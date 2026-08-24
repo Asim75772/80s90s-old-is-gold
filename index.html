@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-<title>80s & 90s Old Is Gold Radio</title>
+<title>80s & 90s Old Is Gold</title>
 
 <style>
 *{
@@ -16,113 +16,112 @@
 body{
     font-family:Arial,Helvetica,sans-serif;
     background:#050b12;
-    color:#f7f0df;
-    min-height:100vh;
-}
-
-/* TOP BAR */
-.topbar{
-    height:45px;
-    background:#05070b;
-    border-bottom:1px solid #27303b;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:0 4%;
-    color:#e9b957;
-    font-size:14px;
+    color:#fff;
+    padding-bottom:105px;
 }
 
 /* HEADER */
-header{
-    background:#08121c;
-    border-bottom:1px solid #c9963e;
-    padding:18px 4%;
+.header{
+    background:#050a11;
+    border-bottom:1px solid #c99632;
+    min-height:100px;
     display:flex;
     align-items:center;
     justify-content:space-between;
+    padding:15px 5%;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:16px;
 }
 
 .logo{
-    display:flex;
-    align-items:center;
-    gap:15px;
-}
-
-.record{
-    width:62px;
-    height:62px;
+    width:68px;
+    height:68px;
     border-radius:50%;
+    border:2px solid #e4ad3c;
     background:
-        radial-gradient(circle,
-        #e6c27a 0 8px,
-        #b63b26 9px 15px,
-        #111 16px 25px,
-        #b63b26 26px 29px,
-        #111 30px);
-    border:2px solid #d4a653;
-    box-shadow:0 0 20px #d99b3b55;
+    repeating-radial-gradient(
+        circle,
+        #111 0px,
+        #111 4px,
+        #222 5px,
+        #111 7px
+    );
+    position:relative;
 }
 
-.logo h1{
-    font-size:32px;
-    letter-spacing:1px;
+.logo:after{
+    content:"";
+    position:absolute;
+    width:17px;
+    height:17px;
+    border-radius:50%;
+    background:#e2a735;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
 }
 
-.logo span{
+.brand h1{
+    font-family:Georgia,serif;
+    font-size:31px;
+    color:#f1bd4e;
+}
+
+.brand span{
     display:block;
-    color:#eab957;
-    letter-spacing:6px;
-    font-size:13px;
-    margin-top:3px;
+    font-size:12px;
+    letter-spacing:5px;
+    color:#fff;
+    margin-top:5px;
 }
 
-.search{
-    font-size:28px;
-    cursor:pointer;
+.menu{
+    font-size:30px;
+    color:#eab448;
 }
 
-/* HERO */
+/* BANNER */
 .hero{
-    min-height:330px;
+    width:94%;
+    max-width:1250px;
+    min-height:310px;
+    margin:22px auto;
+    border:1px solid #a97a25;
+    border-radius:20px;
+
+    background:
+    radial-gradient(circle at 50% 50%,#9c5d23aa,transparent 40%),
+    linear-gradient(110deg,#111820,#20160f,#0b141d);
+
     position:relative;
     overflow:hidden;
+
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
-
-    background:
-    linear-gradient(90deg,#07111aee,#15110ceb,#07111aee),
-    radial-gradient(circle at 50% 50%,#b76b25aa,transparent 55%);
 }
 
 .hero:before{
-    content:"";
+    content:"📻";
     position:absolute;
-    width:420px;
-    height:420px;
-    border:25px solid #b4773a33;
-    border-radius:50%;
-    left:-120px;
-    top:-80px;
-    box-shadow:
-        0 0 0 35px #b4773a1c,
-        0 0 0 70px #b4773a12;
+    left:35px;
+    bottom:15px;
+    font-size:150px;
+    opacity:.18;
 }
 
 .hero:after{
-    content:"";
+    content:"💿";
     position:absolute;
-    width:420px;
-    height:420px;
-    border:25px solid #b4773a33;
-    border-radius:50%;
-    right:-130px;
-    bottom:-120px;
-    box-shadow:
-        0 0 0 35px #b4773a1c,
-        0 0 0 70px #b4773a12;
+    right:30px;
+    top:20px;
+    font-size:150px;
+    opacity:.16;
 }
 
 .hero-content{
@@ -131,93 +130,151 @@ header{
 }
 
 .hero small{
-    color:#f0b448;
+    color:#eeb54a;
     font-size:24px;
-    font-style:italic;
     font-family:Georgia,serif;
+    font-style:italic;
 }
 
 .hero h2{
+    font-family:Georgia,serif;
     font-size:65px;
+    color:#fff5df;
     margin:8px 0;
-    letter-spacing:2px;
 }
 
 .hero p{
-    color:#e9b34f;
-    letter-spacing:9px;
-    font-size:20px;
-    margin-bottom:22px;
+    color:#eab34b;
+    letter-spacing:8px;
+    font-size:19px;
+    margin-bottom:25px;
 }
 
-.main-button{
-    border:none;
-    padding:15px 42px;
-    border-radius:40px;
-    background:#f8c967;
-    color:#17130d;
+.hero button{
+    border:0;
+    background:#f5c65e;
+    color:#111;
     font-size:18px;
     font-weight:bold;
+    padding:15px 40px;
+    border-radius:35px;
     cursor:pointer;
-    box-shadow:0 8px 25px #d18a3855;
 }
 
-.main-button:hover{
-    transform:scale(1.04);
-}
-
-/* RADIO AREA */
+/* MAIN */
 .container{
-    width:92%;
-    max-width:1200px;
-    margin:30px auto 130px;
+    width:94%;
+    max-width:1250px;
+    margin:auto;
 }
 
-.section-title{
-    color:#eab653;
-    font-size:25px;
-    margin-bottom:18px;
+.title{
+    color:#eab44a;
+    font-size:26px;
+    margin:30px 0 18px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+/* RADIO GRID */
+.radio-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+}
+
+.radio-card{
+    background:#081522;
+    border:1px solid #304254;
+    border-radius:18px;
+    padding:20px;
+    display:flex;
+    align-items:center;
+    gap:18px;
+    transition:.2s;
+}
+
+.radio-card:hover{
+    border-color:#e4af42;
+    transform:translateY(-2px);
+}
+
+.radio-icon{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:35px;
+    background:#111d29;
+    border:2px solid #d9a63c;
+    flex-shrink:0;
+}
+
+.radio-info{
+    flex:1;
+}
+
+.radio-info h3{
+    font-size:20px;
+    margin-bottom:7px;
+}
+
+.radio-info p{
+    color:#aab4bf;
+    font-size:14px;
+}
+
+.play{
+    background:#f1bd4d;
+    border:none;
+    border-radius:25px;
+    padding:11px 21px;
+    font-size:14px;
+    font-weight:bold;
+    cursor:pointer;
+    white-space:nowrap;
+}
+
+.play:hover{
+    background:#ffd675;
 }
 
 /* NOW PLAYING */
 .now{
-    background:linear-gradient(135deg,#0b1824,#101b26);
-    border:1px solid #805f2c;
-    border-radius:20px;
-    padding:25px;
+    margin-top:30px;
+    padding:20px;
+    background:#091521;
+    border:1px solid #8d6728;
+    border-radius:18px;
     display:flex;
     align-items:center;
-    gap:25px;
-    margin-bottom:28px;
+    gap:20px;
 }
 
 .now-disc{
-    width:105px;
-    height:105px;
+    width:80px;
+    height:80px;
     border-radius:50%;
     background:
-    repeating-radial-gradient(circle,
-    #111 0 5px,
-    #252525 6px 8px);
-    border:7px solid #161616;
-    box-shadow:0 0 0 2px #d4a64f;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    animation:spin 7s linear infinite;
-}
-
-.now-disc:after{
-    content:"";
-    width:22px;
-    height:22px;
-    border-radius:50%;
-    background:#e6b65d;
+    repeating-radial-gradient(
+        circle,
+        #111 0px,
+        #111 5px,
+        #292929 6px,
+        #111 9px
+    );
+    border:3px solid #d7a23a;
+    flex-shrink:0;
+    animation:spin 6s linear infinite;
 }
 
 @keyframes spin{
-    from{transform:rotate(0deg)}
-    to{transform:rotate(360deg)}
+    to{
+        transform:rotate(360deg);
+    }
 }
 
 .now-info{
@@ -225,80 +282,17 @@ header{
 }
 
 .now-info small{
-    color:#e9b653;
+    color:#eab54d;
     letter-spacing:3px;
 }
 
-.now-info h3{
-    font-size:28px;
-    margin:7px 0;
+.now-info h2{
+    margin:6px 0;
+    font-size:24px;
 }
 
 .now-info p{
-    color:#9eabb7;
-}
-
-/* CHANNEL GRID */
-.radio-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:15px;
-}
-
-.radio-card{
-    background:#091725;
-    border:1px solid #304253;
-    border-radius:18px;
-    padding:18px;
-    display:flex;
-    align-items:center;
-    gap:15px;
-    transition:.25s;
-}
-
-.radio-card:hover{
-    transform:translateY(-3px);
-    border-color:#e2af4f;
-    box-shadow:0 8px 25px #0008;
-}
-
-.station-icon{
-    width:55px;
-    height:55px;
-    border-radius:50%;
-    flex-shrink:0;
-    background:
-    radial-gradient(circle,#e6c27a 0 7px,#d33b27 8px 14px,#171717 15px 23px,#111 24px);
-    border:1px solid #d5a64d;
-}
-
-.station-info{
-    flex:1;
-    min-width:0;
-}
-
-.station-info h3{
-    font-size:17px;
-    white-space:nowrap;
-    overflow:hidden;
-    text-overflow:ellipsis;
-}
-
-.station-info p{
-    color:#a8b2bd;
-    font-size:12px;
-    margin-top:5px;
-}
-
-.play{
-    width:45px;
-    height:45px;
-    border-radius:50%;
-    border:1px solid #e5b456;
-    background:#f4c765;
-    color:#15120c;
-    font-size:18px;
-    cursor:pointer;
+    color:#9ba7b3;
 }
 
 /* PLAYER */
@@ -307,14 +301,13 @@ header{
     left:0;
     right:0;
     bottom:0;
-    height:90px;
-    background:#03080eF7;
-    border-top:1px solid #33404b;
-    backdrop-filter:blur(12px);
+    height:92px;
+    background:#03080e;
+    border-top:1px solid #39434d;
     display:flex;
     align-items:center;
-    padding:12px 4%;
-    z-index:20;
+    padding:10px 4%;
+    z-index:99;
 }
 
 .player-info{
@@ -323,15 +316,15 @@ header{
 
 .player-info strong{
     display:block;
-    font-size:18px;
+    font-size:17px;
 }
 
 .player-info span{
-    color:#9ba6b0;
+    color:#9ba7b2;
     font-size:13px;
 }
 
-.player-controls{
+.controls{
     flex:1;
     display:flex;
     align-items:center;
@@ -340,20 +333,19 @@ header{
 }
 
 .control{
-    border:none;
     background:none;
+    border:0;
     color:#fff;
     font-size:22px;
     cursor:pointer;
 }
 
-.big-play{
-    width:55px;
-    height:55px;
+.main-play{
+    width:58px;
+    height:58px;
     border-radius:50%;
-    border:none;
-    background:#f6c969;
-    color:#15120d;
+    background:#f5c75e;
+    border:2px solid #fff1c7;
     font-size:22px;
     cursor:pointer;
 }
@@ -362,37 +354,39 @@ header{
     width:18%;
 }
 
-input[type=range]{
+.volume input{
     width:100%;
-    accent-color:#e9b452;
+    accent-color:#eab64d;
 }
 
 /* MOBILE */
-@media(max-width:800px){
+@media(max-width:700px){
 
-    .topbar{
-        font-size:12px;
+    .header{
+        min-height:90px;
+        padding:12px 20px;
     }
 
-    header{
-        padding:15px 20px;
-    }
-
-    .logo h1{
-        font-size:27px;
-    }
-
-    .record{
+    .logo{
         width:55px;
         height:55px;
     }
 
+    .brand h1{
+        font-size:25px;
+    }
+
+    .brand span{
+        font-size:9px;
+        letter-spacing:4px;
+    }
+
     .hero{
-        min-height:330px;
+        min-height:300px;
     }
 
     .hero h2{
-        font-size:45px;
+        font-size:43px;
     }
 
     .hero small{
@@ -400,27 +394,35 @@ input[type=range]{
     }
 
     .hero p{
-        font-size:15px;
-        letter-spacing:6px;
+        font-size:14px;
+        letter-spacing:5px;
     }
 
     .radio-grid{
-        grid-template-columns:1fr 1fr;
+        grid-template-columns:1fr;
     }
 
     .radio-card{
-        flex-direction:column;
-        text-align:center;
-        padding:18px 8px;
+        padding:15px;
     }
 
-    .station-info h3{
-        white-space:normal;
+    .radio-icon{
+        width:58px;
+        height:58px;
+        font-size:28px;
+    }
+
+    .radio-info h3{
+        font-size:17px;
+    }
+
+    .play{
+        padding:10px 15px;
     }
 
     .player{
-        height:82px;
-        padding:10px 18px;
+        height:85px;
+        padding:10px 15px;
     }
 
     .player-info{
@@ -428,83 +430,76 @@ input[type=range]{
     }
 
     .player-info strong{
-        font-size:15px;
+        font-size:14px;
     }
 
-    .player-controls{
+    .controls{
         gap:10px;
     }
 
     .volume{
         display:none;
     }
+
 }
 
-@media(max-width:480px){
-
-    .logo h1{
-        font-size:24px;
-    }
-
-    .logo span{
-        font-size:10px;
-    }
+@media(max-width:420px){
 
     .hero h2{
-        font-size:42px;
+        font-size:38px;
     }
 
-    .radio-grid{
+    .radio-card{
         gap:10px;
     }
 
-    .station-icon{
-        width:50px;
-        height:50px;
+    .radio-info h3{
+        font-size:15px;
     }
 
-    .play{
-        width:42px;
-        height:42px;
+    .radio-info p{
+        font-size:12px;
     }
+
 }
 </style>
 </head>
 
 <body>
 
-<div class="topbar">
-    <span>🎵 Welcome to 80s & 90s Old Is Gold</span>
-    <span>📻 LIVE INTERNET RADIO</span>
-</div>
+<!-- HEADER -->
 
-<header>
+<header class="header">
 
-    <div class="logo">
-        <div class="record"></div>
+    <div class="brand">
+
+        <div class="logo"></div>
 
         <div>
             <h1>80s & 90s</h1>
             <span>OLD IS GOLD</span>
         </div>
+
     </div>
 
-    <div class="search">⌕</div>
+    <div class="menu">☰</div>
 
 </header>
 
+
+<!-- BANNER -->
 
 <section class="hero">
 
     <div class="hero-content">
 
-        <small>Relive The Magic Of</small>
+        <small>Feel The Nostalgia</small>
 
         <h2>80s & 90s</h2>
 
-        <p>GOLDEN RADIO</p>
+        <p>OLD IS GOLD</p>
 
-        <button class="main-button" onclick="playCurrent()">
+        <button onclick="playCurrent()">
             ▶ PLAY RADIO
         </button>
 
@@ -513,9 +508,19 @@ input[type=range]{
 </section>
 
 
-<div class="container">
+<!-- CONTENT -->
 
-    <h2 class="section-title">📻 LIVE INTERNET RADIO</h2>
+<main class="container">
+
+    <h2 class="title">
+        📻 LIVE RADIO
+    </h2>
+
+
+    <div class="radio-grid" id="stations"></div>
+
+
+    <!-- NOW PLAYING -->
 
     <div class="now">
 
@@ -525,253 +530,286 @@ input[type=range]{
 
             <small>NOW PLAYING</small>
 
-            <h3 id="nowTitle">Select a Radio Station</h3>
+            <h2 id="nowTitle">
+                Select a Radio Station
+            </h2>
 
             <p id="nowSubtitle">
-                Choose your favourite old Hindi radio station below.
+                Choose a channel and press Play.
             </p>
 
         </div>
 
     </div>
 
+</main>
 
-    <div class="radio-grid" id="radioGrid"></div>
 
-</div>
-
+<!-- BOTTOM PLAYER -->
 
 <div class="player">
 
     <div class="player-info">
 
-        <strong id="playerTitle">Select a station</strong>
+        <strong id="playerTitle">
+            Select a station
+        </strong>
 
-        <span id="playerSubtitle">
+        <span id="playerSub">
             80s & 90s Old Is Gold
         </span>
 
     </div>
 
 
-    <div class="player-controls">
+    <div class="controls">
 
-        <button class="control" onclick="previousStation()">⏮</button>
+        <button
+            class="control"
+            onclick="previousStation()">
+            ⏮
+        </button>
 
-        <button class="big-play" id="playButton" onclick="togglePlay()">▶</button>
+        <button
+            class="main-play"
+            id="mainPlay"
+            onclick="togglePlay()">
+            ▶
+        </button>
 
-        <button class="control" onclick="nextStation()">⏭</button>
+        <button
+            class="control"
+            onclick="nextStation()">
+            ⏭
+        </button>
 
     </div>
 
 
     <div class="volume">
+
         🔊
+
         <input
             type="range"
             min="0"
             max="1"
             step="0.01"
             value="0.8"
-            onchange="setVolume(this.value)"
+            oninput="changeVolume(this.value)"
         >
+
     </div>
 
 </div>
 
 
-<audio id="radioPlayer" preload="none"></audio>
+<audio id="audio" preload="none"></audio>
 
 
 <script>
 
-/*
-========================================
-80s & 90s OLD IS GOLD RADIO
-========================================
-Direct radio streams
-*/
+/* =====================================
+   RADIO STATIONS
+   ===================================== */
 
 const stations = [
 
     {
         name:"Radio Bollywood 90s",
-        subtitle:"90s Bollywood Classics",
+        description:"90s Bollywood Classics",
         stream:"https://stream.zeno.fm/rm4i9pdex3cuv"
     },
 
     {
         name:"Hindi Retro",
-        subtitle:"Golden Hindi Retro Hits",
+        description:"Golden Hindi Retro Hits",
         stream:"https://stream.zeno.fm/v2zfmxef798uv"
     },
 
     {
         name:"Lata Mangeshkar Radio",
-        subtitle:"Evergreen Lata Classics",
+        description:"Evergreen Lata Classics",
         stream:"https://stream.zeno.fm/87xam8pf7tzuv"
     },
 
     {
         name:"90s Once Again",
-        subtitle:"90s Romantic & Evergreen",
+        description:"90s Romantic & Evergreen",
         stream:"https://stream.zeno.fm/rm4i9pdex3cuv"
     },
 
     {
         name:"Goldy Evergreen",
-        subtitle:"Old Bollywood Golden Hits",
+        description:"Old Bollywood Golden Hits",
         stream:"https://stream.zeno.fm/n2fd0edh9k8uv"
     },
 
     {
         name:"Goldy Mukesh",
-        subtitle:"Mukesh Old Is Gold",
-        stream:"https://stream.zeno.fm/t39watus1p8uv"
+        description:"Mukesh Old Is Gold",
+        stream:"https://stream.zeno.fm/g372rxef798uv"
     },
 
     {
         name:"Kishore Kumar Radio",
-        subtitle:"Kishore Kumar Classics",
-        stream:"https://stream.zeno.fm/0ghtfp8ztm0uv"
+        description:"Kishore Kumar Classics",
+        stream:"http://stream.zeno.fm/pg6rqp8ztm0uv"
     },
 
     {
-        name:"Mirchi Love Hindi",
-        subtitle:"Bollywood Romantic Radio",
-        stream:"https://drive.uber.radio/uber/bollywoodlove/icecast.audio"
+        name:"Mirchi Top 20",
+        description:"Bollywood Hindi Hits",
+        stream:"https://drive.uber.radio/uber/bollywoodnow/icecast.audio"
     },
 
     {
-        name:"Radio Retro Bollywood 90s",
-        subtitle:"80s • 90s • Evergreen Hits",
-        stream:"https://stream-143.zeno.fm/fdgs82xkzhhvv"
+        name:"Radio Retro Bollywood",
+        description:"80s & 90s Evergreen",
+        stream:"https://stream.zeno.fm/u0hrd3xkzhhvv"
     },
 
     {
-        name:"60s Forever",
-        subtitle:"Golden 60s Classics",
-        stream:"https://stream.zeno.fm/btrks671ynhvv"
+        name:"Mixify 90s Hits",
+        description:"90s Bollywood Hits",
+        stream:"https://server.mixify.in/listen/listen/radio.mp3"
     },
 
     {
-        name:"Rafi Hit Songs",
-        subtitle:"Mohammed Rafi Classics",
-        stream:"https://stream-143.zeno.fm/0zkr7x8ztm0uv"
-    },
-
-    {
-        name:"Bollywood Gaane Purane",
-        subtitle:"Old Hindi Golden Hits",
-        stream:"https://stream.zeno.fm/6n6ewddtad0uv"
+        name:"Radio Gaana 90s",
+        description:"Retro Romantic Hits",
+        stream:"https://sp14.instainternet.com/8044/stream"
     }
 
 ];
 
 
-const audio = document.getElementById("radioPlayer");
+const audio =
+document.getElementById("audio");
 
-let currentStation = 0;
-let isPlaying = false;
+let current = 0;
 
 
-/* CREATE STATIONS */
+/* =====================================
+   CREATE RADIO CARDS
+   ===================================== */
 
-function loadStations(){
+function createStations(){
 
-    const grid = document.getElementById("radioGrid");
+    const box =
+    document.getElementById("stations");
 
-    grid.innerHTML = "";
+    box.innerHTML = "";
 
     stations.forEach((station,index)=>{
 
-        const card = document.createElement("div");
+        const card =
+        document.createElement("div");
 
-        card.className = "radio-card";
+        card.className =
+        "radio-card";
 
         card.innerHTML = `
 
-            <div class="station-icon"></div>
+            <div class="radio-icon">
+                📻
+            </div>
 
-            <div class="station-info">
+            <div class="radio-info">
 
-                <h3>📻 ${station.name}</h3>
+                <h3>
+                    ${station.name}
+                </h3>
 
-                <p>${station.subtitle}</p>
+                <p>
+                    ${station.description}
+                </p>
 
             </div>
 
             <button
                 class="play"
-                onclick="selectStation(${index})"
-            >
-                ▶
+                onclick="playStation(${index})">
+
+                ▶ PLAY
+
             </button>
 
         `;
 
-        grid.appendChild(card);
+        box.appendChild(card);
 
     });
 
 }
 
 
-/* SELECT STATION */
+/* =====================================
+   PLAY STATION
+   ===================================== */
 
-function selectStation(index){
+function playStation(index){
 
-    currentStation = index;
+    current = index;
 
-    const station = stations[index];
+    const station =
+    stations[index];
 
-    audio.src = station.stream;
+    audio.src =
+    station.stream;
 
-    document.getElementById("nowTitle").textContent =
+    document.getElementById("nowTitle")
+        .textContent =
         station.name;
 
-    document.getElementById("nowSubtitle").textContent =
-        station.subtitle;
+    document.getElementById("nowSubtitle")
+        .textContent =
+        station.description;
 
-    document.getElementById("playerTitle").textContent =
+    document.getElementById("playerTitle")
+        .textContent =
         station.name;
 
-    document.getElementById("playerSubtitle").textContent =
-        station.subtitle;
+    document.getElementById("playerSub")
+        .textContent =
+        station.description;
+
 
     audio.play()
-        .then(()=>{
+    .then(()=>{
 
-            isPlaying = true;
+        document.getElementById("mainPlay")
+        .textContent = "❚❚";
 
-            document.getElementById("playButton").textContent="❚❚";
+    })
+    .catch(()=>{
 
-        })
-        .catch(()=>{
+        document.getElementById("mainPlay")
+        .textContent = "▶";
 
-            isPlaying=false;
+        alert(
+        "এই station টি এখন browser-এ play হচ্ছে না। অন্য station চেষ্টা করুন।"
+        );
 
-            document.getElementById("playButton").textContent="▶";
-
-            alert(
-                "এই radio stream টি আপনার browser-এ play হচ্ছে না। অন্য station চেষ্টা করুন।"
-            );
-
-        });
+    });
 
 }
 
 
-/* PLAY CURRENT */
+/* =====================================
+   PLAY CURRENT
+   ===================================== */
 
 function playCurrent(){
 
-    selectStation(currentStation);
+    playStation(current);
 
 }
 
 
-/* PLAY / PAUSE */
+/* =====================================
+   PLAY / PAUSE
+   ===================================== */
 
 function togglePlay(){
 
@@ -785,76 +823,81 @@ function togglePlay(){
 
     if(audio.paused){
 
-        audio.play()
-        .then(()=>{
+        audio.play();
 
-            isPlaying=true;
+        document.getElementById("mainPlay")
+        .textContent = "❚❚";
 
-            document.getElementById("playButton").textContent="❚❚";
-
-        });
-
-    }else{
+    }
+    else{
 
         audio.pause();
 
-        isPlaying=false;
-
-        document.getElementById("playButton").textContent="▶";
+        document.getElementById("mainPlay")
+        .textContent = "▶";
 
     }
 
 }
 
 
-/* NEXT */
+/* =====================================
+   NEXT
+   ===================================== */
 
 function nextStation(){
 
-    currentStation++;
+    current++;
 
-    if(currentStation >= stations.length){
+    if(current >= stations.length){
 
-        currentStation=0;
+        current = 0;
 
     }
 
-    selectStation(currentStation);
+    playStation(current);
 
 }
 
 
-/* PREVIOUS */
+/* =====================================
+   PREVIOUS
+   ===================================== */
 
 function previousStation(){
 
-    currentStation--;
+    current--;
 
-    if(currentStation < 0){
+    if(current < 0){
 
-        currentStation=stations.length-1;
+        current = stations.length - 1;
 
     }
 
-    selectStation(currentStation);
+    playStation(current);
 
 }
 
 
-/* VOLUME */
+/* =====================================
+   VOLUME
+   ===================================== */
 
-function setVolume(value){
+function changeVolume(value){
 
-    audio.volume = value;
+    audio.volume =
+    Number(value);
 
 }
 
 
-/* START */
+/* =====================================
+   START
+   ===================================== */
 
 audio.volume = 0.8;
 
-loadStations();
+createStations();
 
 </script>
 
