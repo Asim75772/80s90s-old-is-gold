@@ -1,546 +1,498 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>80s & 90s Old Is Gold</title>
+<title>Old Is Gold Radio</title>
 
 <style>
 
-/* =========================
-   BASIC
-========================= */
-
 *{
+    box-sizing:border-box;
     margin:0;
     padding:0;
-    box-sizing:border-box;
 }
 
 body{
-    background:#03080d;
-    color:#f5eee1;
+    background:#05090e;
+    color:#f5ead8;
     font-family:Arial,Helvetica,sans-serif;
-    padding-bottom:100px;
+    padding-bottom:105px;
 }
 
-/* =========================
-   TOP BAR
-========================= */
+/* TOP */
 
-.topbar{
-    height:46px;
+.top{
+    height:44px;
     background:#050608;
-    border-bottom:1px solid #343b42;
-
+    border-bottom:1px solid #303841;
     display:flex;
-    align-items:center;
     justify-content:space-between;
-
+    align-items:center;
     padding:0 25px;
-
-    font-size:14px;
+    font-size:13px;
 }
 
 .top-right{
     display:flex;
-    align-items:center;
-    gap:25px;
+    gap:20px;
 }
 
-.login{
-    background:#f3cc82;
-    color:#16110b;
+/* NAV */
 
-    padding:8px 17px;
-
-    border-radius:22px;
-
-    font-weight:bold;
-}
-
-/* =========================
-   NAVIGATION
-========================= */
-
-.navbar{
-    height:86px;
-
-    background:#080d13;
-
-    border-bottom:1px solid #343c45;
-
+.nav{
+    min-height:82px;
+    background:#090e14;
+    border-bottom:1px solid #34404a;
     display:flex;
     align-items:center;
-
-    padding:0 22px;
+    padding:10px 22px;
 }
 
 .logo{
-    width:285px;
-
+    width:280px;
     display:flex;
     align-items:center;
-
     gap:12px;
 }
 
-.record{
-    width:58px;
-    height:58px;
-
+.logo-disc{
+    width:55px;
+    height:55px;
     border-radius:50%;
-
-    border:1px solid #dfb65f;
-
     background:
     radial-gradient(
         circle,
-        #e8c57c 0 6px,
-        #c9342d 7px 15px,
-        #171b20 16px 23px,
-        #05080c 24px
+        #e5bf70 0 6px,
+        #b52e27 7px 15px,
+        #16191d 16px 24px,
+        #050608 25px
     );
+    border:1px solid #d4ad5e;
 }
 
-.logo-title{
-    font-size:29px;
-    font-weight:900;
+.logo h1{
+    font-size:27px;
 }
 
-.logo-sub{
-    display:block;
-
-    color:#e5b54d;
-
-    letter-spacing:5px;
-
-    font-size:12px;
-
+.logo span{
+    color:#e0ad48;
+    letter-spacing:4px;
+    font-size:10px;
     font-weight:bold;
-
-    margin-top:3px;
 }
 
-.nav-links{
+.menu{
     flex:1;
-
     display:flex;
-
     justify-content:center;
-
-    gap:28px;
+    gap:25px;
 }
 
-.nav-links a{
-    color:#eeeeee;
-
+.menu a{
+    color:#eee;
     text-decoration:none;
-
+    font-size:13px;
     font-weight:bold;
-
-    font-size:14px;
-
     cursor:pointer;
 }
 
-.nav-links a:hover{
-    color:#e5b44d;
+.menu a:hover{
+    color:#e8b64f;
 }
 
 .search{
-    font-size:34px;
-
+    font-size:30px;
     cursor:pointer;
 }
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero{
     height:300px;
-
     position:relative;
-
     overflow:hidden;
-
     display:flex;
-
-    align-items:center;
-
     justify-content:center;
-
+    align-items:center;
     text-align:center;
 
     background:
     radial-gradient(
-        circle at 50% 50%,
-        #4a2b0e,
-        #17120d 42%,
-        #03080d 80%
-    );
-
-    border-bottom:1px solid #4b3920;
-}
-
-/* RADIO */
-
-.radio{
-    position:absolute;
-
-    left:30px;
-    top:35px;
-
-    width:390px;
-    height:200px;
-
-    border:4px solid #846039;
-
-    border-radius:14px;
-
-    transform:rotate(-3deg);
-
-    background:
-    linear-gradient(
-        #493525,
-        #17191b
-    );
-
-    box-shadow:
-    0 15px 35px #000;
-}
-
-.radio-window{
-    position:absolute;
-
-    left:28px;
-    top:23px;
-
-    width:326px;
-    height:68px;
-
-    border:5px solid #111416;
-
-    border-radius:6px;
-
-    background:
-    linear-gradient(
-        #93683c,
-        #332519
-    );
-}
-
-.radio-speaker{
-    position:absolute;
-
-    bottom:18px;
-    left:28px;
-
-    width:78px;
-    height:78px;
-
-    border-radius:50%;
-
-    border:6px solid #111;
-
-    background:
-    radial-gradient(
         circle,
-        #b47b3e 0 9px,
-        #302318 10px 25px,
-        #080a0c 26px
+        #553314,
+        #1b140d 45%,
+        #05090e 82%
     );
 }
 
-.radio-speaker2{
-    left:auto;
-    right:28px;
-}
-
-/* VINYL */
-
-.vinyl{
+.hero-disc{
     position:absolute;
-
-    right:-35px;
-
-    width:285px;
-    height:285px;
-
+    right:-40px;
+    width:290px;
+    height:290px;
     border-radius:50%;
 
     background:
     repeating-radial-gradient(
         circle,
-        #111 0 3px,
-        #252525 4px 5px
+        #101010 0 3px,
+        #272727 4px 5px
     );
 
-    box-shadow:0 0 35px #000;
-
-    opacity:.75;
+    opacity:.65;
 }
 
-.vinyl:after{
-    content:"80s";
-
+.old-radio{
     position:absolute;
+    left:30px;
+    top:50px;
 
-    left:86px;
-    top:86px;
+    width:360px;
+    height:175px;
 
-    width:105px;
-    height:105px;
+    border:4px solid #76552e;
+    border-radius:15px;
+
+    background:linear-gradient(
+        #503927,
+        #16191b
+    );
+
+    transform:rotate(-3deg);
+}
+
+.radio-screen{
+    position:absolute;
+    left:25px;
+    top:20px;
+
+    width:300px;
+    height:58px;
+
+    background:#292015;
+    border:5px solid #111;
+}
+
+.speaker{
+    position:absolute;
+    bottom:15px;
+    left:25px;
+
+    width:70px;
+    height:70px;
 
     border-radius:50%;
+    border:6px solid #111;
 
-    background:#b93629;
-
-    border:5px solid #d6aa57;
-
-    display:flex;
-
-    align-items:center;
-    justify-content:center;
-
-    color:#f4d18b;
-
-    font-size:22px;
-
-    font-weight:bold;
+    background:
+    radial-gradient(
+        circle,
+        #b27b3c 0 8px,
+        #342517 9px 23px,
+        #080a0c 24px
+    );
 }
 
-/* NOTES */
-
-.note{
-    position:absolute;
-
-    color:#a76522;
-
-    font-size:40px;
+.speaker.two{
+    left:auto;
+    right:25px;
 }
-
-.note1{
-    left:25%;
-    top:22px;
-}
-
-.note2{
-    left:32%;
-    bottom:25px;
-}
-
-.note3{
-    right:30%;
-    top:25px;
-}
-
-.note4{
-    right:23%;
-    bottom:30px;
-}
-
-/* HERO TEXT */
 
 .hero-content{
     position:relative;
-
     z-index:5;
 }
 
-.hero-script{
-    color:#ebb64e;
-
-    font-size:40px;
-
+.script{
     font-family:Georgia,serif;
-
     font-style:italic;
+    color:#edba54;
+    font-size:38px;
 }
 
 .hero-title{
-    color:#f8ead4;
-
-    font-size:76px;
-
-    line-height:78px;
-
+    font-size:72px;
     font-weight:900;
-
-    letter-spacing:2px;
+    line-height:75px;
 }
 
 .hero-sub{
-    color:#e8b34b;
-
-    font-size:25px;
-
+    color:#e4ad43;
+    font-weight:bold;
     letter-spacing:9px;
-
-    font-weight:bold;
+    font-size:23px;
 }
 
-.hero-description{
+.hero-small{
     margin-top:7px;
-
-    color:#d0c4b1;
-
-    font-size:15px;
+    color:#c8bba8;
 }
 
-.play-now{
-    margin-top:13px;
-
-    padding:12px 44px;
-
+.hero-button{
+    margin-top:15px;
     border:0;
-
-    border-radius:30px;
-
-    background:#f3ca7d;
-
-    color:#17120b;
-
-    font-size:16px;
-
+    border-radius:25px;
+    padding:12px 35px;
+    background:#f0c979;
     font-weight:bold;
-
     cursor:pointer;
 }
 
-/* =========================
-   CATEGORY
-========================= */
+/* RADIO */
+
+.radio{
+    margin:18px 20px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #111c26,
+        #071017
+    );
+
+    border:1px solid #76582f;
+    border-radius:15px;
+
+    padding:18px;
+
+    box-shadow:0 10px 30px #000;
+}
+
+.radio-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    border-bottom:1px solid #33404a;
+    padding-bottom:12px;
+}
+
+.live{
+    color:#ef5b50;
+    font-weight:bold;
+}
+
+.live-dot{
+    width:10px;
+    height:10px;
+    display:inline-block;
+    border-radius:50%;
+    background:#e83b32;
+    box-shadow:0 0 10px #e83b32;
+    margin-right:6px;
+}
+
+.radio-name{
+    color:#e8bd62;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.radio-main{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    margin-top:18px;
+}
+
+.radio-cover{
+    width:105px;
+    height:105px;
+
+    flex-shrink:0;
+
+    border-radius:50%;
+
+    border:4px solid #b88d4e;
+
+    background:
+    repeating-radial-gradient(
+        circle,
+        #090909 0 3px,
+        #252525 4px 5px
+    );
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:30px;
+}
+
+.radio-cover.spin{
+    animation:spin 7s linear infinite;
+}
+
+@keyframes spin{
+    from{transform:rotate(0)}
+    to{transform:rotate(360deg)}
+}
+
+.radio-info{
+    flex:1;
+}
+
+.radio-info small{
+    color:#d5a94e;
+    letter-spacing:3px;
+}
+
+.radio-info h2{
+    margin-top:7px;
+    font-size:25px;
+}
+
+.radio-info p{
+    margin-top:6px;
+    color:#9ba7b2;
+}
+
+.play{
+    width:65px;
+    height:65px;
+    border:0;
+    border-radius:50%;
+    background:#f1cb7c;
+    color:#111;
+    font-size:24px;
+    cursor:pointer;
+}
+
+/* EQUALIZER */
+
+.eq{
+    display:flex;
+    align-items:end;
+    gap:4px;
+    height:28px;
+    margin-top:10px;
+}
+
+.eq span{
+    width:5px;
+    height:5px;
+    background:#d6aa55;
+}
+
+.eq.active span{
+    animation:eq .6s infinite alternate;
+}
+
+@keyframes eq{
+    from{height:5px}
+    to{height:27px}
+}
+
+/* STATIONS */
+
+.stations{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    margin-top:18px;
+}
+
+.station{
+    border:1px solid #46535e;
+    background:#0b1721;
+    color:#eee;
+    border-radius:22px;
+    padding:10px 16px;
+    cursor:pointer;
+}
+
+.station:hover{
+    border-color:#e0b55d;
+    color:#e0b55d;
+}
+
+.station.active{
+    background:#e0b55d;
+    color:#111;
+}
+
+/* CATEGORY */
 
 .categories{
     display:grid;
-
     grid-template-columns:repeat(8,1fr);
-
     gap:8px;
-
-    padding:15px 20px;
+    padding:0 20px 15px;
 }
 
 .category{
-    height:115px;
-
+    height:105px;
     background:#071421;
-
     border:1px solid #354452;
-
     border-radius:10px;
 
     display:flex;
-
     flex-direction:column;
-
+    justify-content:center;
     align-items:center;
 
-    justify-content:center;
-
-    text-align:center;
-
     cursor:pointer;
-
-    transition:.2s;
 }
 
 .category:hover{
-    transform:translateY(-2px);
-
     border-color:#d9ae5b;
+    transform:translateY(-2px);
 }
 
-.category-icon{
-    font-size:34px;
+.icon{
+    font-size:30px;
 }
 
-.category-title{
-    margin-top:7px;
-
-    font-weight:bold;
-
-    font-size:14px;
-}
-
-.category-count{
+.category b{
     margin-top:6px;
-
-    color:#d9b466;
-
-    font-size:12px;
+    font-size:13px;
 }
 
-/* =========================
-   MAIN CONTENT
-========================= */
+.category small{
+    margin-top:5px;
+    color:#d8b35e;
+}
+
+/* CONTENT */
 
 .content{
     display:grid;
-
-    grid-template-columns:300px 1fr 315px;
-
+    grid-template-columns:290px 1fr 310px;
     gap:15px;
-
     padding:0 20px 20px;
 }
 
 .card{
     background:#07121e;
-
     border:1px solid #354452;
-
     border-radius:10px;
-
     padding:15px;
 }
 
 .heading{
     display:flex;
-
-    align-items:center;
-
     justify-content:space-between;
-
-    padding-bottom:10px;
-
+    align-items:center;
     border-bottom:1px solid #293742;
-
-    margin-bottom:3px;
+    padding-bottom:10px;
 }
 
 .heading h2{
     color:#e7b64d;
-
-    font-size:19px;
+    font-size:18px;
 }
 
-.view-all{
-    color:#aab2ba;
-
-    font-size:12px;
-
-    cursor:pointer;
-}
-
-/* =========================
-   SINGERS
-========================= */
+/* SINGERS */
 
 .singer{
-    height:57px;
-
+    height:55px;
     display:flex;
-
     align-items:center;
-
     gap:10px;
-
     border-bottom:1px solid #293742;
-
     cursor:pointer;
 }
 
@@ -548,14 +500,11 @@ body{
     color:#e8b54b;
 }
 
-.singer-face{
-    width:40px;
-    height:40px;
-
+.face{
+    width:38px;
+    height:38px;
     border-radius:50%;
-
     border:1px solid #bf9754;
-
     background:
     radial-gradient(
         circle at 50% 38%,
@@ -567,154 +516,91 @@ body{
 
 .singer-name{
     flex:1;
-
-    font-size:14px;
+    font-size:13px;
 }
 
-.singer-arrow{
-    font-size:22px;
-}
-
-/* =========================
-   SONGS
-========================= */
+/* SONG LIST */
 
 .song{
-    height:68px;
-
+    height:67px;
     display:grid;
-
-    grid-template-columns:68px 1fr 45px 38px;
-
+    grid-template-columns:62px 1fr 35px;
     align-items:center;
-
-    gap:10px;
-
+    gap:9px;
     border-bottom:1px solid #293742;
 }
 
 .song-cover{
-    width:60px;
-    height:50px;
-
+    width:55px;
+    height:46px;
     border-radius:5px;
 
     background:
     linear-gradient(
         135deg,
-        #87542f,
+        #81502e,
         #172027
     );
 
     display:flex;
-
     align-items:center;
-
     justify-content:center;
 
-    font-size:25px;
+    font-size:24px;
 }
 
 .song-title{
-    font-size:14px;
-
     font-weight:bold;
+    font-size:13px;
 }
 
 .song-info{
     display:block;
-
     color:#9ba8b4;
-
-    font-size:11px;
-
+    font-size:10px;
     margin-top:5px;
 }
 
-.song-play{
-    width:32px;
-    height:32px;
-
+.song-button{
+    width:31px;
+    height:31px;
     border-radius:50%;
-
     border:1px solid #d7ae5c;
-
-    background:transparent;
-
-    color:#fff;
-
+    background:none;
+    color:white;
     cursor:pointer;
 }
 
-.song-play:hover{
-    background:#e3b75d;
+/* RIGHT */
 
-    color:#111;
-}
-
-/* =========================
-   RIGHT SIDE
-========================= */
-
-.song-day{
+.day{
     background:#e8d09f;
-
     color:#211910;
-
     border-radius:10px;
-
     padding:15px;
-
-    min-height:190px;
-
-    margin-bottom:12px;
+    min-height:175px;
 }
 
-.song-day h2{
-    font-size:18px;
-}
-
-.song-day-image{
+.day-icon{
     float:left;
-
-    width:105px;
-    height:105px;
-
+    width:95px;
+    height:95px;
     margin:12px 12px 5px 0;
-
     border-radius:5px;
-
-    background:
-    linear-gradient(
-        135deg,
-        #865638,
-        #281914
-    );
-
+    background:#70472d;
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
-    font-size:42px;
+    font-size:40px;
 }
 
-.song-day h3{
-    margin-top:17px;
-
-    font-size:18px;
+.day h3{
+    padding-top:17px;
 }
 
-.song-day small{
+.day p{
+    margin-top:8px;
     font-size:12px;
-}
-
-.song-day p{
-    margin-top:9px;
-
-    font-size:12px;
-
     font-style:italic;
 }
 
@@ -722,191 +608,95 @@ body{
     clear:both;
 }
 
-/* PLAYLIST */
+/* BOTTOM */
 
-.playlist{
-    background:#06201c;
-
-    border-color:#36574e;
-}
-
-.playlist-item{
-    height:56px;
-
-    display:flex;
-
-    align-items:center;
-
-    gap:9px;
-
-    border-bottom:1px solid #29483f;
-}
-
-.playlist-image{
-    width:43px;
-    height:38px;
-
-    border-radius:5px;
-
-    background:#70472c;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-}
-
-.playlist-name{
-    flex:1;
-
-    font-size:13px;
-}
-
-.playlist-button{
-    width:29px;
-    height:29px;
-
-    border-radius:50%;
-
-    border:1px solid #d3ad5c;
-
-    background:transparent;
-
-    color:#fff;
-}
-
-/* =========================
-   PLAYER
-========================= */
-
-.player{
+.bottom{
     position:fixed;
-
     left:0;
     right:0;
     bottom:0;
 
-    height:95px;
+    height:96px;
 
     background:#03080d;
-
     border-top:1px solid #3d4854;
 
     z-index:100;
 
     display:grid;
-
-    grid-template-columns:330px 1fr 330px;
+    grid-template-columns:330px 1fr 300px;
 
     align-items:center;
 
-    padding:8px 22px;
+    padding:8px 20px;
 }
 
-.now-playing{
+.now{
     display:flex;
-
     align-items:center;
-
     gap:12px;
 }
 
 .now-cover{
-    width:72px;
+    width:70px;
     height:58px;
-
     border-radius:5px;
-
     background:#73482d;
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
-    font-size:27px;
+    font-size:26px;
 }
 
 .now-title{
     font-size:14px;
-
     font-weight:bold;
 }
 
 .now-info{
     display:block;
-
-    color:#9ba6b1;
-
-    font-size:11px;
-
     margin-top:5px;
+    color:#9ba6b1;
+    font-size:11px;
 }
 
 .controls{
     display:flex;
-
-    align-items:center;
-
     justify-content:center;
-
-    gap:22px;
+    align-items:center;
+    gap:20px;
 }
 
 .controls button{
-    border:0;
-
     background:none;
-
+    border:0;
     color:#fff;
-
     font-size:21px;
-
     cursor:pointer;
 }
 
 .main-play{
-    width:58px;
-    height:58px;
-
-    border-radius:50% !important;
-
-    background:#f2ce87 !important;
-
-    color:#111 !important;
+    width:56px;
+    height:56px;
+    border-radius:50%!important;
+    background:#f2ce87!important;
+    color:#111!important;
 }
 
-.progress-area{
+.status{
     display:flex;
-
     align-items:center;
-
-    gap:8px;
-
+    gap:10px;
     font-size:11px;
 }
 
-.progress-line{
+.status-line{
     flex:1;
-
     height:4px;
-
-    background:#555;
+    background:#444;
 }
 
-.progress-fill{
-    width:0%;
-
-    height:100%;
-
-    background:#dfb45c;
-}
-
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media(max-width:1150px){
 
@@ -918,17 +708,10 @@ body{
         grid-template-columns:270px 1fr;
     }
 
-    .right-column{
+    .right{
         display:none;
     }
 
-    .nav-links{
-        gap:14px;
-    }
-
-    .player{
-        grid-template-columns:280px 1fr 230px;
-    }
 }
 
 @media(max-width:700px){
@@ -937,100 +720,99 @@ body{
         padding-bottom:82px;
     }
 
-    .topbar{
-        height:40px;
-
-        padding:0 14px;
+    .top{
+        padding:0 12px;
     }
 
     .top-right{
         display:none;
     }
 
-    .navbar{
-        height:82px;
-
-        padding:10px 15px;
+    .nav{
+        min-height:75px;
+        padding:10px 14px;
     }
 
     .logo{
         width:auto;
-
         flex:1;
     }
 
-    .record{
-        width:48px;
-        height:48px;
+    .logo h1{
+        font-size:23px;
     }
 
-    .logo-title{
-        font-size:24px;
+    .logo-disc{
+        width:47px;
+        height:47px;
     }
 
-    .logo-sub{
-        font-size:9px;
-
-        letter-spacing:3px;
-    }
-
-    .nav-links{
+    .menu{
         display:none;
     }
 
-    .search{
-        font-size:30px;
-    }
-
     .hero{
-        height:320px;
+        height:300px;
     }
 
-    .radio{
-        left:-190px;
-
-        opacity:.45;
-    }
-
-    .vinyl{
-        right:-140px;
-
+    .old-radio{
+        left:-180px;
         opacity:.4;
     }
 
-    .hero-script{
-        font-size:29px;
+    .hero-disc{
+        right:-150px;
+        opacity:.4;
+    }
+
+    .script{
+        font-size:28px;
     }
 
     .hero-title{
         font-size:51px;
-
         line-height:55px;
     }
 
     .hero-sub{
-        font-size:18px;
-
+        font-size:17px;
         letter-spacing:5px;
     }
 
-    .hero-description{
-        font-size:13px;
+    .radio{
+        margin:12px;
+    }
+
+    .radio-main{
+        gap:10px;
+    }
+
+    .radio-cover{
+        width:75px;
+        height:75px;
+        font-size:21px;
+    }
+
+    .radio-info h2{
+        font-size:18px;
+    }
+
+    .radio-info p{
+        font-size:10px;
+    }
+
+    .play{
+        width:52px;
+        height:52px;
     }
 
     .categories{
         grid-template-columns:repeat(2,1fr);
-
-        padding:12px;
-    }
-
-    .category{
-        height:105px;
+        padding:0 12px 12px;
     }
 
     .content{
         display:block;
-
         padding:0 12px;
     }
 
@@ -1038,32 +820,9 @@ body{
         margin-bottom:12px;
     }
 
-    .song{
-        grid-template-columns:52px 1fr 38px;
-    }
-
-    .song-cover{
-        width:48px;
-        height:43px;
-    }
-
-    .song-title{
-        font-size:12px;
-    }
-
-    .song-info{
-        font-size:9px;
-    }
-
-    .song-duration{
-        display:none;
-    }
-
-    .player{
+    .bottom{
         height:82px;
-
         grid-template-columns:1fr auto;
-
         padding:5px 10px;
     }
 
@@ -1072,7 +831,7 @@ body{
     }
 
     .controls{
-        gap:7px;
+        gap:8px;
     }
 
     .controls button{
@@ -1080,13 +839,14 @@ body{
     }
 
     .main-play{
-        width:53px;
-        height:53px;
+        width:52px;
+        height:52px;
     }
 
-    .progress-area{
+    .status{
         display:none;
     }
+
 }
 
 </style>
@@ -1096,64 +856,46 @@ body{
 <body>
 
 
-<!-- =========================
-     TOP BAR
-========================= -->
+<!-- TOP -->
 
-<div class="topbar">
+<div class="top">
 
     <div>
-        🎵 Welcome to 80s & 90s Old Is Gold
+        🎵 Welcome to Old Is Gold Radio
     </div>
 
     <div class="top-right">
-
-        <span>❤️ My Favorites</span>
-
+        <span>❤️ Favorites</span>
         <span>◷ Recently Played</span>
-
-        <span class="login">
-            Login / Sign Up
-        </span>
-
     </div>
 
 </div>
 
 
-<!-- =========================
-     NAVIGATION
-========================= -->
+<!-- NAV -->
 
-<div class="navbar">
+<div class="nav">
 
     <div class="logo">
 
-        <div class="record"></div>
+        <div class="logo-disc"></div>
 
         <div>
-
-            <div class="logo-title">
-                80s & 90s
-            </div>
-
-            <span class="logo-sub">
-                OLD IS GOLD
-            </span>
-
+            <h1>80s & 90s</h1>
+            <span>OLD IS GOLD</span>
         </div>
 
     </div>
 
 
-    <div class="nav-links">
+    <div class="menu">
 
         <a onclick="showAll()">HOME</a>
 
-        <a onclick="showAll()">BROWSE</a>
+        <a onclick="showRadio()">RADIO</a>
 
         <a onclick="filterSongs('Sad')">
-            SAD SONGS
+            SAD
         </a>
 
         <a onclick="filterSongs('Romantic')">
@@ -1164,16 +906,8 @@ body{
             SINGERS
         </a>
 
-        <a>
-            PLAYLISTS
-        </a>
-
         <a onclick="top100()">
             TOP 100
-        </a>
-
-        <a>
-            ABOUT US
         </a>
 
     </div>
@@ -1190,47 +924,27 @@ body{
 </div>
 
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- HERO -->
 
 <section class="hero">
 
+    <div class="old-radio">
 
-    <div class="radio">
+        <div class="radio-screen"></div>
 
-        <div class="radio-window"></div>
+        <div class="speaker"></div>
 
-        <div class="radio-speaker"></div>
-
-        <div class="radio-speaker radio-speaker2"></div>
+        <div class="speaker two"></div>
 
     </div>
 
 
-    <div class="vinyl"></div>
-
-
-    <div class="note note1">
-        ♪
-    </div>
-
-    <div class="note note2">
-        ♫
-    </div>
-
-    <div class="note note3">
-        ♪
-    </div>
-
-    <div class="note note4">
-        ♫
-    </div>
+    <div class="hero-disc"></div>
 
 
     <div class="hero-content">
 
-        <div class="hero-script">
+        <div class="script">
             Feel The Nostalgia
         </div>
 
@@ -1242,15 +956,15 @@ body{
             OLD IS GOLD
         </div>
 
-        <div class="hero-description">
+        <div class="hero-small">
             The Golden Era Of Hindi Music
         </div>
 
         <button
-            class="play-now"
-            onclick="playFirst()">
+            class="hero-button"
+            onclick="showRadio()">
 
-            ▶ PLAY NOW
+            📻 LISTEN LIVE
 
         </button>
 
@@ -1259,9 +973,91 @@ body{
 </section>
 
 
-<!-- =========================
-     CATEGORIES
-========================= -->
+<!-- RADIO -->
+
+<section
+    class="radio"
+    id="radio-section">
+
+
+    <div class="radio-header">
+
+        <div class="live">
+
+            <span class="live-dot"></span>
+            ON AIR
+
+        </div>
+
+        <div class="radio-name">
+            📻 OLD IS GOLD RADIO
+        </div>
+
+    </div>
+
+
+    <div class="radio-main">
+
+
+        <div
+            class="radio-cover"
+            id="radio-cover">
+
+            💿
+
+        </div>
+
+
+        <div class="radio-info">
+
+            <small>
+                LIVE INTERNET RADIO
+            </small>
+
+            <h2 id="radio-title">
+                Select A Radio Station
+            </h2>
+
+            <p id="radio-artist">
+                Choose one of the stations below
+            </p>
+
+
+            <div
+                class="eq"
+                id="eq">
+
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="play"
+            id="radio-play"
+            onclick="toggleRadio()">
+
+            ▶
+
+        </button>
+
+    </div>
+
+
+    <div class="stations" id="stations"></div>
+
+</section>
+
+
+<!-- CATEGORIES -->
 
 <section class="categories">
 
@@ -1270,17 +1066,9 @@ body{
         class="category"
         onclick="filterSongs('Sad')">
 
-        <div class="category-icon">
-            💔
-        </div>
-
-        <div class="category-title">
-            Sad Songs
-        </div>
-
-        <div class="category-count">
-            1200+ Songs
-        </div>
+        <div class="icon">💔</div>
+        <b>Sad Songs</b>
+        <small>Old Classics</small>
 
     </div>
 
@@ -1289,17 +1077,9 @@ body{
         class="category"
         onclick="filterSongs('Romantic')">
 
-        <div class="category-icon">
-            💗
-        </div>
-
-        <div class="category-title">
-            Romantic Songs
-        </div>
-
-        <div class="category-count">
-            1500+ Songs
-        </div>
+        <div class="icon">❤️</div>
+        <b>Romantic</b>
+        <small>Evergreen</small>
 
     </div>
 
@@ -1308,17 +1088,9 @@ body{
         class="category"
         onclick="filterSongs('Rain')">
 
-        <div class="category-icon">
-            🌧️
-        </div>
-
-        <div class="category-title">
-            Rain Songs
-        </div>
-
-        <div class="category-count">
-            500+ Songs
-        </div>
+        <div class="icon">🌧️</div>
+        <b>Rain Songs</b>
+        <small>Monsoon</small>
 
     </div>
 
@@ -1327,17 +1099,9 @@ body{
         class="category"
         onclick="filterSongs('Party')">
 
-        <div class="category-icon">
-            🎉
-        </div>
-
-        <div class="category-title">
-            Party Songs
-        </div>
-
-        <div class="category-count">
-            800+ Songs
-        </div>
+        <div class="icon">🎉</div>
+        <b>Party</b>
+        <small>Retro Hits</small>
 
     </div>
 
@@ -1346,17 +1110,9 @@ body{
         class="category"
         onclick="filterSongs('Sad')">
 
-        <div class="category-icon">
-            💔
-        </div>
-
-        <div class="category-title">
-            Breakup Songs
-        </div>
-
-        <div class="category-count">
-            800+ Songs
-        </div>
+        <div class="icon">💔</div>
+        <b>Breakup</b>
+        <small>Memories</small>
 
     </div>
 
@@ -1365,35 +1121,18 @@ body{
         class="category"
         onclick="filterSongs('Sad')">
 
-        <div class="category-icon">
-            🌙
-        </div>
-
-        <div class="category-title">
-            Night & Melancholy
-        </div>
-
-        <div class="category-count">
-            700+ Songs
-        </div>
+        <div class="icon">🌙</div>
+        <b>Night</b>
+        <small>Melancholy</small>
 
     </div>
 
 
-    <div
-        class="category">
+    <div class="category">
 
-        <div class="category-icon">
-            🎤
-        </div>
-
-        <div class="category-title">
-            Duet Songs
-        </div>
-
-        <div class="category-count">
-            1000+ Songs
-        </div>
+        <div class="icon">🎤</div>
+        <b>Duets</b>
+        <small>Evergreen</small>
 
     </div>
 
@@ -1402,26 +1141,16 @@ body{
         class="category"
         onclick="top100()">
 
-        <div class="category-icon">
-            👑
-        </div>
-
-        <div class="category-title">
-            Top 100
-        </div>
-
-        <div class="category-count">
-            80s & 90s
-        </div>
+        <div class="icon">👑</div>
+        <b>Top 100</b>
+        <small>Classics</small>
 
     </div>
 
 </section>
 
 
-<!-- =========================
-     MAIN CONTENT
-========================= -->
+<!-- CONTENT -->
 
 <section class="content">
 
@@ -1452,16 +1181,8 @@ body{
         <div class="heading">
 
             <h2>
-                TRENDING SONGS
+                SONG CATALOGUE
             </h2>
-
-            <span
-                class="view-all"
-                onclick="showAll()">
-
-                View All
-
-            </span>
 
         </div>
 
@@ -1472,143 +1193,29 @@ body{
 
     <!-- RIGHT -->
 
-    <div class="right-column">
+    <div class="right">
 
 
-        <!-- SONG OF DAY -->
-
-        <div class="song-day">
+        <div class="day">
 
             <h2>
-                🎵 SONG OF THE DAY
+                🎵 RADIO TODAY
             </h2>
 
-            <div class="song-day-image">
-                🎙️
+            <div class="day-icon">
+                📻
             </div>
 
             <h3>
-                Lag Ja Gale
+                Old Is Gold
             </h3>
 
-            <small>
-                Woh Kaun Thi (1964)
-            </small>
-
-            <br>
-
-            <small>
-                Lata Mangeshkar
-            </small>
-
             <p>
-                "Some memories never fade away..."
+                Enjoy evergreen Hindi music
+                through live Internet Radio.
             </p>
 
             <div class="clear"></div>
-
-        </div>
-
-
-        <!-- PLAYLIST -->
-
-        <div class="card playlist">
-
-            <div class="heading">
-
-                <h2>
-                    PLAYLISTS
-                </h2>
-
-                <span class="view-all">
-                    View All
-                </span>
-
-            </div>
-
-
-            <div class="playlist-item">
-
-                <div class="playlist-image">
-                    🎙️
-                </div>
-
-                <div class="playlist-name">
-                    Best of Kishore Kumar
-                </div>
-
-                <button
-                    class="playlist-button"
-                    onclick="filterSinger('Kishore Kumar')">
-
-                    ▶
-
-                </button>
-
-            </div>
-
-
-            <div class="playlist-item">
-
-                <div class="playlist-image">
-                    🎙️
-                </div>
-
-                <div class="playlist-name">
-                    Best of Mohammed Rafi
-                </div>
-
-                <button
-                    class="playlist-button"
-                    onclick="filterSinger('Mohammed Rafi')">
-
-                    ▶
-
-                </button>
-
-            </div>
-
-
-            <div class="playlist-item">
-
-                <div class="playlist-image">
-                    🎙️
-                </div>
-
-                <div class="playlist-name">
-                    Best of Lata Mangeshkar
-                </div>
-
-                <button
-                    class="playlist-button"
-                    onclick="filterSinger('Lata Mangeshkar')">
-
-                    ▶
-
-                </button>
-
-            </div>
-
-
-            <div class="playlist-item">
-
-                <div class="playlist-image">
-                    🎙️
-                </div>
-
-                <div class="playlist-name">
-                    Best of Mukesh
-                </div>
-
-                <button
-                    class="playlist-button"
-                    onclick="filterSinger('Mukesh')">
-
-                    ▶
-
-                </button>
-
-            </div>
 
         </div>
 
@@ -1617,17 +1224,15 @@ body{
 </section>
 
 
-<!-- =========================
-     MUSIC PLAYER
-========================= -->
+<!-- BOTTOM PLAYER -->
 
-<div class="player">
+<div class="bottom">
 
 
-    <div class="now-playing">
+    <div class="now">
 
         <div class="now-cover">
-            💿
+            📻
         </div>
 
         <div>
@@ -1636,7 +1241,7 @@ body{
                 class="now-title"
                 id="now-title">
 
-                Select a song
+                Old Is Gold Radio
 
             </div>
 
@@ -1644,7 +1249,7 @@ body{
                 class="now-info"
                 id="now-info">
 
-                80s & 90s Old Is Gold
+                Select a station
 
             </span>
 
@@ -1655,355 +1260,470 @@ body{
 
     <div class="controls">
 
-        <button>
-            ♥
-        </button>
-
-        <button
-            onclick="shuffleSongs()">
-
-            ⤨
-
-        </button>
-
-        <button
-            onclick="previousSong()">
-
+        <button onclick="previousStation()">
             ⏮
-
         </button>
 
         <button
             class="main-play"
-            id="main-play"
-            onclick="togglePlay()">
+            id="bottom-play"
+            onclick="toggleRadio()">
 
             ▶
 
         </button>
 
-        <button
-            onclick="nextSong()">
-
+        <button onclick="nextStation()">
             ⏭
-
-        </button>
-
-        <button>
-            ↻
         </button>
 
     </div>
 
 
-    <div class="progress-area">
+    <div class="status">
 
-        <span id="current-time">
-            0:00
-        </span>
+        <span>LIVE</span>
 
-        <div class="progress-line">
-
-            <div
-                class="progress-fill"
-                id="progress-fill">
-            </div>
-
-        </div>
-
-        <span id="total-time">
-            0:00
-        </span>
+        <div class="status-line"></div>
 
     </div>
 
 </div>
 
 
-<!-- =========================
-     JAVASCRIPT
-========================= -->
+<!-- AUDIO -->
+
+<audio
+    id="audio"
+    preload="none">
+</audio>
+
 
 <script>
 
 
-/* =====================================
-   100 SONG CATALOGUE
-===================================== */
-
-const songs = [
-
-["Kahin Door Jab Din Dhal Jaye","Mukesh","Anand","1971","Sad"],
-
-["Tujhse Naraz Nahin Zindagi","Lata Mangeshkar","Masoom","1983","Sad"],
-
-["Zindagi Ke Safar Mein","Kishore Kumar","Aap Ki Kasam","1974","Sad"],
-
-["Jeena Yahan Marna Yahan","Mukesh","Mera Naam Joker","1970","Sad"],
-
-["Agar Tum Na Hote","Kishore Kumar","Agar Tum Na Hote","1983","Romantic"],
-
-["Humein Tumse Pyar Kitna","Kishore Kumar","Kudrat","1981","Romantic"],
-
-["Mera Kuchh Samaan","Asha Bhosle","Ijaazat","1987","Sad"],
-
-["Zindagi Kaisi Hai Paheli","Manna Dey","Anand","1971","Sad"],
-
-["Kya Hua Tera Wada","Mohammed Rafi","Hum Kisise Kum Naheen","1977","Sad"],
-
-["Chand Mera Dil","Mohammed Rafi","Hum Kisise Kum Naheen","1977","Romantic"],
-
-["Jaane Kahan Gaye Woh Din","Mukesh","Mera Naam Joker","1970","Sad"],
-
-["Tere Bina Zindagi Se","Lata Mangeshkar","Aandhi","1975","Sad"],
-
-["Chura Liya Hai Tumne Jo Dil Ko","Asha Bhosle","Yaadon Ki Baaraat","1973","Romantic"],
-
-["Pal Pal Dil Ke Paas","Kishore Kumar","Blackmail","1973","Romantic"],
-
-["Neele Neele Ambar Par","Kishore Kumar","Kalaakaar","1983","Romantic"],
-
-["O Mere Dil Ke Chain","Kishore Kumar","Mere Jeevan Saathi","1972","Romantic"],
-
-["Yeh Shaam Mastani","Kishore Kumar","Kati Patang","1970","Romantic"],
-
-["Rimjhim Gire Saawan","Kishore Kumar","Manzil","1979","Rain"],
-
-["Bheegi Bheegi Raaton Mein","Kishore Kumar","Ajnabee","1974","Rain"],
-
-["Tum Itna Jo Muskura Rahe Ho","Jagjit Singh","Arth","1982","Sad"],
-
-["Tujhe Dekha To Yeh Jana Sanam","Kumar Sanu","Dilwale Dulhania Le Jayenge","1995","Romantic"],
-
-["Nazar Ke Samne","Kumar Sanu","Aashiqui","1990","Romantic"],
-
-["Tu Hi Re","Hariharan","Bombay","1995","Romantic"],
-
-["Ek Ladki Ko Dekha","Kumar Sanu","1942 A Love Story","1994","Romantic"],
-
-["Pehla Nasha","Udit Narayan","Jo Jeeta Wohi Sikandar","1992","Romantic"],
-
-["Ae Mere Humsafar","Udit Narayan","Baazigar","1993","Romantic"],
-
-["Do Dil Mil Rahe Hain","Kumar Sanu","Pardes","1997","Romantic"],
-
-["Lag Ja Gale","Lata Mangeshkar","Woh Kaun Thi","1964","Sad"],
-
-["Aap Ki Aankhon Mein Kuch","Lata Mangeshkar","Ghar","1978","Romantic"],
-
-["Tere Bina Jiya Jaye Naa","Lata Mangeshkar","Ghar","1978","Sad"],
-
-["Sawan Ka Mahina","Lata Mangeshkar","Milan","1967","Romantic"],
-
-["Ajeeb Dastan Hai Yeh","Lata Mangeshkar","Dil Apna Aur Preet Parai","1960","Sad"],
-
-["Gaata Rahe Mera Dil","Lata Mangeshkar","Guide","1965","Romantic"],
-
-["Mere Sapno Ki Rani","Kishore Kumar","Aradhana","1969","Romantic"],
-
-["Roop Tera Mastana","Kishore Kumar","Aradhana","1969","Romantic"],
-
-["Zindagi Ek Safar Hai Suhana","Kishore Kumar","Andaz","1971","Romantic"],
-
-["Musafir Hoon Yaaron","Kishore Kumar","Parichay","1972","Romantic"],
-
-["Mere Naina Sawan Bhadon","Kishore Kumar","Mehbooba","1976","Sad"],
-
-["Aane Wala Pal","Kishore Kumar","Golmaal","1979","Sad"],
-
-["Dost Dost Na Raha","Mukesh","Sangam","1964","Sad"],
-
-["Sab Kuchh Seekha Humne","Mukesh","Anari","1959","Sad"],
-
-["Awara Hoon","Mukesh","Awaara","1951","Romantic"],
-
-["Pyar Kiya To Darna Kya","Lata Mangeshkar","Mughal-e-Azam","1960","Romantic"],
-
-["Aaj Phir Jeene Ki Tamanna Hai","Lata Mangeshkar","Guide","1965","Romantic"],
-
-["Jo Tumko Ho Pasand","Mohammed Rafi","Safar","1970","Romantic"],
-
-["Baharon Phool Barsao","Mohammed Rafi","Suraj","1966","Romantic"],
-
-["Likhe Jo Khat Tujhe","Mohammed Rafi","Kanyadaan","1968","Romantic"],
-
-["Chaudhvin Ka Chand Ho","Mohammed Rafi","Chaudhvin Ka Chand","1960","Romantic"],
-
-["Gulabi Aankhen","Mohammed Rafi","The Train","1970","Romantic"],
-
-["Kya Se Kya Ho Gaya","Mohammed Rafi","Guide","1965","Sad"],
-
-["Din Dhal Jaye","Mohammed Rafi","Guide","1965","Sad"],
-
-["Yeh Reshmi Zulfein","Mohammed Rafi","Do Raaste","1969","Romantic"],
-
-["Pukarta Chala Hoon Main","Mohammed Rafi","Mere Sanam","1965","Romantic"],
-
-["In Aankhon Ki Masti","Asha Bhosle","Umrao Jaan","1981","Romantic"],
-
-["Dil Cheez Kya Hai","Asha Bhosle","Umrao Jaan","1981","Romantic"],
-
-["Jab Chhaye Mera Jadoo","Asha Bhosle","Lootmaar","1980","Party"],
-
-["Dum Maro Dum","Asha Bhosle","Hare Rama Hare Krishna","1971","Party"],
-
-["Piya Tu Ab To Aaja","Asha Bhosle","Caravan","1971","Party"],
-
-["Yeh Mera Dil","Asha Bhosle","Don","1978","Party"],
-
-["Ek Ajnabee Haseena Se","Kishore Kumar","Ajnabee","1974","Romantic"],
-
-["Khaike Paan Banaraswala","Kishore Kumar","Don","1978","Party"],
-
-["My Name Is Anthony Gonsalves","Kishore Kumar","Amar Akbar Anthony","1977","Party"],
-
-["Apni To Jaise Taise","Kishore Kumar","Laawaris","1981","Party"],
-
-["Pag Ghunghroo Baandh","Kishore Kumar","Namak Halaal","1982","Party"],
-
-["Raat Kali Ek Khwab Mein Aayi","Kishore Kumar","Buddha Mil Gaya","1971","Romantic"],
-
-["Yeh Jo Mohabbat Hai","Kishore Kumar","Kati Patang","1970","Romantic"],
-
-["Mere Dil Mein Aaj Kya Hai","Kishore Kumar","Daag","1973","Romantic"],
-
-["Saagar Kinare Dil Yeh Pukare","Kishore Kumar","Saagar","1985","Romantic"],
-
-["Hoga Tumse Pyara Kaun","Shailendra Singh","Zamaane Ko Dikhana Hai","1981","Romantic"],
-
-["Dafli Wale Dafli Baja","Lata Mangeshkar","Sargam","1979","Romantic"],
-
-["Tere Mere Beech Mein","Lata Mangeshkar","Ek Duuje Ke Liye","1981","Romantic"],
-
-["Hum Tum Ek Kamre Mein Band Ho","Lata Mangeshkar","Bobby","1973","Romantic"],
-
-["Kabhi Kabhi Mere Dil Mein","Mukesh","Kabhi Kabhie","1976","Romantic"],
-
-["Main Pal Do Pal Ka Shayar Hoon","Mukesh","Kabhi Kabhie","1976","Sad"],
-
-["Kisi Ki Muskurahaton Pe","Mukesh","Anari","1959","Romantic"],
-
-["Suhana Safar Aur Yeh Mausam","Mukesh","Madhumati","1958","Romantic"],
-
-["Duniya Bananewale","Mukesh","Teesri Kasam","1966","Sad"],
-
-["Mere Mehboob Qayamat Hogi","Kishore Kumar","Mr. X in Bombay","1964","Sad"],
-
-["Woh Shaam Kuch Ajeeb Thi","Kishore Kumar","Khamoshi","1969","Sad"],
-
-["Yeh Jeevan Hai","Kishore Kumar","Piya Ka Ghar","1972","Sad"],
-
-["Chingari Koi Bhadke","Kishore Kumar","Amar Prem","1972","Sad"],
-
-["Kuchh To Log Kahenge","Kishore Kumar","Amar Prem","1972","Sad"],
-
-["Ruk Jaana Nahin","Kishore Kumar","Imtihan","1974","Sad"],
-
-["O Saathi Re","Kishore Kumar","Muqaddar Ka Sikandar","1978","Sad"],
-
-["Manzilein Apni Jagah Hain","Kishore Kumar","Sharaabi","1984","Sad"],
-
-["Humein Aur Jeene Ki Chahat Na Hoti","Kishore Kumar","Agar Tum Na Hote","1983","Sad"],
-
-["Zindagi Pyar Ka Geet Hai","Kishore Kumar","Souten","1983","Romantic"],
-
-["Tere Mere Sapne","Mohammed Rafi","Guide","1965","Romantic"],
-
-["Aap Mujhe Achhe Lagne Lage","Lata Mangeshkar","Jeene Ki Raah","1969","Romantic"],
-
-["Chal Akela Chal Akela","Mukesh","Sambandh","1969","Sad"],
-
-["Kahin Karta Hoga Woh","Lata Mangeshkar","Phir Kab Milogi","1974","Romantic"],
-
-["Aaja Tujhko Pukare Mera Pyar","Lata Mangeshkar","Geet","1970","Romantic"],
-
-["Mere Mitwa Mere Meet Re","Kishore Kumar","Geet","1970","Romantic"],
-
-["O Mere Raja","Asha Bhosle","Johny Mera Naam","1970","Romantic"],
-
-["Aaja Aaja Main Hoon Pyar Tera","Asha Bhosle","Teesri Manzil","1966","Party"],
-
-["Yeh Mera Prem Patra","Mohammed Rafi","Sangam","1964","Romantic"],
-
-["Aaja Tujhko Pukare Mera Pyar","Mohammed Rafi","Geet","1970","Romantic"],
-
-["Badan Pe Sitare","Mohammed Rafi","Prince","1969","Romantic"],
-
-["Aap Ke Haseen Rukh Pe","Mohammed Rafi","Baharen Phir Bhi Aayengi","1966","Romantic"],
-
-["Tum Bin Jaoon Kahan","Kishore Kumar","Pyar Ka Mausam","1969","Sad"],
-
-["Yeh Kya Hua","Kishore Kumar","Amar Prem","1972","Sad"],
-
-["O Mere Raja","Kishore Kumar","Johny Mera Naam","1970","Romantic"],
-
-["Kora Kagaz Tha Yeh Man Mera","Kishore Kumar","Aradhana","1969","Romantic"],
-
-["Mere Samne Wali Khidki Mein","Kishore Kumar","Padosan","1968","Romantic"],
-
-["Aao Huzoor Tumko","Asha Bhosle","Kismet","1980","Romantic"],
-
-["Jhumka Gira Re","Asha Bhosle","Mera Saaya","1966","Party"],
-
-["Inhi Logon Ne","Asha Bhosle","Pakeezah","1972","Romantic"],
-
-["Yeh Mera Dil","Asha Bhosle","Don","1978","Party"],
-
-["Chal Kahin Door Nikal Jayein","Lata Mangeshkar","Doosara Aadmi","1977","Romantic"]
+/* =====================================================
+   LIVE RADIO STATIONS
+===================================================== */
+
+const stations=[
+
+    {
+        name:"Radio Bollywood 90s",
+        artist:"90s Hindi Bollywood",
+        url:"https://stream.zeno.fm/rm4i9pdex3cuv"
+    },
+
+    {
+        name:"Hindi Retro",
+        artist:"Retro Hindi Classics",
+        url:"https://stream.zeno.fm/v2zfmxef798uv"
+    },
+
+    {
+        name:"Lata Mangeshkar Radio",
+        artist:"Evergreen Lata Classics",
+        url:"https://stream.zeno.fm/87xam8pf7tzuv"
+    },
+
+    {
+        name:"90s Once Again",
+        artist:"90s Hindi Music",
+        url:"https://stream.zeno.fm/rm4i9pdex3cuv"
+    },
+
+    {
+        name:"Goldy Evergreen",
+        artist:"Evergreen Bollywood",
+        url:"https://stream.zeno.fm/n2fd0edh9k8uv"
+    },
+
+    {
+        name:"Goldy Mukesh",
+        artist:"Mukesh Oldies",
+        url:"https://stream.zeno.fm/t39watus1p8uv"
+    },
+
+    {
+        name:"60s Forever",
+        artist:"Golden 60s Classics",
+        url:"https://stream.zeno.fm/btrks671ynhvv"
+    },
+
+    {
+        name:"Mirchi Love Hindi",
+        artist:"Hindi Love Radio",
+        url:"https://drive.uber.radio/uber/lrbollywood/icecast.audio"
+    }
 
 ];
 
 
-/* =========================
-   CURRENT SONG LIST
-========================= */
+let currentStation=0;
 
-let currentSongs=[...songs];
-
-let currentIndex=0;
+let playing=false;
 
 
-/* =========================
-   RENDER SONGS
-========================= */
+const audio=
+    document.getElementById("audio");
+
+
+const radioTitle=
+    document.getElementById("radio-title");
+
+
+const radioArtist=
+    document.getElementById("radio-artist");
+
+
+const radioPlay=
+    document.getElementById("radio-play");
+
+
+const bottomPlay=
+    document.getElementById("bottom-play");
+
+
+const radioCover=
+    document.getElementById("radio-cover");
+
+
+const eq=
+    document.getElementById("eq");
+
+
+const nowTitle=
+    document.getElementById("now-title");
+
+
+const nowInfo=
+    document.getElementById("now-info");
+
+
+/* =====================================================
+   CREATE STATION BUTTONS
+===================================================== */
+
+const stationBox=
+    document.getElementById("stations");
+
+
+stations.forEach(
+    (station,index)=>{
+
+        const button=
+            document.createElement("button");
+
+        button.className="station";
+
+        button.innerHTML=
+            "📻 "+station.name;
+
+        button.onclick=
+            function(){
+
+                playStation(index);
+
+            };
+
+        stationBox.appendChild(button);
+
+    }
+);
+
+
+/* =====================================================
+   PLAY STATION
+===================================================== */
+
+function playStation(index){
+
+    currentStation=index;
+
+    const station=
+        stations[index];
+
+
+    radioTitle.innerText=
+        station.name;
+
+
+    radioArtist.innerText=
+        station.artist;
+
+
+    nowTitle.innerText=
+        station.name;
+
+
+    nowInfo.innerText=
+        station.artist;
+
+
+    audio.src=
+        station.url;
+
+
+    audio.play()
+    .then(()=>{
+
+        playing=true;
+
+        updatePlayer();
+
+    })
+    .catch(()=>{
+
+        playing=false;
+
+        updatePlayer();
+
+        alert(
+            "এই station এখন চালু হচ্ছে না। অন্য station চেষ্টা করুন।"
+        );
+
+    });
+
+}
+
+
+/* =====================================================
+   TOGGLE
+===================================================== */
+
+function toggleRadio(){
+
+    if(!audio.src){
+
+        playStation(0);
+
+        return;
+
+    }
+
+
+    if(audio.paused){
+
+        audio.play()
+        .then(()=>{
+
+            playing=true;
+
+            updatePlayer();
+
+        });
+
+    }
+    else{
+
+        audio.pause();
+
+        playing=false;
+
+        updatePlayer();
+
+    }
+
+}
+
+
+/* =====================================================
+   UPDATE PLAYER
+===================================================== */
+
+function updatePlayer(){
+
+    if(playing){
+
+        radioPlay.innerText="❚❚";
+
+        bottomPlay.innerText="❚❚";
+
+        radioCover.classList.add("spin");
+
+        eq.classList.add("active");
+
+    }
+    else{
+
+        radioPlay.innerText="▶";
+
+        bottomPlay.innerText="▶";
+
+        radioCover.classList.remove("spin");
+
+        eq.classList.remove("active");
+
+    }
+
+
+    document
+        .querySelectorAll(".station")
+        .forEach(
+            (button,index)=>{
+
+                button.classList.toggle(
+                    "active",
+                    index===currentStation &&
+                    playing
+                );
+
+            }
+        );
+
+}
+
+
+/* =====================================================
+   NEXT
+===================================================== */
+
+function nextStation(){
+
+    currentStation++;
+
+    if(
+        currentStation>=stations.length
+    ){
+
+        currentStation=0;
+
+    }
+
+
+    playStation(
+        currentStation
+    );
+
+}
+
+
+/* =====================================================
+   PREVIOUS
+===================================================== */
+
+function previousStation(){
+
+    currentStation--;
+
+    if(currentStation<0){
+
+        currentStation=
+            stations.length-1;
+
+    }
+
+
+    playStation(
+        currentStation
+    );
+
+}
+
+
+/* =====================================================
+   RADIO SCROLL
+===================================================== */
+
+function showRadio(){
+
+    document
+        .getElementById("radio-section")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+
+}
+
+
+/* =====================================================
+   SONG CATALOGUE
+===================================================== */
+
+const songs=[
+
+["Kahin Door Jab Din Dhal Jaye","Mukesh","Anand","1971","Sad"],
+["Tujhse Naraz Nahin Zindagi","Lata Mangeshkar","Masoom","1983","Sad"],
+["Zindagi Ke Safar Mein","Kishore Kumar","Aap Ki Kasam","1974","Sad"],
+["Jeena Yahan Marna Yahan","Mukesh","Mera Naam Joker","1970","Sad"],
+["Agar Tum Na Hote","Kishore Kumar","Agar Tum Na Hote","1983","Romantic"],
+["Humein Tumse Pyar Kitna","Kishore Kumar","Kudrat","1981","Romantic"],
+["Mera Kuchh Samaan","Asha Bhosle","Ijaazat","1987","Sad"],
+["Zindagi Kaisi Hai Paheli","Manna Dey","Anand","1971","Sad"],
+["Kya Hua Tera Wada","Mohammed Rafi","Hum Kisise Kum Naheen","1977","Sad"],
+["Chand Mera Dil","Mohammed Rafi","Hum Kisise Kum Naheen","1977","Romantic"],
+["Jaane Kahan Gaye Woh Din","Mukesh","Mera Naam Joker","1970","Sad"],
+["Tere Bina Zindagi Se","Lata Mangeshkar","Aandhi","1975","Sad"],
+["Chura Liya Hai Tumne Jo Dil Ko","Asha Bhosle","Yaadon Ki Baaraat","1973","Romantic"],
+["Pal Pal Dil Ke Paas","Kishore Kumar","Blackmail","1973","Romantic"],
+["Neele Neele Ambar Par","Kishore Kumar","Kalaakaar","1983","Romantic"],
+["O Mere Dil Ke Chain","Kishore Kumar","Mere Jeevan Saathi","1972","Romantic"],
+["Yeh Shaam Mastani","Kishore Kumar","Kati Patang","1970","Romantic"],
+["Rimjhim Gire Saawan","Kishore Kumar","Manzil","1979","Rain"],
+["Bheegi Bheegi Raaton Mein","Kishore Kumar","Ajnabee","1974","Rain"],
+["Tum Itna Jo Muskura Rahe Ho","Jagjit Singh","Arth","1982","Sad"],
+["Tujhe Dekha To Yeh Jana Sanam","Kumar Sanu","DDLJ","1995","Romantic"],
+["Nazar Ke Samne","Kumar Sanu","Aashiqui","1990","Romantic"],
+["Tu Hi Re","Hariharan","Bombay","1995","Romantic"],
+["Ek Ladki Ko Dekha","Kumar Sanu","1942 A Love Story","1994","Romantic"],
+["Pehla Nasha","Udit Narayan","Jo Jeeta Wohi Sikandar","1992","Romantic"],
+["Ae Mere Humsafar","Udit Narayan","Baazigar","1993","Romantic"],
+["Do Dil Mil Rahe Hain","Kumar Sanu","Pardes","1997","Romantic"],
+["Lag Ja Gale","Lata Mangeshkar","Woh Kaun Thi","1964","Sad"],
+["Aap Ki Aankhon Mein Kuch","Lata Mangeshkar","Ghar","1978","Romantic"],
+["Tere Bina Jiya Jaye Naa","Lata Mangeshkar","Ghar","1978","Sad"],
+["Sawan Ka Mahina","Lata Mangeshkar","Milan","1967","Romantic"],
+["Ajeeb Dastan Hai Yeh","Lata Mangeshkar","Dil Apna Aur Preet Parai","1960","Sad"],
+["Gaata Rahe Mera Dil","Lata Mangeshkar","Guide","1965","Romantic"],
+["Mere Sapno Ki Rani","Kishore Kumar","Aradhana","1969","Romantic"],
+["Roop Tera Mastana","Kishore Kumar","Aradhana","1969","Romantic"],
+["Zindagi Ek Safar Hai Suhana","Kishore Kumar","Andaz","1971","Romantic"],
+["Musafir Hoon Yaaron","Kishore Kumar","Parichay","1972","Romantic"],
+["Mere Naina Sawan Bhadon","Kishore Kumar","Mehbooba","1976","Sad"],
+["Aane Wala Pal","Kishore Kumar","Golmaal","1979","Sad"],
+["Dost Dost Na Raha","Mukesh","Sangam","1964","Sad"],
+["Sab Kuchh Seekha Humne","Mukesh","Anari","1959","Sad"],
+["Awara Hoon","Mukesh","Awaara","1951","Romantic"],
+["Pyar Kiya To Darna Kya","Lata Mangeshkar","Mughal-e-Azam","1960","Romantic"],
+["Aaj Phir Jeene Ki Tamanna Hai","Lata Mangeshkar","Guide","1965","Romantic"],
+["Jo Tumko Ho Pasand","Mohammed Rafi","Safar","1970","Romantic"],
+["Baharon Phool Barsao","Mohammed Rafi","Suraj","1966","Romantic"],
+["Likhe Jo Khat Tujhe","Mohammed Rafi","Kanyadaan","1968","Romantic"],
+["Chaudhvin Ka Chand Ho","Mohammed Rafi","Chaudhvin Ka Chand","1960","Romantic"],
+["Gulabi Aankhen","Mohammed Rafi","The Train","1970","Romantic"],
+["Kya Se Kya Ho Gaya","Mohammed Rafi","Guide","1965","Sad"]
+
+];
+
+
+let currentSongs=[
+    ...songs
+];
+
+
+/* =====================================================
+   RENDER
+===================================================== */
 
 function renderSongs(list){
 
-    const box=document.getElementById("songs");
+    const box=
+        document.getElementById("songs");
+
 
     box.innerHTML="";
 
 
-    if(list.length===0){
+    list.forEach(
+        song=>{
 
-        box.innerHTML=`
-
-            <div style="
-                padding:30px;
-                text-align:center;
-                color:#aaa;
-            ">
-
-                No songs found.
-
-            </div>
-
-        `;
-
-        return;
-    }
-
-
-    list.forEach((song,index)=>{
-
-        box.innerHTML+=`
+            box.innerHTML+=`
 
             <div class="song">
 
                 <div class="song-cover">
                     🎵
                 </div>
-
 
                 <div>
 
@@ -2020,173 +1740,34 @@ function renderSongs(list){
 
                 </div>
 
-
-                <div class="song-duration">
-                    ♪
-                </div>
-
-
                 <button
-                    class="song-play"
-                    onclick="playSong(${index})">
+                    class="song-button"
+                    onclick="showRadio()">
 
-                    ▶
+                    📻
 
                 </button>
 
             </div>
 
-        `;
+            `;
 
-    });
-
-}
-
-
-/* =========================
-   PLAY SONG
-========================= */
-
-function playSong(index){
-
-    if(!currentSongs[index]){
-        return;
-    }
-
-
-    currentIndex=index;
-
-
-    const song=currentSongs[index];
-
-
-    document.getElementById("now-title").innerText=
-        song[0];
-
-
-    document.getElementById("now-info").innerText=
-        song[2]+" • "+song[1];
-
-
-    /*
-       YouTube search.
-       The site does not download or re-host
-       copyrighted MP3 files.
-    */
-
-    const query=
-        song[0]+" "+
-        song[1]+" "+
-        song[2]+
-        " official";
-
-
-    const youtubeURL=
-        "https://www.youtube.com/results?search_query="+
-        encodeURIComponent(query);
-
-
-    window.open(
-        youtubeURL,
-        "_blank"
+        }
     );
 
 }
 
 
-/* =========================
-   PLAY FIRST
-========================= */
+/* =====================================================
+   FILTER
+===================================================== */
 
-function playFirst(){
-
-    if(currentSongs.length>0){
-
-        playSong(0);
-
-    }
-
-}
-
-
-/* =========================
-   PLAYER BUTTON
-========================= */
-
-function togglePlay(){
-
-    playSong(currentIndex);
-
-}
-
-
-/* =========================
-   NEXT
-========================= */
-
-function nextSong(){
-
-    if(currentSongs.length===0){
-        return;
-    }
-
-
-    currentIndex++;
-
-
-    if(currentIndex>=currentSongs.length){
-
-        currentIndex=0;
-
-    }
-
-
-    playSong(currentIndex);
-
-}
-
-
-/* =========================
-   PREVIOUS
-========================= */
-
-function previousSong(){
-
-    if(currentSongs.length===0){
-        return;
-    }
-
-
-    currentIndex--;
-
-
-    if(currentIndex<0){
-
-        currentIndex=
-            currentSongs.length-1;
-
-    }
-
-
-    playSong(currentIndex);
-
-}
-
-
-/* =========================
-   FILTER CATEGORY
-========================= */
-
-function filterSongs(category){
+function filterSongs(type){
 
     currentSongs=
         songs.filter(
-            song=>song[4]===category
+            song=>song[4]===type
         );
-
-
-    currentIndex=0;
-
 
     renderSongs(
         currentSongs
@@ -2195,9 +1776,9 @@ function filterSongs(category){
 }
 
 
-/* =========================
+/* =====================================================
    SHOW ALL
-========================= */
+===================================================== */
 
 function showAll(){
 
@@ -2205,10 +1786,6 @@ function showAll(){
         ...songs
     ];
 
-
-    currentIndex=0;
-
-
     renderSongs(
         currentSongs
     );
@@ -2216,19 +1793,15 @@ function showAll(){
 }
 
 
-/* =========================
+/* =====================================================
    TOP 100
-========================= */
+===================================================== */
 
 function top100(){
 
     currentSongs=
         songs.slice(0,100);
 
-
-    currentIndex=0;
-
-
     renderSongs(
         currentSongs
     );
@@ -2236,37 +1809,23 @@ function top100(){
 }
 
 
-/* =========================
+/* =====================================================
    SINGERS
-========================= */
+===================================================== */
 
 const singers=[
 
-    "Kishore Kumar",
-
-    "Mohammed Rafi",
-
-    "Mukesh",
-
-    "Lata Mangeshkar",
-
-    "Asha Bhosle",
-
-    "Manna Dey",
-
-    "Udit Narayan",
-
-    "Kumar Sanu",
-
-    "Alka Yagnik",
-
-    "Hariharan",
-
-    "Jagjit Singh",
-
-    "Shailendra Singh",
-
-    "Talat Mahmood"
+"Kishore Kumar",
+"Mohammed Rafi",
+"Mukesh",
+"Lata Mangeshkar",
+"Asha Bhosle",
+"Manna Dey",
+"Udit Narayan",
+"Kumar Sanu",
+"Alka Yagnik",
+"Hariharan",
+"Jagjit Singh"
 
 ];
 
@@ -2282,27 +1841,23 @@ singers.forEach(
 
         singerBox.innerHTML+=`
 
-            <div
-                class="singer"
-                onclick="
-                    filterSinger('${singer}')
-                "
-            >
+        <div
+            class="singer"
+            onclick="
+            filterSinger('${singer}')
+            ">
 
-                <div class="singer-face">
-                </div>
+            <div class="face"></div>
 
-
-                <div class="singer-name">
-                    ${singer}
-                </div>
-
-
-                <div class="singer-arrow">
-                    ›
-                </div>
-
+            <div class="singer-name">
+                ${singer}
             </div>
+
+            <div>
+                ›
+            </div>
+
+        </div>
 
         `;
 
@@ -2310,9 +1865,9 @@ singers.forEach(
 );
 
 
-/* =========================
+/* =====================================================
    FILTER SINGER
-========================= */
+===================================================== */
 
 function filterSinger(name){
 
@@ -2321,21 +1876,16 @@ function filterSinger(name){
             song=>song[1]===name
         );
 
-
-    currentIndex=0;
-
-
     renderSongs(
         currentSongs
     );
 
-
 }
 
 
-/* =========================
+/* =====================================================
    SHOW SINGERS
-========================= */
+===================================================== */
 
 function showSingers(){
 
@@ -2350,55 +1900,50 @@ function showSingers(){
 }
 
 
-/* =========================
+/* =====================================================
    SEARCH
-========================= */
+===================================================== */
 
 function searchSongs(){
 
-    const query=
+    const q=
         prompt(
             "Song / Singer / Movie লিখুন:"
         );
 
 
-    if(!query){
-
+    if(!q){
         return;
-
     }
 
 
     const text=
-        query.toLowerCase();
+        q.toLowerCase();
 
 
     currentSongs=
         songs.filter(
             song=>
 
-                song[0]
-                    .toLowerCase()
-                    .includes(text)
+            song[0]
+                .toLowerCase()
+                .includes(text)
 
-                ||
+            ||
 
-                song[1]
-                    .toLowerCase()
-                    .includes(text)
+            song[1]
+                .toLowerCase()
+                .includes(text)
 
-                ||
+            ||
 
-                song[2]
-                    .toLowerCase()
-                    .includes(text)
+            song[2]
+                .toLowerCase()
+                .includes(text)
 
         );
 
 
-    currentIndex=0;
-
-
     renderSongs(
         currentSongs
     );
@@ -2406,49 +1951,28 @@ function searchSongs(){
 }
 
 
-/* =========================
-   SHUFFLE
-========================= */
+/* =====================================================
+   AUDIO ERROR
+===================================================== */
 
-function shuffleSongs(){
+audio.addEventListener(
+    "error",
+    function(){
 
-    for(
-        let i=currentSongs.length-1;
-        i>0;
-        i--
-    ){
+        playing=false;
 
-        const j=
-            Math.floor(
-                Math.random()*(i+1)
-            );
+        updatePlayer();
 
-
-        [
-            currentSongs[i],
-            currentSongs[j]
-        ]=
-        [
-            currentSongs[j],
-            currentSongs[i]
-        ];
+        radioArtist.innerText=
+            "Stream unavailable — try another station.";
 
     }
+);
 
 
-    currentIndex=0;
-
-
-    renderSongs(
-        currentSongs
-    );
-
-}
-
-
-/* =========================
+/* =====================================================
    START
-========================= */
+===================================================== */
 
 renderSongs(
     currentSongs
