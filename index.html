@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,978 +10,936 @@
 <style>
 
 *{
-box-sizing:border-box;
-margin:0;
-padding:0;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
 body{
-background:#060c14;
-color:#f5f1e8;
-font-family:Arial,Helvetica,sans-serif;
-padding-bottom:95px;
+    background:#050b13;
+    color:#fff;
+    font-family:Arial,Helvetica,sans-serif;
+    padding-bottom:95px;
 }
 
 /* ================= TOP BAR ================= */
 
 .topbar{
-height:43px;
-background:#05080d;
-border-bottom:1px solid #293442;
-
-display:flex;
-align-items:center;
-justify-content:space-between;
-
-padding:0 28px;
-
-font-size:14px;
+    height:42px;
+    background:#04070b;
+    border-bottom:1px solid #293544;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 28px;
+    font-size:14px;
 }
 
-.topbar .welcome{
-color:#e8bd62;
+.topbar span{
+    color:#e9bd63;
 }
 
-.topbar .right{
-display:flex;
-gap:25px;
-align-items:center;
-}
-
-.login{
-background:#f0c878;
-color:#17120d;
-
-padding:8px 18px;
-
-border-radius:20px;
-
-font-weight:bold;
-}
-
-/* ================= NAVIGATION ================= */
+/* ================= NAVBAR ================= */
 
 .navbar{
-height:86px;
-
-background:
-linear-gradient(
-90deg,
-#070c13,
-#0a111a
-);
-
-border-bottom:1px solid #c0913d;
-
-display:flex;
-align-items:center;
-
-padding:0 24px;
-
-gap:25px;
-
-position:sticky;
-top:0;
-
-z-index:20;
+    height:86px;
+    background:#080e17;
+    border-bottom:1px solid #b8893c;
+    display:flex;
+    align-items:center;
+    padding:0 25px;
+    gap:25px;
+    position:sticky;
+    top:0;
+    z-index:50;
 }
 
 .logo{
-display:flex;
-align-items:center;
-gap:12px;
-
-min-width:285px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    min-width:270px;
 }
 
-.logoDisc{
-width:58px;
-height:58px;
+.disc{
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    border:1px solid #e2bd6c;
 
-border-radius:50%;
+    background:
+    radial-gradient(
+        circle,
+        #f0c875 0 6px,
+        #d3322e 7px 15px,
+        #111a23 16px 24px,
+        #060a0e 25px
+    );
 
-border:1px solid #d6b36b;
-
-background:
-radial-gradient(
-circle,
-#e8bd65 0 6px,
-#c52d28 7px 15px,
-#171d24 16px 25px,
-#05090e 26px
-);
-
-box-shadow:
-0 0 0 4px #101722,
-0 0 15px rgba(225,174,76,.15);
+    box-shadow:0 0 15px rgba(230,180,80,.2);
 }
 
 .logo h1{
-font-size:29px;
-line-height:30px;
-
-color:#f8e7c9;
+    font-size:29px;
+    color:#f9e8ca;
 }
 
-.logo span{
-display:block;
-
-font-size:12px;
-
-letter-spacing:5px;
-
-color:#e7b653;
-
-font-weight:bold;
-
-margin-top:4px;
+.logo small{
+    display:block;
+    margin-top:3px;
+    color:#e9b84e;
+    letter-spacing:5px;
+    font-weight:bold;
 }
 
 .menu{
-display:flex;
-
-align-items:center;
-justify-content:center;
-
-gap:30px;
-
-flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:25px;
+    flex:1;
 }
 
 .menu a{
-color:#eee;
-
-text-decoration:none;
-
-font-size:15px;
-
-font-weight:bold;
-
-cursor:pointer;
-
-padding:31px 0;
+    color:#eee;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:14px;
+    cursor:pointer;
 }
 
 .menu a:hover{
-color:#efc365;
-
-border-bottom:3px solid #efc365;
+    color:#efc363;
 }
 
-.searchButton{
-font-size:31px;
-
-background:none;
-
-border:0;
-
-color:white;
-
-cursor:pointer;
+.search{
+    border:0;
+    background:none;
+    color:#fff;
+    font-size:30px;
+    cursor:pointer;
 }
 
 /* ================= HERO ================= */
 
 .hero{
 
-height:300px;
+    min-height:330px;
 
-position:relative;
+    position:relative;
+    overflow:hidden;
 
-overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-display:flex;
+    background:
+    radial-gradient(
+        circle at center,
+        #403021 0,
+        #1b1713 30%,
+        #0c131b 70%
+    );
 
-align-items:center;
-
-justify-content:center;
-
-text-align:center;
-
-background:
-
-linear-gradient(
-90deg,
-#17130f 0%,
-#15212a 48%,
-#19130f 100%
-);
-
+    border-bottom:1px solid #4b3b28;
 }
 
-/* vintage cassette area */
+/* vintage cassette */
 
-.hero::before{
+.cassette{
+    position:absolute;
 
-content:"";
+    left:-50px;
+    top:35px;
 
-position:absolute;
+    width:410px;
+    height:235px;
 
-left:-20px;
+    border:7px solid #6e5335;
+    border-radius:14px;
 
-top:25px;
+    background:
+    linear-gradient(
+        180deg,
+        #33291f,
+        #11171c
+    );
 
-width:430px;
+    transform:rotate(-7deg);
 
-height:245px;
+    opacity:.55;
 
-background:
-
-linear-gradient(
-180deg,
-#2a211a,
-#0c1117
-);
-
-border:4px solid #705536;
-
-border-radius:10px;
-
-box-shadow:
-inset 0 0 0 5px #17191b,
-0 15px 30px rgba(0,0,0,.6);
-
-transform:rotate(-5deg);
-
-opacity:.95;
+    box-shadow:
+    inset 0 0 0 5px #151a1e,
+    0 20px 40px #000;
 }
 
-.hero::after{
+.cassette:before{
+    content:"";
+    position:absolute;
 
-content:"OLD IS GOLD";
+    width:125px;
+    height:125px;
 
-position:absolute;
+    left:65px;
+    top:50px;
 
-left:100px;
+    border-radius:50%;
 
-top:120px;
+    border:10px solid #1b2025;
 
-font-size:25px;
-
-letter-spacing:4px;
-
-font-weight:bold;
-
-color:#d3b37b;
-
-transform:rotate(-5deg);
-
-opacity:.75;
+    background:
+    radial-gradient(
+        circle,
+        #d6a95e 0 8px,
+        #4c3523 9px 28px,
+        #111 29px
+    );
 }
+
+.cassette:after{
+    content:"";
+    position:absolute;
+
+    width:125px;
+    height:125px;
+
+    right:65px;
+    top:50px;
+
+    border-radius:50%;
+
+    border:10px solid #1b2025;
+
+    background:
+    radial-gradient(
+        circle,
+        #d6a95e 0 8px,
+        #4c3523 9px 28px,
+        #111 29px
+    );
+}
+
+/* ================= SINGER COLLAGE ================= */
+
+.singerCollage{
+    position:absolute;
+    right:15px;
+    top:18px;
+
+    width:470px;
+    height:285px;
+
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+
+    gap:4px;
+
+    opacity:.75;
+}
+
+.person{
+    width:72px;
+    height:175px;
+
+    border-radius:45px 45px 8px 8px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #241a16,
+        #7b5a3e,
+        #241a16
+    );
+
+    border:1px solid #8e6b46;
+
+    position:relative;
+
+    box-shadow:0 0 15px #000;
+}
+
+.person:nth-child(2){
+    height:215px;
+}
+
+.person:nth-child(3){
+    height:190px;
+}
+
+.person:nth-child(4){
+    height:225px;
+}
+
+.person:nth-child(5){
+    height:185px;
+}
+
+.person:nth-child(6){
+    height:210px;
+}
+
+.face{
+    width:52px;
+    height:62px;
+
+    border-radius:50%;
+
+    position:absolute;
+
+    top:15px;
+    left:9px;
+
+    background:
+    radial-gradient(
+        circle at 50% 42%,
+        #d3a77c 0 28%,
+        #4b3327 29% 46%,
+        #161719 47%
+    );
+
+    border:1px solid #bd8f60;
+}
+
+.personName{
+    position:absolute;
+
+    bottom:8px;
+    left:3px;
+    right:3px;
+
+    text-align:center;
+
+    font-size:9px;
+
+    color:#f0d19a;
+
+    font-weight:bold;
+}
+
+/* HERO CONTENT */
 
 .heroContent{
+    position:relative;
+    z-index:10;
 
-position:relative;
+    text-align:center;
 
-z-index:3;
-
-width:650px;
-
+    width:650px;
 }
 
-.heroScript{
+.script{
+    font-family:Georgia,serif;
+    font-style:italic;
 
-font-family:Georgia,serif;
+    color:#efb94f;
 
-font-style:italic;
-
-font-size:42px;
-
-color:#efa932;
-
-margin-bottom:0;
+    font-size:40px;
 }
 
 .heroTitle{
+    color:#faead0;
 
-font-size:78px;
+    font-size:72px;
 
-line-height:78px;
+    font-weight:900;
 
-font-weight:900;
+    line-height:1;
 
-letter-spacing:3px;
+    letter-spacing:3px;
 
-color:#f9ead1;
-
-text-shadow:
-3px 3px 0 #403425,
-0 0 20px rgba(239,181,75,.15);
+    text-shadow:
+    3px 3px 0 #3b2e20,
+    0 0 25px rgba(255,190,70,.2);
 }
 
-.heroSubtitle{
+.heroSub{
+    color:#efbd53;
 
-font-size:27px;
+    font-size:25px;
 
-font-weight:bold;
+    font-weight:bold;
 
-letter-spacing:9px;
+    letter-spacing:9px;
 
-color:#efba50;
-
-margin:8px 0 18px;
+    margin:10px 0 18px;
 }
 
 .playNow{
+    border:0;
 
-background:#f6ce7d;
+    background:#f7ce7b;
 
-border:0;
+    color:#17120c;
 
-border-radius:28px;
+    border-radius:30px;
 
-padding:13px 38px;
+    padding:14px 40px;
 
-font-weight:bold;
+    font-weight:bold;
 
-font-size:16px;
+    font-size:16px;
 
-color:#17120c;
+    box-shadow:0 8px 25px #0008;
 
-box-shadow:
-0 5px 15px rgba(0,0,0,.4);
-
-cursor:pointer;
+    cursor:pointer;
 }
 
 .playNow:hover{
-background:#ffe09d;
-
-transform:scale(1.03);
+    background:#ffe09c;
 }
 
-/* ================= CATEGORY ================= */
+/* ================= CATEGORIES ================= */
 
 .categories{
+    display:grid;
+    grid-template-columns:repeat(8,1fr);
+    gap:9px;
 
-display:grid;
-
-grid-template-columns:
-repeat(8,1fr);
-
-gap:8px;
-
-padding:16px 24px;
+    padding:16px 24px;
 }
 
 .category{
 
-background:#0e1927;
+    background:#0d1927;
 
-border:1px solid #344253;
+    border:1px solid #344456;
 
-border-radius:10px;
+    border-radius:11px;
 
-min-height:112px;
+    min-height:110px;
 
-display:flex;
+    display:flex;
+    flex-direction:column;
 
-flex-direction:column;
+    align-items:center;
+    justify-content:center;
 
-align-items:center;
+    text-align:center;
 
-justify-content:center;
+    cursor:pointer;
 
-text-align:center;
-
-cursor:pointer;
-
-transition:.2s;
+    transition:.2s;
 }
 
 .category:hover{
+    transform:translateY(-3px);
 
-border-color:#d8ad57;
+    border-color:#e0b75f;
 
-transform:translateY(-3px);
-
-background:#121f30;
+    background:#122033;
 }
 
 .category .icon{
-
-font-size:35px;
-
-margin-bottom:7px;
+    font-size:34px;
+    margin-bottom:7px;
 }
 
 .category h3{
-
-font-size:15px;
-
-margin-bottom:7px;
+    font-size:14px;
+    margin-bottom:7px;
 }
 
 .category small{
-
-color:#ddb96e;
+    color:#dcb66c;
 }
 
-/* ================= MAIN GRID ================= */
+/* ================= MAIN ================= */
 
 .main{
+    display:grid;
 
-display:grid;
+    grid-template-columns:
+    300px
+    minmax(0,1fr)
+    300px;
 
-grid-template-columns:
-310px
-1fr
-310px;
+    gap:16px;
 
-gap:16px;
-
-padding:0 24px 25px;
+    padding:0 24px 25px;
 }
 
 .card{
+    background:#0c1623;
 
-background:#0c1623;
+    border:1px solid #344253;
 
-border:1px solid #344253;
+    border-radius:10px;
 
-border-radius:10px;
-
-padding:15px;
+    padding:15px;
 }
 
 .heading{
+    display:flex;
 
-display:flex;
+    justify-content:space-between;
 
-align-items:center;
+    align-items:center;
 
-justify-content:space-between;
+    border-bottom:1px solid #293644;
 
-border-bottom:1px solid #293645;
+    padding-bottom:10px;
 
-padding-bottom:10px;
-
-margin-bottom:3px;
+    margin-bottom:3px;
 }
 
 .heading h2{
-
-color:#edbb59;
-
-font-size:19px;
+    color:#edbb59;
+    font-size:18px;
 }
 
 .view{
-
-font-size:12px;
-
-color:#aeb7c3;
-
-cursor:pointer;
+    color:#9da8b5;
+    font-size:12px;
+    cursor:pointer;
 }
 
 /* ================= SINGERS ================= */
 
 .singer{
+    display:flex;
 
-display:flex;
+    align-items:center;
 
-align-items:center;
+    gap:10px;
 
-gap:11px;
+    padding:9px 0;
 
-padding:9px 0;
+    border-bottom:1px solid #293442;
 
-border-bottom:1px solid #293442;
-
-cursor:pointer;
+    cursor:pointer;
 }
 
 .singer:hover{
-color:#efc365;
+    color:#efc466;
 }
 
 .singerPhoto{
+    width:40px;
+    height:40px;
 
-width:39px;
+    border-radius:50%;
 
-height:39px;
+    border:1px solid #bd9656;
 
-border-radius:50%;
-
-border:1px solid #b18b50;
-
-background:
-
-radial-gradient(
-circle at 50% 35%,
-#d4ae7c 0 12%,
-#523d31 13% 36%,
-#161b22 37%
-);
+    background:
+    radial-gradient(
+        circle at 50% 37%,
+        #d4a878 0 14%,
+        #523b2d 15% 38%,
+        #15191e 39%
+    );
 }
 
 .singerName{
-font-size:15px;
-
-flex:1;
+    flex:1;
 }
 
 .arrow{
-font-size:20px;
-
-color:#aaa;
+    color:#aaa;
+    font-size:20px;
 }
 
 /* ================= SONGS ================= */
 
 .song{
 
-display:grid;
+    display:grid;
 
-grid-template-columns:
-68px
-1fr
-50px
-40px;
+    grid-template-columns:
+    62px
+    minmax(0,1fr)
+    45px
+    35px;
 
-gap:10px;
+    gap:10px;
 
-align-items:center;
+    align-items:center;
 
-padding:8px 0;
+    padding:8px 0;
 
-border-bottom:1px solid #293442;
+    border-bottom:1px solid #293442;
 }
 
 .songArt{
 
-width:64px;
+    width:58px;
+    height:45px;
 
-height:48px;
+    border-radius:5px;
 
-border-radius:5px;
+    background:
+    linear-gradient(
+        135deg,
+        #9a6135,
+        #1e252c
+    );
 
-display:flex;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-align-items:center;
-
-justify-content:center;
-
-font-size:24px;
-
-background:
-
-linear-gradient(
-135deg,
-#9b6135,
-#272c31
-);
-
-border:1px solid #6c5136;
+    font-size:22px;
 }
 
 .songTitle{
 
-font-weight:bold;
+    font-weight:bold;
 
-font-size:15px;
+    white-space:nowrap;
 
-white-space:nowrap;
+    overflow:hidden;
 
-overflow:hidden;
-
-text-overflow:ellipsis;
+    text-overflow:ellipsis;
 }
 
 .songInfo{
 
-display:block;
+    display:block;
 
-color:#9da8b6;
+    color:#9ca8b6;
 
-font-size:12px;
+    font-size:12px;
 
-margin-top:5px;
+    margin-top:4px;
 
-white-space:nowrap;
+    white-space:nowrap;
 
-overflow:hidden;
+    overflow:hidden;
 
-text-overflow:ellipsis;
+    text-overflow:ellipsis;
 }
 
 .duration{
-
-font-size:12px;
-
-color:#ddd;
+    color:#ddd;
+    font-size:12px;
 }
 
 .songPlay{
 
-width:32px;
+    width:31px;
+    height:31px;
 
-height:32px;
+    border-radius:50%;
 
-border-radius:50%;
+    border:1px solid #d3ae62;
 
-border:1px solid #d0a95c;
+    color:#fff;
 
-background:transparent;
+    background:transparent;
 
-color:white;
-
-cursor:pointer;
+    cursor:pointer;
 }
 
 .songPlay:hover{
-
-background:#e9bd67;
-
-color:#111;
+    background:#edc16c;
+    color:#111;
 }
 
-/* ================= SONG OF DAY ================= */
+/* ================= RIGHT ================= */
 
 .songDay{
 
-background:#e7cf9f;
+    background:#ead3a5;
 
-color:#211b12;
+    color:#241d13;
 
-border-radius:10px;
+    border-radius:10px;
 
-padding:15px;
+    padding:15px;
 
-margin-bottom:12px;
-}
-
-.songDayTitle{
-
-font-weight:bold;
-
-font-size:18px;
-
-margin-bottom:10px;
-}
-
-.dayImage{
-
-width:100px;
-
-height:90px;
-
-float:left;
-
-margin-right:12px;
-
-border-radius:6px;
-
-background:
-linear-gradient(
-135deg,
-#79503a,
-#241b17
-);
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-size:42px;
+    margin-bottom:12px;
 }
 
 .songDay h3{
+    margin:8px 0 5px;
+}
 
-font-size:18px;
+.dayPic{
 
-margin:8px 0 4px;
+    float:left;
+
+    width:95px;
+    height:88px;
+
+    margin:8px 12px 5px 0;
+
+    border-radius:6px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #795038,
+        #211915
+    );
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:40px;
 }
 
 .songDay p{
+    font-size:12px;
 
-font-size:12px;
+    margin-top:8px;
 
-margin-top:8px;
-
-font-style:italic;
+    font-style:italic;
 }
 
 .clear{
-clear:both;
+    clear:both;
 }
 
 /* ================= PLAYLIST ================= */
 
 .playlist{
+    background:#0d2a27;
 
-background:#0d2926;
-
-border-color:#3b5a53;
+    border-color:#3c5c54;
 }
 
 .playItem{
 
-display:flex;
+    display:flex;
 
-align-items:center;
+    align-items:center;
 
-gap:10px;
+    gap:10px;
 
-padding:10px 0;
+    padding:9px 0;
 
-border-bottom:1px solid #294944;
+    border-bottom:1px solid #294a45;
 }
 
 .playThumb{
 
-width:46px;
+    width:45px;
+    height:40px;
 
-height:40px;
+    border-radius:5px;
 
-background:#62452f;
+    background:#65432e;
 
-border-radius:5px;
+    display:flex;
 
-display:flex;
+    align-items:center;
 
-align-items:center;
-
-justify-content:center;
-
-font-size:20px;
+    justify-content:center;
 }
 
 .playInfo{
-
-flex:1;
+    flex:1;
 }
 
 .playInfo small{
+    display:block;
 
-display:block;
+    color:#9eb0aa;
 
-color:#9db0aa;
-
-margin-top:4px;
+    margin-top:4px;
 }
 
 .playButton{
 
-width:29px;
+    width:29px;
+    height:29px;
 
-height:29px;
+    border-radius:50%;
 
-border-radius:50%;
+    border:1px solid #d3ad62;
 
-border:1px solid #d0ae68;
+    background:transparent;
 
-background:transparent;
-
-color:white;
+    color:white;
 }
 
-/* ================= BOTTOM PLAYER ================= */
+/* ================= PLAYER ================= */
 
 .player{
 
-position:fixed;
+    position:fixed;
 
-left:0;
+    left:0;
+    right:0;
+    bottom:0;
 
-right:0;
+    height:94px;
 
-bottom:0;
+    background:#060b12;
 
-height:94px;
+    border-top:1px solid #46515e;
 
-background:#060b12;
+    z-index:100;
 
-border-top:1px solid #45505d;
+    display:grid;
 
-z-index:100;
+    grid-template-columns:
+    320px
+    1fr
+    300px;
 
-display:grid;
+    align-items:center;
 
-grid-template-columns:
-320px
-1fr
-330px;
-
-align-items:center;
-
-padding:8px 24px;
+    padding:8px 24px;
 }
 
 .current{
-
-display:flex;
-
-align-items:center;
-
-gap:12px;
+    display:flex;
+    align-items:center;
+    gap:12px;
 }
 
 .currentArt{
 
-width:78px;
+    width:78px;
+    height:60px;
 
-height:60px;
+    border-radius:5px;
 
-border-radius:5px;
+    background:
+    linear-gradient(
+        135deg,
+        #985e35,
+        #1c2227
+    );
 
-background:
-linear-gradient(
-135deg,
-#9a6237,
-#1d2227
-);
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-size:28px;
+    font-size:28px;
 }
 
-.currentSong{
-
-font-weight:bold;
-
-font-size:15px;
+.currentTitle{
+    font-weight:bold;
 }
 
 .currentArtist{
 
-display:block;
+    display:block;
 
-color:#9ca7b5;
+    color:#9da8b6;
 
-font-size:12px;
+    font-size:12px;
 
-margin-top:5px;
+    margin-top:5px;
 }
 
 .controls{
 
-display:flex;
+    display:flex;
 
-justify-content:center;
+    align-items:center;
 
-align-items:center;
+    justify-content:center;
 
-gap:20px;
+    gap:17px;
 }
 
 .controls button{
 
-border:0;
+    background:none;
 
-background:none;
+    border:0;
 
-color:white;
+    color:#fff;
 
-font-size:22px;
+    font-size:21px;
 
-cursor:pointer;
+    cursor:pointer;
 }
 
-.controls .bigPlay{
+.bigPlay{
 
-width:56px;
+    width:57px;
+    height:57px;
 
-height:56px;
+    border-radius:50% !important;
 
-border-radius:50%;
+    background:#f6d790 !important;
 
-background:#f5d58f;
-
-color:#111;
-
-font-size:22px;
+    color:#111 !important;
 }
 
-.progressArea{
+.progress{
 
-display:flex;
+    display:flex;
 
-align-items:center;
+    align-items:center;
 
-gap:10px;
+    gap:9px;
 
-font-size:12px;
-
-color:#ddd;
+    font-size:12px;
 }
 
-.progressBar{
+.progressLine{
 
-height:4px;
+    flex:1;
 
-flex:1;
+    height:4px;
 
-background:#5d5b56;
+    background:#575852;
 
-border-radius:5px;
+    border-radius:5px;
 }
 
-.progressBar span{
+.progressLine span{
 
-display:block;
+    display:block;
 
-height:100%;
+    height:100%;
 
-width:28%;
+    width:30%;
 
-background:#e4b75e;
+    background:#e5b85d;
 
-border-radius:5px;
+    border-radius:5px;
 }
 
 /* ================= FOOTER ================= */
 
 .footer{
 
-text-align:center;
+    text-align:center;
 
-padding:35px 20px 120px;
+    color:#778494;
 
-color:#73808f;
+    padding:30px 20px 120px;
 
-font-size:13px;
+    font-size:13px;
 }
 
 /* ================= TABLET ================= */
 
-@media(max-width:1200px){
+@media(max-width:1150px){
 
 .menu{
-gap:15px;
+    gap:14px;
 }
 
 .categories{
-
-grid-template-columns:
-repeat(4,1fr);
+    grid-template-columns:repeat(4,1fr);
 }
 
 .main{
-
-grid-template-columns:
-270px
-1fr;
+    grid-template-columns:270px 1fr;
 }
 
 .rightColumn{
-display:none;
+    display:none;
 }
 
 .player{
+    grid-template-columns:280px 1fr 220px;
+}
 
-grid-template-columns:
-280px
-1fr
-230px;
+.singerCollage{
+    opacity:.35;
 }
 
 }
@@ -990,205 +949,139 @@ grid-template-columns:
 @media(max-width:700px){
 
 .topbar{
-
-height:38px;
-
-padding:0 12px;
-
-font-size:12px;
+    height:38px;
+    padding:0 12px;
+    font-size:12px;
 }
 
 .topbar .right{
-display:none;
+    display:none;
 }
 
 .navbar{
+    height:auto;
+    min-height:85px;
 
-height:auto;
+    padding:12px;
 
-padding:12px;
+    gap:8px;
 
-gap:8px;
-
-flex-wrap:wrap;
+    flex-wrap:wrap;
 }
 
 .logo{
-
-min-width:0;
-
-flex:1;
+    min-width:0;
+    flex:1;
 }
 
-.logoDisc{
-
-width:46px;
-
-height:46px;
+.disc{
+    width:46px;
+    height:46px;
 }
 
 .logo h1{
-
-font-size:23px;
+    font-size:23px;
 }
 
-.logo span{
-
-font-size:9px;
-
-letter-spacing:3px;
+.logo small{
+    font-size:9px;
+    letter-spacing:3px;
 }
 
 .menu{
-
-display:none;
-}
-
-.searchButton{
-
-font-size:26px;
+    display:none;
 }
 
 .hero{
-
-height:270px;
+    min-height:290px;
 }
 
 .heroContent{
-
-width:100%;
-
-padding:15px;
-}
-
-.heroScript{
-
-font-size:29px;
+    width:100%;
+    padding:15px;
 }
 
 .heroTitle{
-
-font-size:48px;
-
-line-height:52px;
+    font-size:48px;
 }
 
-.heroSubtitle{
-
-font-size:18px;
-
-letter-spacing:5px;
+.script{
+    font-size:28px;
 }
 
-.hero::before{
-
-left:-130px;
-
-width:350px;
-
-opacity:.55;
+.heroSub{
+    font-size:18px;
+    letter-spacing:5px;
 }
 
-.hero::after{
+.cassette{
+    left:-180px;
+    opacity:.35;
+}
 
-display:none;
+.singerCollage{
+    right:-90px;
+    opacity:.25;
 }
 
 .categories{
-
-grid-template-columns:
-repeat(2,1fr);
-
-padding:12px;
-
-gap:8px;
+    grid-template-columns:repeat(2,1fr);
+    padding:12px;
 }
 
 .category{
-
-min-height:105px;
-}
-
-.category .icon{
-
-font-size:30px;
+    min-height:105px;
 }
 
 .main{
-
-display:block;
-
-padding:
-0 12px
-20px;
+    display:block;
+    padding:0 12px 20px;
 }
 
 .card{
-
-margin-bottom:12px;
-}
-
-.rightColumn{
-
-display:block;
+    margin-bottom:12px;
 }
 
 .song{
-
-grid-template-columns:
-52px
-1fr
-35px;
+    grid-template-columns:50px 1fr 34px;
 }
 
 .songArt{
-
-width:48px;
-
-height:43px;
+    width:48px;
+    height:43px;
 }
 
 .duration{
-
-display:none;
+    display:none;
 }
 
 .player{
+    height:82px;
 
-height:82px;
+    padding:7px 10px;
 
-padding:7px 10px;
-
-grid-template-columns:
-1fr
-auto;
+    grid-template-columns:1fr auto;
 }
 
 .currentArt{
-
-display:none;
+    display:none;
 }
 
 .controls{
-
-gap:5px;
+    gap:5px;
 }
 
 .controls button{
-
-font-size:18px;
+    font-size:18px;
 }
 
-.controls .bigPlay{
-
-width:52px;
-
-height:52px;
+.bigPlay{
+    width:52px;
+    height:52px;
 }
 
-.progressArea{
-
-display:none;
+.progress{
+    display:none;
 }
 
 }
@@ -1198,33 +1091,31 @@ display:none;
 @media(max-width:430px){
 
 .heroTitle{
-
-font-size:42px;
+    font-size:42px;
 }
 
-.heroScript{
+.script{
+    font-size:25px;
+}
 
-font-size:25px;
+.heroSub{
+    font-size:16px;
 }
 
 .category h3{
-
-font-size:13px;
+    font-size:13px;
 }
 
 .category small{
-
-font-size:11px;
+    font-size:11px;
 }
 
 .songTitle{
-
-font-size:13px;
+    font-size:13px;
 }
 
 .songInfo{
-
-font-size:10px;
+    font-size:10px;
 }
 
 }
@@ -1237,44 +1128,42 @@ font-size:10px;
 <body>
 
 
-<!-- ================= TOP ================= -->
+<!-- TOP BAR -->
 
 <div class="topbar">
 
-<div class="welcome">
-
-🎵 Welcome to 80s & 90s Old Is Gold
-
+<div>
+🎵
+<span>
+Welcome to 80s & 90s Old Is Gold
+</span>
 </div>
 
 <div class="right">
 
-<span>
-❤️ My Favorites
-</span>
+<div>❤️ My Favorites</div>
 
-<span>
-◷ Recently Played
-</span>
+<div>◷ Recently Played</div>
 
+<div>
 <span class="login">
 ♙ Login / Sign Up
 </span>
-
 </div>
 
 </div>
 
+</div>
 
 
-<!-- ================= NAVIGATION ================= -->
+
+<!-- NAVBAR -->
 
 <header class="navbar">
 
-
 <div class="logo">
 
-<div class="logoDisc"></div>
+<div class="disc"></div>
 
 <div>
 
@@ -1282,25 +1171,20 @@ font-size:10px;
 80s & 90s
 </h1>
 
-<span>
+<small>
 OLD IS GOLD
-</span>
+</small>
 
 </div>
 
 </div>
-
 
 
 <nav class="menu">
 
-<a onclick="showAll()">
-HOME
-</a>
+<a onclick="showAll()">HOME</a>
 
-<a onclick="showAll()">
-BROWSE⌄
-</a>
+<a onclick="showAll()">BROWSE⌄</a>
 
 <a onclick="filterCategory('Sad')">
 SAD SONGS
@@ -1314,56 +1198,118 @@ ROMANTIC SONGS
 SINGERS⌄
 </a>
 
-<a>
-PLAYLISTS
-</a>
+<a>PLAYLISTS</a>
 
-<a onclick="top100()">
+<a onclick="topSongs()">
 TOP 100
 </a>
 
-<a>
-ABOUT US
-</a>
+<a>ABOUT US</a>
 
 </nav>
 
 
 <button
-class="searchButton"
-onclick="focusSearch()">
-
+class="search"
+onclick="searchMusic()">
 ⌕
-
 </button>
-
 
 </header>
 
 
 
-<!-- ================= HERO ================= -->
+<!-- HERO BANNER -->
 
 <section class="hero">
 
+
+<div class="cassette"></div>
+
+
+<div class="singerCollage">
+
+<div class="person">
+
+<div class="face"></div>
+
+<div class="personName">
+KISHORE
+</div>
+
+</div>
+
+
+<div class="person">
+
+<div class="face"></div>
+
+<div class="personName">
+LATA
+</div>
+
+</div>
+
+
+<div class="person">
+
+<div class="face"></div>
+
+<div class="personName">
+MUKESH
+</div>
+
+</div>
+
+
+<div class="person">
+
+<div class="face"></div>
+
+<div class="personName">
+RAFI
+</div>
+
+</div>
+
+
+<div class="person">
+
+<div class="face"></div>
+
+<div class="personName">
+ASHA
+</div>
+
+</div>
+
+
+<div class="person">
+
+<div class="face"></div>
+
+<div class="personName">
+MANNA
+</div>
+
+</div>
+
+</div>
+
+
+
 <div class="heroContent">
 
-<div class="heroScript">
-
+<div class="script">
 Relive The Magic of
-
 </div>
 
 <div class="heroTitle">
-
 80s & 90s
-
 </div>
 
-<div class="heroSubtitle">
-
+<div class="heroSub">
 GOLDEN HITS
-
 </div>
 
 <button
@@ -1380,7 +1326,7 @@ onclick="playFirst()">
 
 
 
-<!-- ================= CATEGORIES ================= -->
+<!-- CATEGORIES -->
 
 <section class="categories">
 
@@ -1523,7 +1469,7 @@ Duet Songs
 
 <div
 class="category"
-onclick="top100()">
+onclick="topSongs()">
 
 <div class="icon">
 👑
@@ -1544,16 +1490,16 @@ Top 100
 
 
 
-<!-- ================= MAIN ================= -->
+<!-- MAIN CONTENT -->
 
 <main class="main">
 
 
-<!-- ================= SINGERS ================= -->
+<!-- SINGERS -->
 
 <aside
 class="card"
-id="singerBox">
+id="singerSection">
 
 <div class="heading">
 
@@ -1563,64 +1509,50 @@ TOP SINGERS
 
 </div>
 
-
-<div id="singers">
-</div>
-
+<div id="singers"></div>
 
 </aside>
 
 
 
-<!-- ================= SONGS ================= -->
+<!-- SONGS -->
 
 <section class="card">
 
 <div class="heading">
 
 <h2>
-🎵 TRENDING SONGS
+TRENDING SONGS
 </h2>
 
 <span
 class="view"
 onclick="showAll()">
-
-View All ›
-
+View All
 </span>
 
 </div>
 
-
-<div id="songs">
-</div>
-
+<div id="songList"></div>
 
 </section>
 
 
 
-<!-- ================= RIGHT ================= -->
+<!-- RIGHT SIDE -->
 
 <aside class="rightColumn">
 
 
-<!-- SONG OF DAY -->
-
 <div class="songDay">
 
-<div class="songDayTitle">
-
-SONG OF THE DAY 🎵
-
+<div>
+🎵 SONG OF THE DAY
 </div>
 
 
-<div class="dayImage">
-
+<div class="dayPic">
 🎙️
-
 </div>
 
 
@@ -1638,25 +1570,17 @@ Woh Kaun Thi (1964)
 Lata Mangeshkar
 </small>
 
-
 <p>
-
 "Some memories never fade away..."
-
 </p>
-
 
 <button
 class="songPlay"
 onclick="playSong(0)">
-
 ▶
-
 </button>
 
-
-<div class="clear">
-</div>
+<div class="clear"></div>
 
 </div>
 
@@ -1669,7 +1593,7 @@ onclick="playSong(0)">
 <div class="heading">
 
 <h2>
-🎵 PLAYLISTS
+PLAYLISTS
 </h2>
 
 <span class="view">
@@ -1677,7 +1601,6 @@ View All
 </span>
 
 </div>
-
 
 
 <div class="playItem">
@@ -1705,7 +1628,6 @@ Best of Kishore Kumar
 </div>
 
 
-
 <div class="playItem">
 
 <div class="playThumb">
@@ -1729,7 +1651,6 @@ Best of Mohammed Rafi
 </button>
 
 </div>
-
 
 
 <div class="playItem">
@@ -1757,7 +1678,6 @@ Best of Lata Mangeshkar
 </div>
 
 
-
 <div class="playItem">
 
 <div class="playThumb">
@@ -1781,7 +1701,6 @@ Best of Mukesh
 </button>
 
 </div>
-
 
 
 <div class="playItem">
@@ -1808,18 +1727,15 @@ Best of Asha Bhosle
 
 </div>
 
-
 </div>
 
-
 </aside>
-
 
 </main>
 
 
 
-<!-- ================= PLAYER ================= -->
+<!-- MUSIC PLAYER -->
 
 <div class="player">
 
@@ -1830,11 +1746,10 @@ Best of Asha Bhosle
 💿
 </div>
 
-
 <div>
 
 <div
-class="currentSong"
+class="currentTitle"
 id="currentTitle">
 
 Select a song
@@ -1854,21 +1769,13 @@ id="currentArtist">
 </div>
 
 
-
 <div class="controls">
 
-<button>
-♥
-</button>
+<button>♥</button>
 
-<button>
-⤨
-</button>
+<button>⤨</button>
 
-<button>
-⏮
-</button>
-
+<button>⏮</button>
 
 <button
 class="bigPlay"
@@ -1879,29 +1786,22 @@ onclick="togglePlay()">
 
 </button>
 
+<button>⏭</button>
 
-<button>
-⏭
-</button>
-
-<button>
-↻
-</button>
+<button>↻</button>
 
 </div>
 
 
-
-<div class="progressArea">
+<div class="progress">
 
 <span>
 1:25
 </span>
 
-<div class="progressBar">
+<div class="progressLine">
 
-<span>
-</span>
+<span></span>
 
 </div>
 
@@ -1912,7 +1812,6 @@ onclick="togglePlay()">
 🔊
 
 </div>
-
 
 </div>
 
@@ -1934,12 +1833,11 @@ Timeless Songs • Golden Memories • Evergreen Music
 
 
 
-<!-- ================= JAVASCRIPT ================= -->
-
 <script>
 
+/* ================= SONG DATA ================= */
 
-const songs=[
+const songs = [
 
 [
 "Kahin Door Jab Din Dhal Jaye",
@@ -2201,26 +2099,23 @@ let currentSongs=[...songs];
 let playing=false;
 
 
-
-/* RENDER SONGS */
+/* ================= SHOW SONGS ================= */
 
 function renderSongs(list){
 
-const box=document.getElementById("songs");
+const box=document.getElementById("songList");
 
 box.innerHTML="";
 
-
 list.forEach(function(song,index){
 
-box.innerHTML+=`
+box.innerHTML += `
 
 <div class="song">
 
 <div class="songArt">
 🎵
 </div>
-
 
 <div>
 
@@ -2234,11 +2129,9 @@ ${song[2]} (${song[3]}) • ${song[1]}
 
 </div>
 
-
 <div class="duration">
 ${song[5]}
 </div>
-
 
 <button
 class="songPlay"
@@ -2257,29 +2150,24 @@ onclick="playSong(${index})">
 }
 
 
-
-/* PLAY SONG */
+/* ================= PLAY ================= */
 
 function playSong(index){
 
 let song=currentSongs[index];
 
 if(!song){
-
 song=songs[0];
-
 }
 
 document.getElementById(
 "currentTitle"
 ).innerText=song[0];
 
-
 document.getElementById(
 "currentArtist"
 ).innerText=
 song[2]+" • "+song[1];
-
 
 playing=true;
 
@@ -2290,18 +2178,12 @@ document.getElementById(
 }
 
 
-
-/* PLAY FIRST */
-
 function playFirst(){
 
 playSong(0);
 
 }
 
-
-
-/* PLAY PAUSE */
 
 function togglePlay(){
 
@@ -2315,8 +2197,7 @@ playing ? "❚❚" : "▶";
 }
 
 
-
-/* SHOW ALL */
+/* ================= FILTER ================= */
 
 function showAll(){
 
@@ -2327,14 +2208,10 @@ renderSongs(currentSongs);
 }
 
 
-
-/* CATEGORY */
-
 function filterCategory(category){
 
 currentSongs=
-songs.filter(
-function(song){
+songs.filter(function(song){
 
 return song[4]===category;
 
@@ -2345,10 +2222,21 @@ renderSongs(currentSongs);
 }
 
 
+function filterSinger(name){
 
-/* TOP 100 */
+currentSongs=
+songs.filter(function(song){
 
-function top100(){
+return song[1]===name;
+
+});
+
+renderSongs(currentSongs);
+
+}
+
+
+function topSongs(){
 
 currentSongs=
 songs.slice(0,10);
@@ -2358,13 +2246,12 @@ renderSongs(currentSongs);
 }
 
 
-
-/* SINGERS */
+/* ================= SINGERS ================= */
 
 const singers=[
 
 "Kishore Kumar",
-"Mohammed Rafi",
+" Mohammed Rafi",
 "Mukesh",
 "Lata Mangeshkar",
 "Asha Bhosle",
@@ -2382,20 +2269,19 @@ const singerBox=
 document.getElementById("singers");
 
 
-singers.forEach(
-function(name){
+singers.forEach(function(name){
 
-singerBox.innerHTML+=`
+singerBox.innerHTML += `
 
 <div
 class="singer"
-onclick="filterSinger('${name}')">
+onclick="filterSinger('${name.trim()}')">
 
 <div class="singerPhoto">
 </div>
 
 <div class="singerName">
-${name}
+${name.trim()}
 </div>
 
 <div class="arrow">
@@ -2409,60 +2295,57 @@ ${name}
 });
 
 
-
-/* FILTER SINGER */
-
-function filterSinger(name){
-
-currentSongs=
-songs.filter(
-function(song){
-
-return song[1]===name;
-
-});
-
-renderSongs(currentSongs);
-
-}
-
-
-
-/* SCROLL SINGERS */
-
 function showSingers(){
 
-document
-.getElementById("singerBox")
-.scrollIntoView({
+document.getElementById(
+"singerSection"
+).scrollIntoView({
 behavior:"smooth"
 });
 
 }
 
 
+/* ================= SEARCH ================= */
 
-/* SEARCH */
+function searchMusic(){
 
-function focusSearch(){
+let text=
+prompt("Search singer or song:");
 
-let search=
-document.getElementById("searchBox");
-
-if(search){
-
-search.focus();
-
+if(!text){
+return;
 }
 
-}
+text=text.toLowerCase();
 
+currentSongs=
+songs.filter(function(song){
 
+return (
 
-/* INITIAL LOAD */
+song[0].toLowerCase().includes(text)
+
+||
+
+song[1].toLowerCase().includes(text)
+
+||
+
+song[2].toLowerCase().includes(text)
+
+);
+
+});
 
 renderSongs(currentSongs);
 
+}
+
+
+/* ================= START ================= */
+
+renderSongs(currentSongs);
 
 </script>
 
