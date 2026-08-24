@@ -7,16 +7,23 @@
 <title>80s & 90s Old Is Gold</title>
 
 <style>
+
 *{
     box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
     margin:0;
     background:#080d16;
-    color:white;
+    color:#ffffff;
     font-family:Arial,Helvetica,sans-serif;
 }
+
+/* TOP BAR */
 
 .top{
     background:#05070b;
@@ -24,11 +31,14 @@ body{
     display:flex;
     justify-content:space-between;
     border-bottom:1px solid #263143;
+    font-size:14px;
 }
 
 .top span{
     color:#f3c46b;
 }
+
+/* HEADER */
 
 .header{
     display:flex;
@@ -39,14 +49,14 @@ body{
     border-bottom:1px solid #2b3545;
     position:sticky;
     top:0;
-    z-index:10;
+    z-index:100;
 }
 
 .logo{
     display:flex;
     align-items:center;
     gap:10px;
-    min-width:240px;
+    min-width:245px;
 }
 
 .record{
@@ -54,11 +64,15 @@ body{
     height:50px;
     border-radius:50%;
     border:1px solid #e0c795;
+
     background:
-    radial-gradient(circle,#e0c795 0 5px,
-    #111 6px 12px,
-    #b44c36 13px 16px,
-    #111 17px);
+    radial-gradient(
+        circle,
+        #e0c795 0 5px,
+        #111 6px 12px,
+        #b44c36 13px 16px,
+        #111 17px
+    );
 }
 
 .logo b{
@@ -73,6 +87,8 @@ body{
     font-weight:bold;
 }
 
+/* DESKTOP MENU */
+
 nav{
     display:flex;
     gap:18px;
@@ -81,7 +97,7 @@ nav{
 }
 
 nav a{
-    color:white;
+    color:#ffffff;
     text-decoration:none;
     font-size:13px;
     font-weight:bold;
@@ -91,6 +107,8 @@ nav a{
 nav a:hover{
     color:#f3c46b;
 }
+
+/* SEARCH */
 
 .search{
     width:190px;
@@ -102,12 +120,64 @@ nav a:hover{
     outline:none;
 }
 
+.search::placeholder{
+    color:#8993a3;
+}
+
+/* MOBILE MENU BUTTON */
+
+.menuButton{
+    display:none;
+    background:#111b2b;
+    color:#f3c46b;
+    border:1px solid #39465a;
+    border-radius:8px;
+    padding:9px 13px;
+    font-size:22px;
+    cursor:pointer;
+}
+
+/* MOBILE MENU */
+
+.mobileMenu{
+    display:none;
+    background:#0d1522;
+    border-bottom:1px solid #303b4c;
+    padding:12px 20px;
+}
+
+.mobileMenu a{
+    display:block;
+    padding:13px;
+    color:white;
+    text-decoration:none;
+    border-bottom:1px solid #273142;
+    font-weight:bold;
+}
+
+.mobileMenu a:hover{
+    color:#f3c46b;
+}
+
+/* HERO */
+
 .hero{
     text-align:center;
-    padding:55px 20px;
+    padding:65px 20px;
+
     background:
-    radial-gradient(circle at 30% 50%,#6b3e21 0,transparent 30%),
-    radial-gradient(circle at 70% 50%,#7b4026 0,transparent 30%),
+    radial-gradient(
+        circle at 30% 50%,
+        #6b3e21 0,
+        transparent 30%
+    ),
+
+    radial-gradient(
+        circle at 70% 50%,
+        #7b4026 0,
+        transparent 30%
+    ),
+
     #101923;
 }
 
@@ -119,7 +189,7 @@ nav a:hover{
 
 .hero h1{
     font-size:58px;
-    margin:5px;
+    margin:8px;
     color:#f7ead0;
 }
 
@@ -139,10 +209,18 @@ nav a:hover{
     cursor:pointer;
 }
 
+.btn:hover{
+    background:#ffd88d;
+}
+
+/* MAIN */
+
 .wrap{
     padding:20px;
-    padding-bottom:120px;
+    padding-bottom:130px;
 }
+
+/* CATEGORY */
 
 .categories{
     display:grid;
@@ -157,10 +235,12 @@ nav a:hover{
     padding:22px;
     text-align:center;
     cursor:pointer;
+    transition:.2s;
 }
 
 .category:hover{
     border-color:#f3c46b;
+    transform:translateY(-2px);
 }
 
 .category .icon{
@@ -177,12 +257,16 @@ nav a:hover{
     color:#f3c46b;
 }
 
+/* MAIN GRID */
+
 .main{
     display:grid;
     grid-template-columns:260px 1fr;
     gap:15px;
     margin-top:18px;
 }
+
+/* BOX */
 
 .box{
     background:#101827;
@@ -198,6 +282,8 @@ nav a:hover{
     margin-bottom:12px;
 }
 
+/* SINGERS */
+
 .singer{
     padding:11px 5px;
     border-bottom:1px solid #293343;
@@ -207,6 +293,8 @@ nav a:hover{
 .singer:hover{
     color:#f3c46b;
 }
+
+/* SONG */
 
 .song{
     display:flex;
@@ -220,10 +308,18 @@ nav a:hover{
     width:52px;
     height:52px;
     border-radius:7px;
-    background:linear-gradient(135deg,#9b5e32,#332319);
+
+    background:
+    linear-gradient(
+        135deg,
+        #9b5e32,
+        #332319
+    );
+
     display:flex;
     align-items:center;
     justify-content:center;
+
     font-size:22px;
 }
 
@@ -240,6 +336,8 @@ nav a:hover{
     color:#9da8b8;
 }
 
+/* PLAY BUTTON */
+
 .play{
     width:38px;
     height:38px;
@@ -255,23 +353,43 @@ nav a:hover{
     color:#111;
 }
 
+/* STATUS */
+
 .status{
     color:#9da8b8;
     margin-bottom:12px;
 }
+
+/* YEAR BADGE */
+
+.yearBadge{
+    display:inline-block;
+    padding:3px 7px;
+    border-radius:10px;
+    background:#26344a;
+    color:#f3c46b;
+    font-size:11px;
+}
+
+/* PLAYER */
 
 .player{
     position:fixed;
     bottom:0;
     left:0;
     right:0;
-    height:82px;
+
+    min-height:82px;
+
     background:#050a12;
     border-top:1px solid #394354;
+
     display:flex;
     align-items:center;
+
     padding:10px 20px;
-    z-index:20;
+
+    z-index:200;
 }
 
 .now{
@@ -308,142 +426,510 @@ nav a:hover{
     border-radius:50%;
 }
 
+/* FOOTER */
+
+.footer{
+    text-align:center;
+    padding:35px 20px 110px;
+    color:#7e8999;
+    font-size:13px;
+}
+
+/* MOBILE */
+
 @media(max-width:800px){
 
-    .top-right,
-    nav{
+    .top{
+        padding:9px 12px;
+    }
+
+    .top-right{
         display:none;
     }
 
     .header{
         flex-wrap:wrap;
+        padding:14px;
     }
 
     .logo{
-        width:100%;
+        min-width:0;
+        flex:1;
+    }
+
+    .logo b{
+        font-size:25px;
+    }
+
+    .menuButton{
+        display:block;
+    }
+
+    nav{
+        display:none;
     }
 
     .search{
         width:100%;
+        order:5;
+    }
+
+    .mobileMenu.open{
+        display:block;
+    }
+
+    .hero{
+        padding:55px 15px;
+    }
+
+    .hero h1{
+        font-size:44px;
+    }
+
+    .hero .script{
+        font-size:23px;
+    }
+
+    .hero p{
+        font-size:14px;
     }
 
     .categories{
         grid-template-columns:repeat(2,1fr);
     }
 
+    .category{
+        padding:18px 8px;
+    }
+
+    .category b{
+        font-size:16px;
+    }
+
     .main{
         grid-template-columns:1fr;
     }
 
+    .player{
+        min-height:78px;
+        padding:8px 10px;
+    }
+
     .now{
-        width:45%;
+        width:42%;
+    }
+
+    .now b{
+        font-size:15px;
+    }
+
+    .now small{
+        font-size:12px;
     }
 
     .controls button{
-        margin:0 3px;
+        margin:0 2px;
+        font-size:17px;
+    }
+
+    .controls .mainplay{
+        width:43px;
+        height:43px;
+    }
+}
+
+
+/* SMALL MOBILE */
+
+@media(max-width:430px){
+
+    .logo b{
+        font-size:22px;
+    }
+
+    .logo small{
+        font-size:11px;
+        letter-spacing:2px;
+    }
+
+    .record{
+        width:46px;
+        height:46px;
     }
 
     .hero h1{
-        font-size:42px;
+        font-size:40px;
     }
 
-    .hero .script{
-        font-size:23px;
+    .categories{
+        gap:8px;
     }
+
+    .category{
+        padding:16px 5px;
+    }
+
+    .category .icon{
+        font-size:26px;
+    }
+
+    .song{
+        gap:8px;
+    }
+
+    .cover{
+        width:45px;
+        height:45px;
+    }
+
+    .info b{
+        font-size:14px;
+    }
+
+    .info small{
+        font-size:11px;
+    }
+
+    .play{
+        width:34px;
+        height:34px;
+    }
+
 }
+
 </style>
+
 </head>
 
 <body>
 
+
+<!-- TOP BAR -->
+
 <div class="top">
-    <div>🎵 <span>Welcome to 80s & 90s Old Is Gold</span></div>
-    <div class="top-right">❤️ My Favorites &nbsp;&nbsp; ◷ Recently Played</div>
+
+<div>
+🎵 <span>Welcome to 80s & 90s Old Is Gold</span>
 </div>
 
+<div class="top-right">
+❤️ My Favorites &nbsp;&nbsp; ◷ Recently Played
+</div>
+
+</div>
+
+
+
+<!-- HEADER -->
 
 <header class="header">
 
-<div class="logo">
-    <div class="record"></div>
 
-    <div>
-        <b>80s & 90s</b>
-        <small>OLD IS GOLD</small>
-    </div>
+<div class="logo">
+
+<div class="record"></div>
+
+<div>
+
+<b>80s & 90s</b>
+
+<small>
+OLD IS GOLD
+</small>
+
+</div>
+
 </div>
 
 
+
+<button
+class="menuButton"
+onclick="toggleMenu()">
+
+☰
+
+</button>
+
+
+
 <nav>
-    <a onclick="showAll()">HOME</a>
-    <a onclick="filterSongs('Sad')">SAD SONGS</a>
-    <a onclick="filterSongs('Romantic')">ROMANTIC</a>
-    <a onclick="filterSongs('Party')">PARTY</a>
-    <a onclick="showAll()">ALL SONGS</a>
+
+<a onclick="showAll()">HOME</a>
+
+<a onclick="filterByEra(80)">80s</a>
+
+<a onclick="filterByEra(90)">90s</a>
+
+<a onclick="filterSongs('Sad')">SAD SONGS</a>
+
+<a onclick="filterSongs('Romantic')">ROMANTIC</a>
+
+<a onclick="filterSongs('Party')">PARTY</a>
+
+<a onclick="showAll()">ALL SONGS</a>
+
 </nav>
 
 
+
 <input
+
 class="search"
+
 id="searchBox"
-placeholder="🔍 Search"
-oninput="searchSongs()">
+
+placeholder="🔍 Search song / singer..."
+
+oninput="searchSongs()"
+
+>
 
 </header>
 
 
+
+<!-- MOBILE MENU -->
+
+<div
+class="mobileMenu"
+id="mobileMenu">
+
+<a onclick="showAll();closeMenu()">🏠 HOME</a>
+
+<a onclick="filterByEra(80);closeMenu()">🎵 80s SONGS</a>
+
+<a onclick="filterByEra(90);closeMenu()">🎵 90s SONGS</a>
+
+<a onclick="filterSongs('Sad');closeMenu()">💔 SAD SONGS</a>
+
+<a onclick="filterSongs('Romantic');closeMenu()">❤️ ROMANTIC SONGS</a>
+
+<a onclick="filterSongs('Party');closeMenu()">🎉 PARTY SONGS</a>
+
+<a onclick="showAll();closeMenu()">⭐ ALL SONGS</a>
+
+</div>
+
+
+
+<!-- HERO -->
+
 <section class="hero">
 
-<div class="script">Relive The Magic of</div>
+<div class="script">
+Relive The Magic of
+</div>
 
-<h1>80s & 90s</h1>
+<h1>
+80s & 90s
+</h1>
 
-<p>GOLDEN HITS</p>
+<p>
+GOLDEN HITS
+</p>
 
-<button class="btn" onclick="playFirst()">
+<button
+class="btn"
+onclick="playFirst()">
+
 ▶ PLAY NOW
+
 </button>
 
 </section>
 
 
+
+<!-- MAIN -->
+
 <main class="wrap">
 
 
+
+<!-- CATEGORIES -->
+
 <section class="categories">
 
-<div class="category" onclick="filterSongs('Sad')">
-<div class="icon">💔</div>
-<b>Sad Songs</b>
-<small>Heart Touching</small>
+
+<div
+class="category"
+onclick="filterByEra(80)">
+
+<div class="icon">
+📼
+</div>
+
+<b>
+80s Songs
+</b>
+
+<small>
+Golden 80s
+</small>
+
 </div>
 
 
-<div class="category" onclick="filterSongs('Romantic')">
-<div class="icon">❤️</div>
-<b>Romantic Songs</b>
-<small>Love Classics</small>
+
+<div
+class="category"
+onclick="filterByEra(90)">
+
+<div class="icon">
+📻
+</div>
+
+<b>
+90s Songs
+</b>
+
+<small>
+Golden 90s
+</small>
+
 </div>
 
 
-<div class="category" onclick="filterSongs('Party')">
-<div class="icon">🎉</div>
-<b>Party Songs</b>
-<small>Evergreen Hits</small>
+
+<div
+class="category"
+onclick="filterSongs('Sad')">
+
+<div class="icon">
+💔
+</div>
+
+<b>
+Sad Songs
+</b>
+
+<small>
+Heart Touching
+</small>
+
 </div>
 
 
-<div class="category" onclick="showAll()">
-<div class="icon">⭐</div>
-<b>All Songs</b>
-<small>Old Is Gold</small>
+
+<div
+class="category"
+onclick="filterSongs('Romantic')">
+
+<div class="icon">
+❤️
 </div>
+
+<b>
+Romantic Songs
+</b>
+
+<small>
+Love Classics
+</small>
+
+</div>
+
 
 </section>
 
 
+
+<!-- SECOND CATEGORY ROW -->
+
+<section
+class="categories"
+style="margin-top:12px;">
+
+
+<div
+class="category"
+onclick="filterSongs('Party')">
+
+<div class="icon">
+🎉
+</div>
+
+<b>
+Party Songs
+</b>
+
+<small>
+Evergreen Hits
+</small>
+
+</div>
+
+
+
+<div
+class="category"
+onclick="showAll()">
+
+<div class="icon">
+⭐
+</div>
+
+<b>
+All Songs
+</b>
+
+<small>
+Old Is Gold
+</small>
+
+</div>
+
+
+<div
+class="category"
+onclick="showAll()">
+
+<div class="icon">
+🎤
+</div>
+
+<b>
+Top Singers
+</b>
+
+<small>
+Singer Collection
+</small>
+
+</div>
+
+
+<div
+class="category"
+onclick="playFirst()">
+
+<div class="icon">
+▶️
+</div>
+
+<b>
+Play Music
+</b>
+
+<small>
+Start Listening
+</small>
+
+</div>
+
+
+</section>
+
+
+
+<!-- CONTENT -->
+
 <section class="main">
 
+
+
+<!-- SINGERS -->
 
 <aside class="box">
 
@@ -456,14 +942,21 @@ TOP SINGERS
 </aside>
 
 
+
+<!-- SONGS -->
+
 <section class="box">
 
 <div class="title">
 SONG COLLECTION
 </div>
 
-<div class="status" id="status">
+<div
+class="status"
+id="status">
+
 Loading songs...
+
 </div>
 
 <div id="songs"></div>
@@ -473,10 +966,15 @@ Loading songs...
 
 </section>
 
+
 </main>
 
 
+
+<!-- PLAYER -->
+
 <div class="player">
+
 
 <div class="now">
 
@@ -491,24 +989,54 @@ Select a song
 </div>
 
 
+
 <div class="controls">
 
-<button>🔀</button>
+<button>
+🔀
+</button>
 
-<button>⏮</button>
+<button>
+⏮
+</button>
 
 <button
 class="mainplay"
 id="playButton"
 onclick="togglePlay()">
+
 ▶
+
 </button>
 
-<button>⏭</button>
+<button>
+⏭
+</button>
 
-<button>🔁</button>
+<button>
+🔁
+</button>
 
 </div>
+
+
+</div>
+
+
+
+<!-- FOOTER -->
+
+<div class="footer">
+
+🎵 80s & 90s OLD IS GOLD
+
+<br><br>
+
+A tribute to timeless music and golden memories.
+
+<br><br>
+
+© 2026 Old Is Gold
 
 </div>
 
@@ -516,7 +1044,12 @@ onclick="togglePlay()">
 
 <script>
 
+
+/* SONG DATABASE */
+
+
 const songs = [
+
 
 {
 singer:"Kishore Kumar",
@@ -526,6 +1059,7 @@ year:1983,
 category:"Romantic"
 },
 
+
 {
 singer:"Kishore Kumar",
 song:"Humein Tumse Pyar Kitna",
@@ -533,6 +1067,7 @@ movie:"Kudrat",
 year:1981,
 category:"Romantic"
 },
+
 
 {
 singer:"Kishore Kumar",
@@ -542,6 +1077,7 @@ year:1987,
 category:"Sad"
 },
 
+
 {
 singer:"Kishore Kumar",
 song:"Saagar Kinare Dil Yeh Pukare",
@@ -549,6 +1085,7 @@ movie:"Saagar",
 year:1985,
 category:"Romantic"
 },
+
 
 {
 singer:"Kishore Kumar",
@@ -558,6 +1095,7 @@ year:1981,
 category:"Romantic"
 },
 
+
 {
 singer:"Mohammed Rafi",
 song:"Dard-E-Dil",
@@ -565,6 +1103,7 @@ movie:"Karz",
 year:1980,
 category:"Sad"
 },
+
 
 {
 singer:"Mohammed Rafi",
@@ -574,6 +1113,7 @@ year:1977,
 category:"Sad"
 },
 
+
 {
 singer:"Mohammed Rafi",
 song:"Chand Mera Dil",
@@ -581,6 +1121,7 @@ movie:"Hum Kisise Kum Naheen",
 year:1977,
 category:"Romantic"
 },
+
 
 {
 singer:"Lata Mangeshkar",
@@ -590,6 +1131,7 @@ year:1983,
 category:"Sad"
 },
 
+
 {
 singer:"Lata Mangeshkar",
 song:"Aye Dil-E-Nadan",
@@ -597,6 +1139,7 @@ movie:"Razia Sultan",
 year:1983,
 category:"Sad"
 },
+
 
 {
 singer:"Lata Mangeshkar",
@@ -606,6 +1149,7 @@ year:1966,
 category:"Sad"
 },
 
+
 {
 singer:"Asha Bhosle",
 song:"Mera Kuchh Samaan",
@@ -613,6 +1157,7 @@ movie:"Ijaazat",
 year:1987,
 category:"Sad"
 },
+
 
 {
 singer:"Asha Bhosle",
@@ -622,6 +1167,7 @@ year:1987,
 category:"Romantic"
 },
 
+
 {
 singer:"Mukesh",
 song:"Kahin Door Jab Din Dhal Jaye",
@@ -629,6 +1175,7 @@ movie:"Anand",
 year:1971,
 category:"Sad"
 },
+
 
 {
 singer:"Mukesh",
@@ -638,6 +1185,7 @@ year:1970,
 category:"Sad"
 },
 
+
 {
 singer:"Manna Dey",
 song:"Zindagi Kaisi Hai Paheli",
@@ -645,6 +1193,7 @@ movie:"Anand",
 year:1971,
 category:"Sad"
 },
+
 
 {
 singer:"Kumar Sanu",
@@ -654,6 +1203,7 @@ year:1991,
 category:"Romantic"
 },
 
+
 {
 singer:"Kumar Sanu",
 song:"Do Dil Mil Rahe Hain",
@@ -661,6 +1211,7 @@ movie:"Pardes",
 year:1997,
 category:"Romantic"
 },
+
 
 {
 singer:"Kumar Sanu",
@@ -670,6 +1221,7 @@ year:1995,
 category:"Romantic"
 },
 
+
 {
 singer:"Kumar Sanu",
 song:"Nazar Ke Samne",
@@ -677,6 +1229,7 @@ movie:"Aashiqui",
 year:1990,
 category:"Romantic"
 },
+
 
 {
 singer:"Udit Narayan",
@@ -686,6 +1239,7 @@ year:1992,
 category:"Romantic"
 },
 
+
 {
 singer:"Udit Narayan",
 song:"Pardesi Pardesi",
@@ -693,6 +1247,7 @@ movie:"Raja Hindustani",
 year:1996,
 category:"Sad"
 },
+
 
 {
 singer:"Udit Narayan",
@@ -702,6 +1257,7 @@ year:1995,
 category:"Romantic"
 },
 
+
 {
 singer:"Alka Yagnik",
 song:"Dilbar Dilbar",
@@ -709,6 +1265,7 @@ movie:"Sirf Tum",
 year:1999,
 category:"Romantic"
 },
+
 
 {
 singer:"Alka Yagnik",
@@ -718,6 +1275,7 @@ year:1994,
 category:"Romantic"
 },
 
+
 {
 singer:"Anuradha Paudwal",
 song:"Dheere Dheere Se Meri Zindagi Mein Aana",
@@ -725,6 +1283,7 @@ movie:"Aashiqui",
 year:1990,
 category:"Romantic"
 },
+
 
 {
 singer:"Abhijeet",
@@ -734,6 +1293,7 @@ year:1992,
 category:"Romantic"
 },
 
+
 {
 singer:"Hariharan",
 song:"Tu Hi Re",
@@ -742,6 +1302,7 @@ year:1995,
 category:"Romantic"
 },
 
+
 {
 singer:"Jagjit Singh",
 song:"Tum Itna Jo Muskura Rahe Ho",
@@ -749,6 +1310,7 @@ movie:"Arth",
 year:1982,
 category:"Sad"
 },
+
 
 {
 singer:"Pankaj Udhas",
@@ -761,52 +1323,57 @@ category:"Sad"
 ];
 
 
-let currentSongs = songs;
+let currentSongs=songs;
 
-let playing = false;
+let playing=false;
 
 
 
 /* SINGER LIST */
 
-const singers =
-[...new Set(songs.map(song => song.singer))];
+
+const singers=
+[...new Set(
+songs.map(song=>song.singer)
+)];
 
 
-document.getElementById("singers").innerHTML =
-singers.map(singer =>
+document.getElementById("singers").innerHTML=
 
-`<div
+singers.map(singer=>`
+
+<div
 class="singer"
 onclick="filterSinger('${singer}')">
 
 🎤 ${singer}
 
-</div>`
+</div>
 
-).join("");
+`).join("");
 
 
 
-/* SHOW SONGS */
+/* DISPLAY SONGS */
+
 
 function renderSongs(list){
 
-document.getElementById("status").innerText =
-list.length + " songs available";
+document.getElementById("status").innerText=
+list.length+" songs available";
 
 
-document.getElementById("songs").innerHTML =
+document.getElementById("songs").innerHTML=
 
-list.map((song,index) =>
-
-`
+list.map((song,index)=>`
 
 <div class="song">
+
 
 <div class="cover">
 🎵
 </div>
+
 
 <div class="info">
 
@@ -814,11 +1381,25 @@ list.map((song,index) =>
 ${song.song}
 </b>
 
+
 <small>
-${song.singer} •
-${song.movie} •
-${song.year} •
+
+${song.singer}
+
+•
+
+${song.movie}
+
+•
+
+<span class="yearBadge">
+${song.year}
+</span>
+
+•
+
 ${song.category}
+
 </small>
 
 </div>
@@ -832,26 +1413,85 @@ onclick="selectSong(${index})">
 
 </button>
 
+
 </div>
 
-`
-
-).join("");
+`).join("");
 
 }
 
 
 
-/* FILTER */
+/* SHOW ALL */
+
+
+function showAll(){
+
+currentSongs=songs;
+
+renderSongs(currentSongs);
+
+window.scrollTo({
+top:document.querySelector(".main").offsetTop-70,
+behavior:"smooth"
+});
+
+}
+
+
+
+/* CATEGORY */
+
 
 function filterSongs(category){
 
-currentSongs =
-songs.filter(song =>
-song.category === category
+currentSongs=
+songs.filter(song=>
+song.category===category
 );
 
 renderSongs(currentSongs);
+
+window.scrollTo({
+top:document.querySelector(".main").offsetTop-70,
+behavior:"smooth"
+});
+
+}
+
+
+
+/* 80s / 90s */
+
+
+function filterByEra(era){
+
+if(era===80){
+
+currentSongs=
+songs.filter(song=>
+song.year>=1980 &&
+song.year<=1989
+);
+
+}
+
+else{
+
+currentSongs=
+songs.filter(song=>
+song.year>=1990 &&
+song.year<=1999
+);
+
+}
+
+renderSongs(currentSongs);
+
+window.scrollTo({
+top:document.querySelector(".main").offsetTop-70,
+behavior:"smooth"
+});
 
 }
 
@@ -859,14 +1499,20 @@ renderSongs(currentSongs);
 
 /* SINGER */
 
+
 function filterSinger(name){
 
-currentSongs =
-songs.filter(song =>
-song.singer === name
+currentSongs=
+songs.filter(song=>
+song.singer===name
 );
 
 renderSongs(currentSongs);
+
+window.scrollTo({
+top:document.querySelector(".main").offsetTop-70,
+behavior:"smooth"
+});
 
 }
 
@@ -874,37 +1520,36 @@ renderSongs(currentSongs);
 
 /* SEARCH */
 
+
 function searchSongs(){
 
-const text =
-document.getElementById("searchBox")
+const text=
+document
+.getElementById("searchBox")
 .value
 .toLowerCase();
 
-currentSongs =
-songs.filter(song =>
 
-(song.song +
-" " +
-song.singer +
-" " +
-song.movie)
+currentSongs=
+
+songs.filter(song=>
+
+(
+song.song+
+" "+
+song.singer+
+" "+
+song.movie+
+" "+
+song.year
+)
+
 .toLowerCase()
+
 .includes(text)
 
 );
 
-renderSongs(currentSongs);
-
-}
-
-
-
-/* ALL */
-
-function showAll(){
-
-currentSongs = songs;
 
 renderSongs(currentSongs);
 
@@ -914,35 +1559,41 @@ renderSongs(currentSongs);
 
 /* SELECT SONG */
 
+
 function selectSong(index){
 
-const song =
+const song=
 currentSongs[index];
 
+
 document.getElementById("nowTitle")
-.innerText =
+.innerText=
 song.song;
 
+
 document.getElementById("nowArtist")
-.innerText =
-song.singer +
-" • " +
+.innerText=
+song.singer+
+" • "+
 song.movie;
 
-playing = true;
+
+playing=true;
+
 
 document.getElementById("playButton")
-.innerText = "❚❚";
+.innerText="❚❚";
 
 }
 
 
 
-/* PLAY FIRST */
+/* FIRST SONG */
+
 
 function playFirst(){
 
-if(currentSongs.length > 0){
+if(currentSongs.length>0){
 
 selectSong(0);
 
@@ -952,15 +1603,40 @@ selectSong(0);
 
 
 
-/* PLAY / PAUSE */
+/* PLAY PAUSE */
+
 
 function togglePlay(){
 
-playing = !playing;
+playing=!playing;
 
 document.getElementById("playButton")
-.innerText =
+.innerText=
 playing ? "❚❚" : "▶";
+
+}
+
+
+
+/* MOBILE MENU */
+
+
+function toggleMenu(){
+
+document
+.getElementById("mobileMenu")
+.classList
+.toggle("open");
+
+}
+
+
+function closeMenu(){
+
+document
+.getElementById("mobileMenu")
+.classList
+.remove("open");
 
 }
 
@@ -971,6 +1647,7 @@ playing ? "❚❚" : "▶";
 renderSongs(songs);
 
 </script>
+
 
 </body>
 </html>
