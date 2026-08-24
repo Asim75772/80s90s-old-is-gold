@@ -3,712 +3,958 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>80s & 90s Old Is Gold</title>
 
 <style>
-*{box-sizing:border-box}
+
+*{
+box-sizing:border-box;
+}
 
 body{
 margin:0;
-background:#07101a;
-color:#f7f0df;
-font-family:Arial,Helvetica,sans-serif
+background:#070c14;
+color:#fff;
+font-family:Arial,Helvetica,sans-serif;
 }
 
-button,input{font:inherit}
+button,input{
+font:inherit;
+}
+
+button{
+cursor:pointer;
+}
+
+/* TOP BAR */
 
 .top{
 height:44px;
-background:#070b10;
-border-bottom:1px solid #39404a;
+background:#05080d;
+border-bottom:1px solid #293442;
 display:flex;
 align-items:center;
 justify-content:space-between;
 padding:0 28px;
-font-size:14px
+font-size:14px;
 }
 
-.gold{color:#f3c46b}
+.gold{
+color:#efc56f;
+}
+
+
+/* NAVIGATION */
 
 .nav{
 height:88px;
 background:#080e17;
-border-bottom:1px solid #37404c;
+border-bottom:1px solid #334050;
 display:flex;
 align-items:center;
 padding:0 24px;
-gap:28px
+gap:25px;
 }
 
 .brand{
 display:flex;
 align-items:center;
 gap:10px;
-min-width:270px
+min-width:270px;
 }
 
-.disc{
+.vinyl{
 width:58px;
 height:58px;
 border-radius:50%;
-border:1px solid #c7a56b;
+border:1px solid #d5b26b;
+
 background:
 radial-gradient(
 circle,
-#d8b875 0 6px,
-#c43e31 7px 15px,
-#151a20 16px 24px,
-#0b0f14 25px
-)
+#e5c27b 0 6px,
+#c83e31 7px 15px,
+#111923 16px 24px,
+#05090e 25px
+);
 }
 
 .brand h1{
-font-size:28px;
 margin:0;
-color:#f8eddb
+font-size:28px;
+color:#f8ead0;
 }
 
 .brand small{
-color:#eab95e;
-letter-spacing:4px;
-font-weight:bold
-}
-
-.links{
-display:flex;
-gap:28px;
-flex:1;
-justify-content:center
-}
-
-.links a{
-color:#eee;
-text-decoration:none;
-font-size:14px;
+display:block;
+color:#efc56f;
 font-weight:bold;
-cursor:pointer
+letter-spacing:4px;
+margin-top:3px;
 }
 
-.links a:hover{
-color:#f3c46b
-}
-
-.search{
-width:190px;
-background:transparent;
-border:0;
-color:white;
-font-size:27px;
-text-align:right;
-outline:none
-}
-
-.hero{
-height:285px;
+.navlinks{
 display:flex;
 align-items:center;
 justify-content:center;
-text-align:center;
+gap:25px;
+flex:1;
+}
+
+.navlinks a{
+color:#eee;
+text-decoration:none;
+font-weight:bold;
+white-space:nowrap;
+cursor:pointer;
+}
+
+.navlinks a:hover{
+color:#efc56f;
+}
+
+.search{
+width:42px;
+border:0;
+background:transparent;
+color:#fff;
+font-size:28px;
+outline:none;
+}
+
+
+/* HERO */
+
+.hero{
+height:285px;
 position:relative;
 overflow:hidden;
+display:grid;
+place-items:center;
+text-align:center;
+
 background:
 linear-gradient(
 90deg,
-#1a1b1a,
-#15202a 50%,
-#231c18
-)
+#171c1d,
+#15212b 48%,
+#241d18
+);
 }
 
 .hero:before{
 content:"";
 position:absolute;
-left:-50px;
-width:420px;
-height:260px;
-border-radius:20px;
-opacity:.45;
+inset:-20%;
+opacity:.35;
+
 background:
 repeating-linear-gradient(
 0deg,
-#8d6b45 0 9px,
-#2b221a 10px 18px
+#806346 0 11px,
+#1b2025 12px 23px,
+#513e2d 24px 30px
 );
-transform:rotate(-8deg)
+
+transform:rotate(-6deg);
 }
 
 .hero:after{
 content:"";
 position:absolute;
-right:-40px;
-top:0;
-width:470px;
-height:285px;
-opacity:.45;
+right:-30px;
+top:-20px;
+width:50%;
+height:120%;
+
 background:
 radial-gradient(
-circle at 20% 30%,
-#c9a06a 0 12%,
-transparent 13%
+circle at 18% 22%,
+#d0ab73 0 5%,
+transparent 5.5%
 ),
+
 radial-gradient(
-circle at 55% 42%,
-#a57d54 0 13%,
-transparent 14%
+circle at 42% 58%,
+#ae875c 0 7%,
+transparent 7.5%
 ),
+
 radial-gradient(
-circle at 80% 65%,
-#c6a06d 0 12%,
-transparent 13%
-)
+circle at 76% 30%,
+#c9a26e 0 6%,
+transparent 6.5%
+),
+
+linear-gradient(
+120deg,
+transparent 20%,
+#2b211b 21% 27%,
+transparent 28%
+);
+
+opacity:.45;
 }
 
 .heroContent{
 position:relative;
-z-index:2
+z-index:2;
 }
 
 .script{
-font-family:Georgia,serif;
-font-style:italic;
-color:#f1b94d;
-font-size:39px
+font:italic 40px Georgia,serif;
+color:#f0b84f;
 }
 
 .hero h2{
-font-size:70px;
+font-size:72px;
 letter-spacing:3px;
 margin:0;
-color:#f7ead0;
-text-shadow:2px 2px #292016
+color:#f8ead0;
+text-shadow:3px 3px #31271b;
 }
 
 .hero p{
-font-size:27px;
-letter-spacing:8px;
-color:#f2bd59;
 margin:4px 0 18px;
-font-weight:bold
+font-size:28px;
+letter-spacing:9px;
+color:#f1bd58;
+font-weight:800;
 }
 
 .playNow{
 border:0;
 border-radius:28px;
-background:#f5d28e;
-padding:12px 34px;
-font-weight:bold;
-cursor:pointer
+padding:13px 34px;
+background:#f6d18c;
+color:#17120c;
+font-weight:800;
 }
 
 .playNow:hover{
-background:#ffd98f
+background:#ffd990;
 }
 
-.cats{
+
+/* CATEGORY */
+
+.categories{
 display:grid;
 grid-template-columns:repeat(8,1fr);
-gap:8px;
-padding:16px 24px
+gap:9px;
+padding:16px 24px;
 }
 
 .cat{
-background:#101a28;
-border:1px solid #344052;
-border-radius:10px;
-text-align:center;
-padding:14px 5px;
-cursor:pointer;
 min-height:105px;
-transition:.2s
+padding:12px 5px;
+
+border:1px solid #334254;
+border-radius:10px;
+
+background:#0f1927;
+
+text-align:center;
+transition:.2s;
 }
 
 .cat:hover{
-border-color:#d7ae62;
-transform:translateY(-2px)
+border-color:#d9b56c;
+transform:translateY(-2px);
 }
 
-.emoji{
-font-size:34px
+.cat .ico{
+font-size:33px;
 }
 
 .cat b{
 display:block;
-font-size:14px;
-margin:6px
+margin:6px 0;
 }
 
 .cat small{
-color:#c9a96d
+color:#c9a86d;
 }
 
-.layout{
+
+/* MAIN CONTENT */
+
+.content{
 display:grid;
-grid-template-columns:305px 1fr 300px;
+grid-template-columns:
+305px
+minmax(0,1fr)
+305px;
+
 gap:16px;
-padding:0 24px 110px
+
+padding:
+0 24px
+115px;
 }
 
 .panel{
-background:#0d1724;
-border:1px solid #344052;
-border-radius:9px;
-padding:16px
+background:#0d1622;
+border:1px solid #344153;
+border-radius:10px;
+padding:16px;
 }
 
 .panelTitle{
-color:#e9b958;
-font-weight:bold;
 font-size:19px;
-border-bottom:1px solid #293442;
-padding-bottom:12px;
-margin-bottom:4px
+font-weight:800;
+color:#e8b95c;
+
+border-bottom:
+1px solid #293543;
+
+padding-bottom:11px;
+margin-bottom:3px;
 }
+
+
+/* SINGERS */
 
 .singer{
 display:flex;
 align-items:center;
 gap:10px;
+
 padding:10px 0;
-border-bottom:1px solid #283241;
-cursor:pointer
+
+border-bottom:
+1px solid #283341;
+
+cursor:pointer;
 }
 
 .singer:hover{
-color:#f3c46b
+color:#efc56f;
 }
 
-.face{
+.avatar{
 width:34px;
 height:34px;
 border-radius:50%;
+
+border:1px solid #9a7b4c;
+
 background:
 radial-gradient(
-circle at 50% 35%,
-#d6b080 0 12%,
-#44352d 13% 35%,
-#1b2027 36%
+circle at 50% 36%,
+#d6ad7b 0 12%,
+#4b3830 13% 35%,
+#181e26 36%
 );
-border:1px solid #8d744e
 }
 
-.singer span:last-child{
+.singer .arrow{
 margin-left:auto;
-color:#aaa
+color:#aaa;
+font-size:20px;
 }
+
+
+/* SONG */
 
 .song{
 display:grid;
-grid-template-columns:60px 1fr 48px 35px;
+
+grid-template-columns:
+60px
+minmax(0,1fr)
+48px
+36px;
+
 gap:10px;
+
 align-items:center;
+
 padding:8px 0;
-border-bottom:1px solid #293442
+
+border-bottom:
+1px solid #293442;
 }
 
-.thumb{
+.art{
 width:58px;
 height:44px;
+
 border-radius:5px;
+
 background:
 linear-gradient(
 135deg,
-#755037,
-#181c22
+#9a653a,
+#20252b 58%,
+#4e3a2b
 );
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:20px
+
+display:grid;
+place-items:center;
+
+font-size:20px;
 }
 
 .song b{
 display:block;
-font-size:15px;
-margin-bottom:4px
+
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
 }
 
 .song small{
-color:#9ea7b4
+display:block;
+
+color:#9ba8b7;
+
+margin-top:4px;
+
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
 }
 
-.duration{
+.time{
 color:#ddd;
-font-size:13px
+font-size:12px;
 }
 
-.circlePlay{
-width:30px;
-height:30px;
+.play{
+width:31px;
+height:31px;
+
 border-radius:50%;
-border:1px solid #c4a56c;
+
+border:
+1px solid #c8a86b;
+
 background:transparent;
+
 color:#fff;
-cursor:pointer
 }
 
-.circlePlay:hover{
-background:#f3c46b;
-color:#111
+.play:hover{
+background:#efc56f;
+color:#111;
 }
+
+
+/* SONG OF DAY */
 
 .day{
-background:#e9d2a9;
-color:#211b13;
+background:#ead3aa;
+color:#241c12;
+
 border-radius:10px;
-padding:15px;
+
+padding:14px;
+
 margin-bottom:12px;
-min-height:210px
+
+min-height:205px;
 }
 
-.day .thumb{
+.dayArt{
+width:100px;
+height:90px;
+
 float:left;
-margin-right:12px;
+
+margin:
+10px 12px
+6px 0;
+
+border-radius:6px;
+
 background:
 linear-gradient(
 135deg,
-#75503b,
-#2b1d18
-)
+#6d4936,
+#251b18
+);
+
+display:grid;
+place-items:center;
+
+font-size:40px;
 }
 
 .day h3{
-margin:10px 0 5px
+margin:
+10px 0 5px;
 }
 
 .day p{
-font-size:12px
+font-size:12px;
 }
 
+.clear{
+clear:both;
+}
+
+
+/* PLAYLIST */
+
 .playlist{
-background:#0d2a27;
-border-color:#3e5a53
+background:#12342f;
+border-color:#3d5b55;
 }
 
 .pl{
 display:flex;
 align-items:center;
 gap:10px;
+
 padding:10px 0;
-border-bottom:1px solid #2f4a46
+
+border-bottom:
+1px solid #2c4b46;
 }
 
-.pl .thumb{
-width:45px;
-height:40px
+.plArt{
+width:44px;
+height:38px;
+
+border-radius:5px;
+
+background:#65422f;
+
+display:grid;
+place-items:center;
 }
 
 .pl small{
-color:#a9b9b4
+display:block;
+
+color:#a9b9b4;
+
+margin-top:3px;
 }
 
 .pl button{
 margin-left:auto;
-border:1px solid #a8a06d;
+
+border:
+1px solid #bba66e;
+
 background:transparent;
-color:white;
+
+color:#fff;
+
+width:29px;
+height:29px;
+
 border-radius:50%;
-width:28px;
-height:28px
 }
+
+
+/* PLAYER */
 
 .player{
 position:fixed;
+
 left:0;
 right:0;
 bottom:0;
-height:92px;
-background:#080d14;
-border-top:1px solid #3d4653;
+
+height:94px;
+
+background:#070c13;
+
+border-top:
+1px solid #3c4653;
+
+z-index:50;
+
 display:grid;
-grid-template-columns:310px 1fr 260px;
+
+grid-template-columns:
+310px
+1fr
+280px;
+
 align-items:center;
-padding:10px 24px;
-z-index:10
+
+padding:9px 24px;
 }
 
 .now{
 display:flex;
+align-items:center;
 gap:12px;
-align-items:center
 }
 
-.now .thumb{
+.nowArt{
 width:80px;
-height:58px
+height:60px;
+
+border-radius:5px;
+
+background:
+linear-gradient(
+135deg,
+#8c5938,
+#191e24
+);
+
+display:grid;
+place-items:center;
+
+font-size:27px;
 }
 
 .now b{
-display:block
+display:block;
 }
 
 .now small{
 display:block;
-color:#9ea7b4;
-margin-top:4px
+
+color:#9ba8b7;
+
+margin-top:4px;
 }
 
 .controls{
-text-align:center
+text-align:center;
 }
 
 .controls button{
-background:transparent;
-color:white;
 border:0;
-font-size:24px;
-margin:0 8px;
-cursor:pointer
+background:transparent;
+color:#fff;
+
+font-size:22px;
+
+margin:
+0 7px;
 }
 
 .controls .main{
-width:52px;
-height:52px;
+width:54px;
+height:54px;
+
 border-radius:50%;
-background:#f1d8a2;
-color:#111
+
+background:#f8ead0;
+
+color:#111;
 }
 
 .progress{
 display:flex;
+
 align-items:center;
-gap:10px;
+
+gap:8px;
+
+font-size:12px;
+
 color:#ddd;
-font-size:12px
 }
 
 .bar{
 height:4px;
-background:#7d725f;
+
+background:#756d5c;
+
 flex:1;
-border-radius:3px
+
+border-radius:3px;
 }
+
+.bar span{
+display:block;
+
+height:100%;
+
+width:28%;
+
+background:#e2bd72;
+
+border-radius:3px;
+}
+
+
+/* FOOTER */
 
 .footer{
 text-align:center;
-padding:35px 20px 120px;
-color:#7e8999;
-font-size:13px
+
+color:#788594;
+
+padding:
+30px 20px
+120px;
 }
 
-@media(max-width:1100px){
 
-.links{
-gap:14px
+/* TABLET */
+
+@media(max-width:1150px){
+
+.navlinks{
+gap:13px;
 }
 
-.cats{
-grid-template-columns:repeat(4,1fr)
+.categories{
+grid-template-columns:
+repeat(4,1fr);
 }
 
-.layout{
-grid-template-columns:280px 1fr
+.content{
+grid-template-columns:
+270px 1fr;
 }
 
 .right{
-display:none
+display:none;
+}
+
+.player{
+grid-template-columns:
+280px 1fr 220px;
 }
 
 }
+
+
+/* MOBILE */
 
 @media(max-width:700px){
 
 .top{
-padding:0 12px
+height:38px;
+
+padding:
+0 12px;
+
+font-size:12px;
 }
 
-.rightTop{
-display:none
+.top .rightTop{
+display:none;
 }
 
 .nav{
 height:auto;
+
+min-height:86px;
+
 padding:12px;
+
 gap:10px;
-flex-wrap:wrap
+
+flex-wrap:wrap;
 }
 
 .brand{
 min-width:0;
-flex:1
+flex:1;
 }
 
 .brand h1{
-font-size:23px
+font-size:23px;
 }
 
 .brand small{
 font-size:10px;
-letter-spacing:3px
+
+letter-spacing:3px;
 }
 
-.disc{
+.vinyl{
 width:45px;
-height:45px
+height:45px;
 }
 
-.links{
-display:none
+.navlinks{
+display:none;
 }
 
 .search{
-width:45px;
-font-size:25px
+width:40px;
 }
 
 .hero{
-height:250px
+height:270px;
 }
 
 .hero:before,
 .hero:after{
-opacity:.2
+opacity:.22;
 }
 
 .script{
-font-size:27px
+font-size:29px;
 }
 
 .hero h2{
-font-size:48px
+font-size:46px;
 }
 
 .hero p{
-font-size:19px;
-letter-spacing:5px
+font-size:18px;
+letter-spacing:5px;
 }
 
-.cats{
-grid-template-columns:repeat(2,1fr);
+.categories{
+grid-template-columns:
+repeat(2,1fr);
+
 padding:12px;
-gap:8px
 }
 
-.layout{
+.cat{
+min-height:105px;
+}
+
+.content{
 grid-template-columns:1fr;
-padding:0 12px 105px
-}
 
-.panel{
-padding:12px
+padding:
+0 12px
+105px;
 }
 
 .right{
-display:block
+display:block;
 }
 
 .player{
 height:82px;
-padding:7px 10px;
-grid-template-columns:1fr auto
+
+padding:
+7px 10px;
+
+grid-template-columns:
+1fr auto;
 }
 
-.now .thumb{
-display:none
+.nowArt{
+display:none;
 }
 
 .controls button{
-font-size:19px;
-margin:0 3px
+font-size:18px;
+
+margin:
+0 3px;
 }
 
 .progress{
-display:none
+display:none;
 }
 
 .song{
-grid-template-columns:50px 1fr 35px
+grid-template-columns:
+50px
+1fr
+34px;
 }
 
-.duration{
-display:none
+.time{
+display:none;
+}
+
+.art{
+width:48px;
+height:42px;
 }
 
 }
+
+
+/* SMALL MOBILE */
 
 @media(max-width:430px){
 
 .hero h2{
-font-size:42px
+font-size:41px;
 }
 
-.hero p{
-font-size:17px
+.script{
+font-size:26px;
 }
 
-.cat{
-min-height:100px;
-padding:12px 4px
-}
-
-.emoji{
-font-size:28px
+.cat .ico{
+font-size:28px;
 }
 
 .cat b{
-font-size:13px
+font-size:13px;
 }
 
 .song b{
-font-size:14px
+font-size:14px;
 }
 
 .song small{
-font-size:11px
+font-size:11px;
 }
 
-.thumb{
-width:48px;
-height:42px
-}
-
-.now b{
-font-size:14px
-}
-
-.now small{
-font-size:11px
+.dayArt{
+width:85px;
 }
 
 }
+
 </style>
+
 </head>
 
+
 <body>
+
 
 <!-- TOP BAR -->
 
 <div class="top">
 
 <div>
-🎵 <span class="gold">
+🎵
+<span class="gold">
 Welcome to 80s & 90s Old Is Gold
 </span>
 </div>
 
 <div class="rightTop">
+
 ❤️ My Favorites
+
 &nbsp;&nbsp;
+
 ◷ Recently Played
+
 &nbsp;&nbsp;
+
 <span class="gold">
 ♙ Login / Sign Up
 </span>
+
 </div>
 
 </div>
+
 
 
 <!-- NAVIGATION -->
 
 <header class="nav">
 
+
 <div class="brand">
 
-<div class="disc"></div>
+<div class="vinyl"></div>
 
 <div>
 
-<h1>80s & 90s</h1>
+<h1>
+80s & 90s
+</h1>
 
 <small>
 OLD IS GOLD
@@ -719,7 +965,8 @@ OLD IS GOLD
 </div>
 
 
-<div class="links">
+
+<nav class="navlinks">
 
 <a onclick="showAll()">
 HOME
@@ -753,16 +1000,21 @@ TOP 100
 ABOUT US
 </a>
 
-</div>
+</nav>
+
 
 
 <input
-class="search"
 id="search"
+class="search"
+type="search"
 placeholder="⌕"
-oninput="searchSongs()">
+oninput="searchSongs()"
+>
+
 
 </header>
+
 
 
 <!-- HERO -->
@@ -796,16 +1048,17 @@ onclick="playFirst()">
 </section>
 
 
+
 <!-- CATEGORY CARDS -->
 
-<section class="cats">
+<section class="categories">
 
 
 <div
 class="cat"
 onclick="filterCat('Sad')">
 
-<div class="emoji">
+<div class="ico">
 💔
 </div>
 
@@ -820,11 +1073,12 @@ Sad Songs
 </div>
 
 
+
 <div
 class="cat"
 onclick="filterCat('Romantic')">
 
-<div class="emoji">
+<div class="ico">
 💗
 </div>
 
@@ -839,10 +1093,10 @@ Romantic Songs
 </div>
 
 
-<div
-class="cat">
 
-<div class="emoji">
+<div class="cat">
+
+<div class="ico">
 🌧️
 </div>
 
@@ -857,11 +1111,12 @@ Rain Songs
 </div>
 
 
+
 <div
 class="cat"
 onclick="filterCat('Party')">
 
-<div class="emoji">
+<div class="ico">
 🎉
 </div>
 
@@ -876,11 +1131,12 @@ Party Songs
 </div>
 
 
+
 <div
 class="cat"
 onclick="filterCat('Sad')">
 
-<div class="emoji">
+<div class="ico">
 💔
 </div>
 
@@ -895,11 +1151,12 @@ Breakup Songs
 </div>
 
 
+
 <div
 class="cat"
 onclick="filterCat('Sad')">
 
-<div class="emoji">
+<div class="ico">
 🌙
 </div>
 
@@ -914,10 +1171,10 @@ Night & Melancholy
 </div>
 
 
-<div
-class="cat">
 
-<div class="emoji">
+<div class="cat">
+
+<div class="ico">
 🎤
 </div>
 
@@ -932,11 +1189,12 @@ Duet Songs
 </div>
 
 
+
 <div
 class="cat"
 onclick="showTop()">
 
-<div class="emoji">
+<div class="ico">
 👑
 </div>
 
@@ -950,28 +1208,34 @@ Top 100
 
 </div>
 
+
 </section>
 
 
-<!-- MAIN CONTENT -->
 
-<main class="layout">
+<!-- MAIN -->
+
+<main class="content">
 
 
-<!-- TOP SINGERS -->
+<!-- SINGERS -->
 
-<aside class="panel">
+<aside
+class="panel"
+id="singerPanel">
 
 <div class="panelTitle">
 TOP SINGERS
 </div>
 
-<div id="singers"></div>
+<div id="singers">
+</div>
 
 </aside>
 
 
-<!-- TRENDING SONGS -->
+
+<!-- SONG LIST -->
 
 <section class="panel">
 
@@ -982,9 +1246,9 @@ TRENDING SONGS
 <span
 style="
 float:right;
-color:#9ea7b4;
+color:#9ba8b7;
 font-size:12px;
-cursor:pointer
+cursor:pointer;
 "
 onclick="showAll()">
 
@@ -994,17 +1258,18 @@ View All
 
 </div>
 
-<div id="songList"></div>
+
+<div id="songList">
+</div>
 
 </section>
 
 
+
 <!-- RIGHT SIDE -->
 
-<aside class="panel right">
+<aside class="right">
 
-
-<!-- SONG OF THE DAY -->
 
 <div class="day">
 
@@ -1012,11 +1277,11 @@ View All
 SONG OF THE DAY 🎵
 </b>
 
-<div style="height:12px"></div>
 
-<div class="thumb">
+<div class="dayArt">
 🎙️
 </div>
+
 
 <h3>
 Lag Ja Gale
@@ -1032,24 +1297,29 @@ Woh Kaun Thi (1964)
 Lata Mangeshkar
 </small>
 
+
 <p>
 “Some memories never fade away...”
 </p>
 
+
 <button
-class="circlePlay"
+class="play"
 onclick="selectSong(0)">
 
 ▶
 
 </button>
 
-<div style="clear:both"></div>
+
+<div class="clear">
+</div>
 
 </div>
 
 
-<!-- PLAYLISTS -->
+
+<!-- PLAYLIST -->
 
 <div class="panel playlist">
 
@@ -1058,9 +1328,10 @@ PLAYLISTS
 </div>
 
 
+
 <div class="pl">
 
-<div class="thumb">
+<div class="plArt">
 🎙️
 </div>
 
@@ -1070,8 +1341,6 @@ PLAYLISTS
 Best of Kishore Kumar
 </b>
 
-<br>
-
 <small>
 50 Songs
 </small>
@@ -1085,9 +1354,10 @@ Best of Kishore Kumar
 </div>
 
 
+
 <div class="pl">
 
-<div class="thumb">
+<div class="plArt">
 🎙️
 </div>
 
@@ -1097,7 +1367,31 @@ Best of Kishore Kumar
 Best of Mohammed Rafi
 </b>
 
-<br>
+<small>
+50 Songs
+</small>
+
+</div>
+
+<button>
+▶
+</button>
+
+</div>
+
+
+
+<div class="pl">
+
+<div class="plArt">
+🎙️
+</div>
+
+<div>
+
+<b>
+Best of Lata Mangeshkar
+</b>
 
 <small>
 50 Songs
@@ -1112,19 +1406,18 @@ Best of Mohammed Rafi
 </div>
 
 
+
 <div class="pl">
 
-<div class="thumb">
+<div class="plArt">
 🎙️
 </div>
 
 <div>
 
 <b>
-Best of Lata Mangeshkar
+Best of Asha Bhosle
 </b>
-
-<br>
 
 <small>
 50 Songs
@@ -1147,6 +1440,7 @@ Best of Lata Mangeshkar
 </main>
 
 
+
 <!-- MUSIC PLAYER -->
 
 <div class="player">
@@ -1154,7 +1448,7 @@ Best of Lata Mangeshkar
 
 <div class="now">
 
-<div class="thumb">
+<div class="nowArt">
 💿
 </div>
 
@@ -1173,6 +1467,7 @@ Select a song
 </div>
 
 
+
 <div class="controls">
 
 <button>
@@ -1187,6 +1482,7 @@ Select a song
 ⏮
 </button>
 
+
 <button
 class="main"
 id="playBtn"
@@ -1195,6 +1491,7 @@ onclick="togglePlay()">
 ▶
 
 </button>
+
 
 <button>
 ⏭
@@ -1207,13 +1504,19 @@ onclick="togglePlay()">
 </div>
 
 
+
 <div class="progress">
 
-<span id="time">
+<span>
 0:00
 </span>
 
-<div class="bar"></div>
+<div class="bar">
+
+<span>
+</span>
+
+</div>
 
 <span>
 4:42
@@ -1228,12 +1531,31 @@ onclick="togglePlay()">
 
 
 
+<div class="footer">
+
+🎵 80s & 90s OLD IS GOLD
+
+<br>
+<br>
+
+Timeless songs • Golden memories • Evergreen music
+
+<br>
+<br>
+
+© 2026 Old Is Gold
+
+</div>
+
+
+
 <script>
 
 
 /* SONG DATABASE */
 
 const songs=[
+
 
 [
 "Kahin Door Jab Din Dhal Jaye",
@@ -1244,6 +1566,7 @@ const songs=[
 "4:42"
 ],
 
+
 [
 "Tujhse Naraz Nahin Zindagi",
 "Lata Mangeshkar",
@@ -1252,6 +1575,7 @@ const songs=[
 "Sad",
 "5:24"
 ],
+
 
 [
 "Zindagi Ke Safar Mein",
@@ -1262,6 +1586,7 @@ const songs=[
 "4:36"
 ],
 
+
 [
 "Jeena Yahan Marna Yahan",
 "Mukesh",
@@ -1270,6 +1595,7 @@ const songs=[
 "Sad",
 "6:10"
 ],
+
 
 [
 "Aap Ki Aankhon Mein Kuch",
@@ -1280,6 +1606,7 @@ const songs=[
 "4:55"
 ],
 
+
 [
 "Agar Tum Na Hote",
 "Kishore Kumar",
@@ -1288,6 +1615,7 @@ const songs=[
 "Romantic",
 "4:08"
 ],
+
 
 [
 "Humein Tumse Pyar Kitna",
@@ -1298,6 +1626,7 @@ const songs=[
 "4:12"
 ],
 
+
 [
 "Mera Kuchh Samaan",
 "Asha Bhosle",
@@ -1306,6 +1635,7 @@ const songs=[
 "Sad",
 "6:42"
 ],
+
 
 [
 "Katra Katra",
@@ -1316,6 +1646,7 @@ const songs=[
 "6:20"
 ],
 
+
 [
 "Zindagi Kaisi Hai Paheli",
 "Manna Dey",
@@ -1324,6 +1655,7 @@ const songs=[
 "Sad",
 "3:55"
 ],
+
 
 [
 "Mera Dil Bhi Kitna Pagal Hai",
@@ -1334,6 +1666,7 @@ const songs=[
 "5:20"
 ],
 
+
 [
 "Do Dil Mil Rahe Hain",
 "Kumar Sanu",
@@ -1342,6 +1675,7 @@ const songs=[
 "Romantic",
 "5:56"
 ],
+
 
 [
 "Pehla Nasha",
@@ -1352,6 +1686,7 @@ const songs=[
 "4:53"
 ],
 
+
 [
 "Pardesi Pardesi",
 "Udit Narayan",
@@ -1360,6 +1695,7 @@ const songs=[
 "Sad",
 "7:00"
 ],
+
 
 [
 "Tum Mile Dil Khile",
@@ -1370,6 +1706,7 @@ const songs=[
 "5:56"
 ],
 
+
 [
 "Dilbar Dilbar",
 "Alka Yagnik",
@@ -1378,6 +1715,7 @@ const songs=[
 "Romantic",
 "5:43"
 ],
+
 
 [
 "Tip Tip Barsa Paani",
@@ -1388,6 +1726,7 @@ const songs=[
 "6:03"
 ],
 
+
 [
 "Wada Raha Sanam",
 "Abhijeet",
@@ -1396,6 +1735,7 @@ const songs=[
 "Romantic",
 "6:05"
 ],
+
 
 [
 "Tu Hi Re",
@@ -1406,6 +1746,7 @@ const songs=[
 "7:15"
 ],
 
+
 [
 "Tum Itna Jo Muskura Rahe Ho",
 "Jagjit Singh",
@@ -1415,6 +1756,7 @@ const songs=[
 "5:21"
 ],
 
+
 [
 "Chitthi Aai Hai",
 "Pankaj Udhas",
@@ -1422,7 +1764,78 @@ const songs=[
 1986,
 "Sad",
 "7:16"
+],
+
+
+[
+"Dard-E-Dil",
+"Mohammed Rafi",
+"Karz",
+1980,
+"Sad",
+"4:32"
+],
+
+
+[
+"Kya Hua Tera Wada",
+"Mohammed Rafi",
+"Hum Kisise Kum Naheen",
+1977,
+"Sad",
+"4:22"
+],
+
+
+[
+"Chand Mera Dil",
+"Mohammed Rafi",
+"Hum Kisise Kum Naheen",
+1977,
+"Romantic",
+"4:34"
+],
+
+
+[
+"Jaane Kahan Gaye Woh Din",
+"Mukesh",
+"Mera Naam Joker",
+1970,
+"Sad",
+"5:30"
+],
+
+
+[
+"Tujhe Dekha To Yeh Jana Sanam",
+"Kumar Sanu",
+"Dilwale Dulhania Le Jayenge",
+1995,
+"Romantic",
+"5:00"
+],
+
+
+[
+"Nazar Ke Samne",
+"Kumar Sanu",
+"Aashiqui",
+1990,
+"Romantic",
+"5:33"
+],
+
+
+[
+"Aye Dil-E-Nadan",
+"Lata Mangeshkar",
+"Razia Sultan",
+1983,
+"Sad",
+"5:26"
 ]
+
 
 ];
 
@@ -1432,7 +1845,8 @@ let current=[...songs];
 let playing=false;
 
 
-/* RENDER SONGS */
+
+/* DISPLAY SONGS */
 
 function render(list){
 
@@ -1442,9 +1856,10 @@ list.map((s,i)=>`
 
 <div class="song">
 
-<div class="thumb">
+<div class="art">
 🎵
 </div>
+
 
 <div>
 
@@ -1458,12 +1873,14 @@ ${s[2]} (${s[3]}) • ${s[1]}
 
 </div>
 
-<span class="duration">
+
+<span class="time">
 ${s[5]}
 </span>
 
+
 <button
-class="circlePlay"
+class="play"
 onclick="selectSong(${i})">
 
 ▶
@@ -1477,24 +1894,34 @@ onclick="selectSong(${i})">
 }
 
 
+
 /* SELECT SONG */
 
 function selectSong(i){
 
 const s=current[i] || songs[0];
 
-document.getElementById("nowTitle")
-.textContent=s[0];
 
-document.getElementById("nowArtist")
-.textContent=s[2]+" • "+s[1];
+document.getElementById(
+"nowTitle"
+).textContent=s[0];
+
+
+document.getElementById(
+"nowArtist"
+).textContent=
+s[2]+" • "+s[1];
+
 
 playing=true;
 
-document.getElementById("playBtn")
-.textContent="❚❚";
+
+document.getElementById(
+"playBtn"
+).textContent="❚❚";
 
 }
+
 
 
 /* PLAY FIRST */
@@ -1506,17 +1933,21 @@ selectSong(0);
 }
 
 
-/* PLAY / PAUSE */
+
+/* PLAY PAUSE */
 
 function togglePlay(){
 
 playing=!playing;
 
-document.getElementById("playBtn")
-.textContent=
+
+document.getElementById(
+"playBtn"
+).textContent=
 playing ? "❚❚" : "▶";
 
 }
+
 
 
 /* SHOW ALL */
@@ -1528,6 +1959,7 @@ current=[...songs];
 render(current);
 
 }
+
 
 
 /* CATEGORY */
@@ -1544,7 +1976,8 @@ render(current);
 }
 
 
-/* 80s / 90s */
+
+/* ERA */
 
 function filterEra(era){
 
@@ -1560,6 +1993,7 @@ render(current);
 }
 
 
+
 /* TOP 100 */
 
 function showTop(){
@@ -1572,17 +2006,19 @@ render(current);
 }
 
 
+
 /* SINGERS */
 
 function showSingers(){
 
 document
-.getElementById("singers")
+.getElementById("singerPanel")
 .scrollIntoView({
 behavior:"smooth"
 });
 
 }
+
 
 
 /* SEARCH */
@@ -1593,7 +2029,9 @@ const q=
 document
 .getElementById("search")
 .value
-.toLowerCase();
+.toLowerCase()
+.trim();
+
 
 current=
 
@@ -1609,46 +2047,58 @@ s[3]
 .includes(q)
 );
 
+
 render(current);
 
 }
 
 
+
 /* SINGER LIST */
 
-const singerList=
-[
+const singerList=[
+
 ...new Set(
-songs.map(s=>s[1])
+songs.map(
+s=>s[1]
 )
+)
+
 ];
 
 
-document.getElementById("singers")
-.innerHTML=
+document.getElementById(
+"singers"
+).innerHTML=
 
-singerList.map(name=>`
+
+singerList.map(
+name=>`
 
 <div
 class="singer"
-onclick="filterSinger('${name}')">
+onclick="filterSinger(${JSON.stringify(name)})"
+>
 
-<div class="face"></div>
+<div class="avatar">
+</div>
 
 <b>
 ${name}
 </b>
 
-<span>
+<span class="arrow">
 ›
 </span>
 
 </div>
 
-`).join("");
+`
+).join("");
 
 
-/* FILTER SINGER */
+
+/* SINGER FILTER */
 
 function filterSinger(name){
 
@@ -1662,9 +2112,11 @@ render(current);
 }
 
 
-/* INITIAL */
+
+/* INITIAL LOAD */
 
 render(current);
+
 
 </script>
 
