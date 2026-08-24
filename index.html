@@ -1,420 +1,476 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 <title>80s & 90s Old Is Gold</title>
 
 <style>
 
 *{
-    box-sizing:border-box;
     margin:0;
     padding:0;
+    box-sizing:border-box;
 }
 
 body{
     background:#050b13;
-    color:#fff;
+    color:#f5f1e8;
     font-family:Arial,Helvetica,sans-serif;
-    padding-bottom:95px;
+    padding-bottom:105px;
 }
 
 /* ================= TOP BAR ================= */
 
 .topbar{
-    height:42px;
-    background:#04070b;
-    border-bottom:1px solid #293544;
+    height:48px;
+    background:#05070b;
+    border-bottom:1px solid #303945;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
+
     padding:0 28px;
+
     font-size:14px;
 }
 
-.topbar span{
-    color:#e9bd63;
+.welcome{
+    color:#eee;
 }
 
-/* ================= NAVBAR ================= */
+.top-right{
+    display:flex;
+    align-items:center;
+    gap:28px;
+}
+
+.top-right span{
+    color:#eee;
+}
+
+.login{
+    background:#f2cc88;
+    color:#17130e !important;
+
+    padding:9px 18px;
+    border-radius:22px;
+
+    font-weight:bold;
+}
+
+/* ================= NAVIGATION ================= */
 
 .navbar{
     height:86px;
-    background:#080e17;
-    border-bottom:1px solid #b8893c;
+
+    background:#080d15;
+
+    border-bottom:1px solid #313a46;
+
     display:flex;
     align-items:center;
-    padding:0 25px;
+
+    padding:0 24px;
+
     gap:25px;
-    position:sticky;
-    top:0;
-    z-index:50;
 }
 
-.logo{
+.brand{
     display:flex;
     align-items:center;
+
     gap:12px;
-    min-width:270px;
+
+    min-width:285px;
 }
 
-.disc{
-    width:58px;
-    height:58px;
+.vinyl{
+    width:59px;
+    height:59px;
+
     border-radius:50%;
-    border:1px solid #e2bd6c;
+
+    border:1px solid #d9b66b;
 
     background:
     radial-gradient(
         circle,
-        #f0c875 0 6px,
-        #d3322e 7px 15px,
-        #111a23 16px 24px,
-        #060a0e 25px
+        #e6c27a 0 6px,
+        #b72c29 7px 15px,
+        #141a21 16px 24px,
+        #05090e 25px
     );
 
-    box-shadow:0 0 15px rgba(230,180,80,.2);
+    box-shadow:
+    0 0 0 3px #101720,
+    0 0 14px rgba(240,190,90,.2);
 }
 
-.logo h1{
+.brand-title{
     font-size:29px;
-    color:#f9e8ca;
+    font-weight:900;
+
+    color:#f7e6c7;
 }
 
-.logo small{
+.brand-sub{
     display:block;
+
     margin-top:3px;
-    color:#e9b84e;
+
+    color:#e4b653;
+
     letter-spacing:5px;
+
+    font-size:12px;
+
     font-weight:bold;
 }
 
-.menu{
+.navlinks{
     display:flex;
-    justify-content:center;
+
     align-items:center;
-    gap:25px;
+
+    justify-content:center;
+
+    gap:31px;
+
     flex:1;
 }
 
-.menu a{
-    color:#eee;
+.navlinks a{
+    color:#f1f1f1;
+
     text-decoration:none;
+
+    font-size:15px;
+
     font-weight:bold;
-    font-size:14px;
+
     cursor:pointer;
+
+    white-space:nowrap;
 }
 
-.menu a:hover{
-    color:#efc363;
+.navlinks a:hover{
+    color:#efc365;
 }
 
-.search{
+.search-btn{
     border:0;
     background:none;
+
     color:#fff;
-    font-size:30px;
+
+    font-size:35px;
+
     cursor:pointer;
 }
 
 /* ================= HERO ================= */
 
 .hero{
-
-    min-height:330px;
+    height:270px;
 
     position:relative;
+
     overflow:hidden;
 
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 
-    background:
-    radial-gradient(
-        circle at center,
-        #403021 0,
-        #1b1713 30%,
-        #0c131b 70%
-    );
-
-    border-bottom:1px solid #4b3b28;
-}
-
-/* vintage cassette */
-
-.cassette{
-    position:absolute;
-
-    left:-50px;
-    top:35px;
-
-    width:410px;
-    height:235px;
-
-    border:7px solid #6e5335;
-    border-radius:14px;
-
-    background:
-    linear-gradient(
-        180deg,
-        #33291f,
-        #11171c
-    );
-
-    transform:rotate(-7deg);
-
-    opacity:.55;
-
-    box-shadow:
-    inset 0 0 0 5px #151a1e,
-    0 20px 40px #000;
-}
-
-.cassette:before{
-    content:"";
-    position:absolute;
-
-    width:125px;
-    height:125px;
-
-    left:65px;
-    top:50px;
-
-    border-radius:50%;
-
-    border:10px solid #1b2025;
-
-    background:
-    radial-gradient(
-        circle,
-        #d6a95e 0 8px,
-        #4c3523 9px 28px,
-        #111 29px
-    );
-}
-
-.cassette:after{
-    content:"";
-    position:absolute;
-
-    width:125px;
-    height:125px;
-
-    right:65px;
-    top:50px;
-
-    border-radius:50%;
-
-    border:10px solid #1b2025;
-
-    background:
-    radial-gradient(
-        circle,
-        #d6a95e 0 8px,
-        #4c3523 9px 28px,
-        #111 29px
-    );
-}
-
-/* ================= SINGER COLLAGE ================= */
-
-.singerCollage{
-    position:absolute;
-    right:15px;
-    top:18px;
-
-    width:470px;
-    height:285px;
-
-    display:flex;
-    align-items:flex-end;
-    justify-content:center;
-
-    gap:4px;
-
-    opacity:.75;
-}
-
-.person{
-    width:72px;
-    height:175px;
-
-    border-radius:45px 45px 8px 8px;
+    text-align:center;
 
     background:
     linear-gradient(
         90deg,
-        #241a16,
-        #7b5a3e,
-        #241a16
+        #151313,
+        #17212b 48%,
+        #18120f
     );
 
-    border:1px solid #8e6b46;
+    border-bottom:1px solid #252d36;
+}
 
+/* LEFT VINTAGE RADIO/CASSETTE */
+
+.hero-left{
+    position:absolute;
+
+    left:-35px;
+    top:22px;
+
+    width:440px;
+    height:230px;
+
+    transform:rotate(-5deg);
+
+    background:
+    linear-gradient(
+        180deg,
+        #3b2e23,
+        #17191b
+    );
+
+    border:5px solid #735438;
+
+    border-radius:10px;
+
+    box-shadow:
+    inset 0 0 0 5px #191c1e,
+    0 20px 30px #0009;
+}
+
+.hero-left:before{
+    content:"";
+
+    position:absolute;
+
+    left:45px;
+    top:38px;
+
+    width:290px;
+    height:65px;
+
+    border:6px solid #17191b;
+
+    background:
+    linear-gradient(
+        #9c744d,
+        #33271d
+    );
+
+    box-shadow:
+    inset 0 0 0 4px #5d452e;
+}
+
+.hero-left:after{
+    content:"";
+
+    position:absolute;
+
+    left:75px;
+    bottom:35px;
+
+    width:80px;
+    height:80px;
+
+    border-radius:50%;
+
+    border:10px solid #15191d;
+
+    background:
+    radial-gradient(
+        circle,
+        #d4a95e 0 7px,
+        #513b27 8px 25px,
+        #15191d 26px
+    );
+}
+
+/* RIGHT VINTAGE PORTRAIT AREA */
+
+.hero-right{
+    position:absolute;
+
+    right:-20px;
+    top:0;
+
+    width:570px;
+    height:270px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:5px;
+
+    opacity:.72;
+}
+
+.portrait{
     position:relative;
+
+    width:82px;
+    height:205px;
+
+    border-radius:45px 45px 8px 8px;
+
+    border:1px solid #87633f;
+
+    background:
+    linear-gradient(
+        90deg,
+        #201814,
+        #8b6547,
+        #2b1d18
+    );
 
     box-shadow:0 0 15px #000;
 }
 
-.person:nth-child(2){
-    height:215px;
+.portrait:nth-child(2){
+    height:235px;
 }
 
-.person:nth-child(3){
-    height:190px;
+.portrait:nth-child(3){
+    height:220px;
 }
 
-.person:nth-child(4){
+.portrait:nth-child(4){
+    height:245px;
+}
+
+.portrait:nth-child(5){
     height:225px;
 }
 
-.person:nth-child(5){
-    height:185px;
-}
-
-.person:nth-child(6){
-    height:210px;
+.portrait:nth-child(6){
+    height:205px;
 }
 
 .face{
-    width:52px;
-    height:62px;
-
-    border-radius:50%;
-
     position:absolute;
 
-    top:15px;
-    left:9px;
+    top:14px;
+    left:13px;
+
+    width:54px;
+    height:67px;
+
+    border-radius:50%;
 
     background:
     radial-gradient(
         circle at 50% 42%,
-        #d3a77c 0 28%,
-        #4b3327 29% 46%,
-        #161719 47%
+        #d4a77b 0 27%,
+        #563a2b 28% 45%,
+        #151719 46%
     );
 
-    border:1px solid #bd8f60;
+    border:1px solid #a47a52;
 }
 
-.personName{
+.pname{
     position:absolute;
 
-    bottom:8px;
-    left:3px;
-    right:3px;
+    bottom:7px;
+
+    left:2px;
+    right:2px;
 
     text-align:center;
 
     font-size:9px;
 
-    color:#f0d19a;
+    color:#e7c995;
 
     font-weight:bold;
 }
 
-/* HERO CONTENT */
+/* HERO TEXT */
 
-.heroContent{
+.hero-content{
     position:relative;
+
     z-index:10;
 
-    text-align:center;
-
-    width:650px;
+    width:600px;
 }
 
-.script{
+.hero-script{
     font-family:Georgia,serif;
+
+    font-size:42px;
+
     font-style:italic;
 
-    color:#efb94f;
-
-    font-size:40px;
+    color:#efb650;
 }
 
-.heroTitle{
-    color:#faead0;
+.hero-title{
+    font-size:76px;
 
-    font-size:72px;
+    line-height:75px;
 
     font-weight:900;
 
-    line-height:1;
+    letter-spacing:2px;
 
-    letter-spacing:3px;
+    color:#faecd5;
 
     text-shadow:
-    3px 3px 0 #3b2e20,
-    0 0 25px rgba(255,190,70,.2);
+    3px 3px 0 #3c2e21;
 }
 
-.heroSub{
-    color:#efbd53;
+.hero-sub{
+    color:#eab64d;
 
-    font-size:25px;
+    font-size:26px;
+
+    letter-spacing:8px;
 
     font-weight:bold;
 
-    letter-spacing:9px;
-
-    margin:10px 0 18px;
+    margin:8px 0 18px;
 }
 
-.playNow{
+.play-now{
+    background:#f3cd83;
+
     border:0;
-
-    background:#f7ce7b;
-
-    color:#17120c;
 
     border-radius:30px;
 
-    padding:14px 40px;
-
-    font-weight:bold;
+    padding:12px 42px;
 
     font-size:16px;
 
-    box-shadow:0 8px 25px #0008;
+    font-weight:bold;
+
+    color:#17120d;
 
     cursor:pointer;
-}
-
-.playNow:hover{
-    background:#ffe09c;
 }
 
 /* ================= CATEGORIES ================= */
 
 .categories{
     display:grid;
-    grid-template-columns:repeat(8,1fr);
-    gap:9px;
+
+    grid-template-columns:
+    repeat(8,1fr);
+
+    gap:8px;
 
     padding:16px 24px;
 }
 
 .category{
+    height:116px;
 
-    background:#0d1927;
+    background:#0d1826;
 
-    border:1px solid #344456;
+    border:1px solid #344252;
 
-    border-radius:11px;
-
-    min-height:110px;
+    border-radius:10px;
 
     display:flex;
+
     flex-direction:column;
 
-    align-items:center;
     justify-content:center;
+
+    align-items:center;
 
     text-align:center;
 
@@ -426,72 +482,81 @@ body{
 .category:hover{
     transform:translateY(-3px);
 
-    border-color:#e0b75f;
-
-    background:#122033;
+    border-color:#d8ad58;
 }
 
-.category .icon{
-    font-size:34px;
+.category-icon{
+    font-size:36px;
+
     margin-bottom:7px;
 }
 
-.category h3{
-    font-size:14px;
+.category-title{
+    font-size:15px;
+
+    font-weight:bold;
+
     margin-bottom:7px;
 }
 
-.category small{
-    color:#dcb66c;
+.category-count{
+    color:#dcb66d;
+
+    font-size:12px;
 }
 
-/* ================= MAIN ================= */
+/* ================= CONTENT GRID ================= */
 
-.main{
+.content{
     display:grid;
 
     grid-template-columns:
-    300px
-    minmax(0,1fr)
-    300px;
+    305px
+    1fr
+    315px;
 
     gap:16px;
 
     padding:0 24px 25px;
 }
 
-.card{
-    background:#0c1623;
+/* ================= CARD ================= */
 
-    border:1px solid #344253;
+.card{
+    background:#0b1522;
+
+    border:1px solid #344252;
 
     border-radius:10px;
 
-    padding:15px;
+    padding:16px;
 }
 
-.heading{
+.card-heading{
     display:flex;
 
     justify-content:space-between;
 
     align-items:center;
 
-    border-bottom:1px solid #293644;
-
     padding-bottom:10px;
 
-    margin-bottom:3px;
+    border-bottom:1px solid #2b3745;
+
+    margin-bottom:2px;
 }
 
-.heading h2{
-    color:#edbb59;
-    font-size:18px;
+.card-heading h2{
+    color:#eab95c;
+
+    font-size:19px;
 }
 
-.view{
-    color:#9da8b5;
+.view-all{
+    color:#aab1b9;
+
     font-size:12px;
+
     cursor:pointer;
 }
 
@@ -504,9 +569,9 @@ body{
 
     gap:10px;
 
-    padding:9px 0;
+    height:58px;
 
-    border-bottom:1px solid #293442;
+    border-bottom:1px solid #293543;
 
     cursor:pointer;
 }
@@ -515,75 +580,81 @@ body{
     color:#efc466;
 }
 
-.singerPhoto{
+.singer-photo{
     width:40px;
     height:40px;
 
     border-radius:50%;
 
-    border:1px solid #bd9656;
+    border:1px solid #b99355;
 
     background:
     radial-gradient(
-        circle at 50% 37%,
-        #d4a878 0 14%,
-        #523b2d 15% 38%,
-        #15191e 39%
+        circle at 50% 38%,
+        #d0a276 0 14%,
+        #51382b 15% 39%,
+        #161a1e 40%
     );
 }
 
-.singerName{
+.singer-name{
     flex:1;
+
+    font-size:15px;
 }
 
-.arrow{
-    color:#aaa;
+.singer-arrow{
     font-size:20px;
+
+    color:#bbb;
 }
 
-/* ================= SONGS ================= */
+/* ================= SONG LIST ================= */
 
 .song{
-
     display:grid;
 
     grid-template-columns:
-    62px
-    minmax(0,1fr)
-    45px
-    35px;
-
-    gap:10px;
+    72px
+    1fr
+    55px
+    38px;
 
     align-items:center;
 
-    padding:8px 0;
+    gap:10px;
 
-    border-bottom:1px solid #293442;
+    height:66px;
+
+    border-bottom:1px solid #293543;
 }
 
-.songArt{
-
-    width:58px;
-    height:45px;
+.song-cover{
+    width:64px;
+    height:50px;
 
     border-radius:5px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:25px;
 
     background:
     linear-gradient(
         135deg,
-        #9a6135,
-        #1e252c
+        #8c5932,
+        #20262d
     );
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-size:22px;
+    border:1px solid #60472f;
 }
 
-.songTitle{
+.song-title{
+    font-size:15px;
 
     font-weight:bold;
 
@@ -594,15 +665,14 @@ body{
     text-overflow:ellipsis;
 }
 
-.songInfo{
-
+.song-info{
     display:block;
 
-    color:#9ca8b6;
+    color:#9ca8b5;
 
     font-size:12px;
 
-    margin-top:4px;
+    margin-top:5px;
 
     white-space:nowrap;
 
@@ -611,84 +681,114 @@ body{
     text-overflow:ellipsis;
 }
 
-.duration{
+.song-duration{
     color:#ddd;
+
     font-size:12px;
 }
 
-.songPlay{
-
-    width:31px;
-    height:31px;
+.song-button{
+    width:32px;
+    height:32px;
 
     border-radius:50%;
 
-    border:1px solid #d3ae62;
-
-    color:#fff;
+    border:1px solid #d0aa60;
 
     background:transparent;
+
+    color:#fff;
 
     cursor:pointer;
 }
 
-.songPlay:hover{
-    background:#edc16c;
+.song-button:hover{
+    background:#e5b962;
+
     color:#111;
 }
 
-/* ================= RIGHT ================= */
+/* ================= SONG OF DAY ================= */
 
-.songDay{
+.song-day{
+    background:#e8d0a0;
 
-    background:#ead3a5;
-
-    color:#241d13;
+    color:#211a12;
 
     border-radius:10px;
 
     padding:15px;
 
+    min-height:185px;
+
     margin-bottom:12px;
 }
 
-.songDay h3{
-    margin:8px 0 5px;
+.day-heading{
+    font-size:18px;
+
+    font-weight:bold;
+
+    margin-bottom:10px;
 }
 
-.dayPic{
-
+.day-image{
     float:left;
 
-    width:95px;
-    height:88px;
+    width:105px;
+    height:105px;
 
-    margin:8px 12px 5px 0;
+    margin-right:13px;
 
     border-radius:6px;
 
     background:
     linear-gradient(
         135deg,
-        #795038,
-        #211915
+        #805238,
+        #251914
     );
 
     display:flex;
 
-    align-items:center;
-
     justify-content:center;
 
-    font-size:40px;
+    align-items:center;
+
+    font-size:42px;
 }
 
-.songDay p{
+.song-day h3{
+    font-size:18px;
+
+    margin:5px 0;
+}
+
+.song-day small{
+    font-size:12px;
+}
+
+.song-day p{
     font-size:12px;
 
-    margin-top:8px;
-
     font-style:italic;
+
+    margin-top:8px;
+}
+
+.day-play{
+    float:right;
+
+    width:35px;
+    height:35px;
+
+    border-radius:50%;
+
+    border:1px solid #8b7046;
+
+    background:transparent;
+
+    cursor:pointer;
 }
 
 .clear{
@@ -698,12 +798,13 @@ body{
 /* ================= PLAYLIST ================= */
 
 .playlist{
-    background:#0d2a27;
+    background:#0d2926;
 
-    border-color:#3c5c54;
+    border-color:#39584f;
 }
 
-.playItem{
+.play-item{
+    height:57px;
 
     display:flex;
 
@@ -711,19 +812,16 @@ body{
 
     gap:10px;
 
-    padding:9px 0;
-
-    border-bottom:1px solid #294a45;
+    border-bottom:1px solid #294944;
 }
 
-.playThumb{
-
+.play-thumb{
     width:45px;
     height:40px;
 
     border-radius:5px;
 
-    background:#65432e;
+    background:#60412e;
 
     display:flex;
 
@@ -732,70 +830,71 @@ body{
     justify-content:center;
 }
 
-.playInfo{
+.play-info{
     flex:1;
+
+    font-size:14px;
 }
 
-.playInfo small{
+.play-info small{
     display:block;
 
-    color:#9eb0aa;
+    color:#9eafa9;
 
     margin-top:4px;
 }
 
-.playButton{
-
-    width:29px;
-    height:29px;
+.play-button{
+    width:30px;
+    height:30px;
 
     border-radius:50%;
 
-    border:1px solid #d3ad62;
+    border:1px solid #cfae69;
+
+    color:#fff;
 
     background:transparent;
-
-    color:white;
 }
 
-/* ================= PLAYER ================= */
+/* ================= BOTTOM PLAYER ================= */
 
 .player{
-
     position:fixed;
 
     left:0;
     right:0;
     bottom:0;
 
-    height:94px;
+    height:96px;
 
-    background:#060b12;
+    background:#050a11;
 
-    border-top:1px solid #46515e;
+    border-top:1px solid #414b58;
 
     z-index:100;
 
     display:grid;
 
     grid-template-columns:
-    320px
+    330px
     1fr
-    300px;
+    360px;
 
     align-items:center;
 
     padding:8px 24px;
 }
 
-.current{
+.now-playing{
     display:flex;
+
     align-items:center;
-    gap:12px;
+
+    gap:13px;
 }
 
-.currentArt{
-
+.now-cover{
     width:78px;
     height:60px;
 
@@ -804,121 +903,107 @@ body{
     background:
     linear-gradient(
         135deg,
-        #985e35,
-        #1c2227
+        #925c35,
+        #20262a
     );
 
     display:flex;
-    align-items:center;
+
     justify-content:center;
+
+    align-items:center;
 
     font-size:28px;
 }
 
-.currentTitle{
+.now-title{
+    font-size:15px;
+
     font-weight:bold;
 }
 
-.currentArtist{
-
-    display:block;
-
-    color:#9da8b6;
+.now-info{
+    color:#9ba5b2;
 
     font-size:12px;
 
     margin-top:5px;
+
+    display:block;
 }
 
-.controls{
-
+.player-controls{
     display:flex;
-
-    align-items:center;
 
     justify-content:center;
 
-    gap:17px;
+    align-items:center;
+
+    gap:23px;
 }
 
-.controls button{
-
+.player-controls button{
     background:none;
 
     border:0;
 
-    color:#fff;
+    color:white;
 
-    font-size:21px;
+    font-size:22px;
 
     cursor:pointer;
 }
 
-.bigPlay{
-
+.main-play{
     width:57px;
     height:57px;
 
     border-radius:50% !important;
 
-    background:#f6d790 !important;
+    background:#f1d08d !important;
 
     color:#111 !important;
+
+    font-size:22px !important;
 }
 
-.progress{
-
+.progress-area{
     display:flex;
 
     align-items:center;
 
-    gap:9px;
+    gap:10px;
 
     font-size:12px;
 }
 
-.progressLine{
-
+.progress{
     flex:1;
 
     height:4px;
 
-    background:#575852;
+    background:#555a5e;
 
     border-radius:5px;
 }
 
-.progressLine span{
-
+.progress span{
     display:block;
 
     height:100%;
 
-    width:30%;
+    width:35%;
 
-    background:#e5b85d;
+    background:#e0b45e;
 
     border-radius:5px;
 }
 
-/* ================= FOOTER ================= */
+/* ================= MOBILE ================= */
 
-.footer{
+@media(max-width:1200px){
 
-    text-align:center;
-
-    color:#778494;
-
-    padding:30px 20px 120px;
-
-    font-size:13px;
-}
-
-/* ================= TABLET ================= */
-
-@media(max-width:1150px){
-
-.menu{
+.navlinks{
     gap:14px;
 }
 
@@ -926,115 +1011,142 @@ body{
     grid-template-columns:repeat(4,1fr);
 }
 
-.main{
+.content{
     grid-template-columns:270px 1fr;
 }
 
-.rightColumn{
+.right-column{
     display:none;
 }
 
 .player{
-    grid-template-columns:280px 1fr 220px;
+    grid-template-columns:280px 1fr 230px;
 }
 
-.singerCollage{
-    opacity:.35;
+.hero-right{
+    opacity:.25;
 }
 
 }
-
-/* ================= MOBILE ================= */
 
 @media(max-width:700px){
 
+body{
+    padding-bottom:82px;
+}
+
 .topbar{
-    height:38px;
-    padding:0 12px;
+    height:40px;
+
+    padding:0 15px;
+
     font-size:12px;
 }
 
-.topbar .right{
+.top-right{
     display:none;
 }
 
 .navbar{
-    height:auto;
-    min-height:85px;
+    height:82px;
 
-    padding:12px;
-
-    gap:8px;
-
-    flex-wrap:wrap;
+    padding:10px 15px;
 }
 
-.logo{
+.brand{
     min-width:0;
+
     flex:1;
 }
 
-.disc{
-    width:46px;
-    height:46px;
+.vinyl{
+    width:48px;
+    height:48px;
 }
 
-.logo h1{
-    font-size:23px;
+.brand-title{
+    font-size:24px;
 }
 
-.logo small{
+.brand-sub{
     font-size:9px;
+
     letter-spacing:3px;
 }
 
-.menu{
+.navlinks{
     display:none;
 }
 
+.search-btn{
+    font-size:29px;
+}
+
 .hero{
-    min-height:290px;
+    height:310px;
 }
 
-.heroContent{
+.hero-left{
+    left:-180px;
+
+    opacity:.45;
+}
+
+.hero-right{
+    right:-200px;
+
+    opacity:.28;
+}
+
+.hero-content{
     width:100%;
-    padding:15px;
+
+    padding:10px;
 }
 
-.heroTitle{
-    font-size:48px;
+.hero-script{
+    font-size:29px;
 }
 
-.script{
-    font-size:28px;
+.hero-title{
+    font-size:51px;
+
+    line-height:55px;
 }
 
-.heroSub{
+.hero-sub{
     font-size:18px;
+
     letter-spacing:5px;
 }
 
-.cassette{
-    left:-180px;
-    opacity:.35;
-}
-
-.singerCollage{
-    right:-90px;
-    opacity:.25;
+.play-now{
+    padding:13px 38px;
 }
 
 .categories{
     grid-template-columns:repeat(2,1fr);
+
     padding:12px;
+
+    gap:8px;
 }
 
 .category{
-    min-height:105px;
+    height:105px;
 }
 
-.main{
+.category-icon{
+    font-size:31px;
+}
+
+.category-title{
+    font-size:13px;
+}
+
+.content{
     display:block;
+
     padding:0 12px 20px;
 }
 
@@ -1043,79 +1155,80 @@ body{
 }
 
 .song{
-    grid-template-columns:50px 1fr 34px;
+    grid-template-columns:
+    52px
+    1fr
+    38px;
+
+    height:65px;
 }
 
-.songArt{
+.song-cover{
     width:48px;
     height:43px;
 }
 
-.duration{
+.song-duration{
     display:none;
+}
+
+.song-title{
+    font-size:13px;
+}
+
+.song-info{
+    font-size:10px;
 }
 
 .player{
     height:82px;
 
-    padding:7px 10px;
+    padding:6px 12px;
 
     grid-template-columns:1fr auto;
 }
 
-.currentArt{
+.now-cover{
     display:none;
 }
 
-.controls{
-    gap:5px;
+.player-controls{
+    gap:7px;
 }
 
-.controls button{
+.player-controls button{
     font-size:18px;
 }
 
-.bigPlay{
-    width:52px;
-    height:52px;
+.main-play{
+    width:54px;
+    height:54px;
 }
 
-.progress{
+.progress-area{
     display:none;
 }
 
 }
 
-/* ================= SMALL MOBILE ================= */
+/* ================= VERY SMALL ================= */
 
-@media(max-width:430px){
+@media(max-width:400px){
 
-.heroTitle{
-    font-size:42px;
+.hero-title{
+    font-size:43px;
 }
 
-.script{
+.hero-script{
     font-size:25px;
 }
 
-.heroSub{
+.hero-sub{
     font-size:16px;
 }
 
-.category h3{
-    font-size:13px;
-}
-
-.category small{
-    font-size:11px;
-}
-
-.songTitle{
-    font-size:13px;
-}
-
-.songInfo{
-    font-size:10px;
+.category{
+    height:100px;
 }
 
 }
@@ -1128,59 +1241,51 @@ body{
 <body>
 
 
-<!-- TOP BAR -->
+<!-- ================= TOP BAR ================= -->
 
 <div class="topbar">
 
-<div>
-🎵
-<span>
-Welcome to 80s & 90s Old Is Gold
-</span>
+<div class="welcome">
+🎵 Welcome to 80s & 90s Old Is Gold
 </div>
 
-<div class="right">
+<div class="top-right">
 
-<div>❤️ My Favorites</div>
+<span>❤️ My Favorites</span>
 
-<div>◷ Recently Played</div>
+<span>◷ Recently Played</span>
 
-<div>
-<span class="login">
-♙ Login / Sign Up
-</span>
-</div>
+<span class="login">♙ Login / Sign Up</span>
 
 </div>
 
 </div>
 
 
+<!-- ================= NAVIGATION ================= -->
 
-<!-- NAVBAR -->
+<div class="navbar">
 
-<header class="navbar">
+<div class="brand">
 
-<div class="logo">
-
-<div class="disc"></div>
+<div class="vinyl"></div>
 
 <div>
 
-<h1>
+<div class="brand-title">
 80s & 90s
-</h1>
+</div>
 
-<small>
+<span class="brand-sub">
 OLD IS GOLD
-</small>
+</span>
 
 </div>
 
 </div>
 
 
-<nav class="menu">
+<div class="navlinks">
 
 <a onclick="showAll()">HOME</a>
 
@@ -1200,124 +1305,85 @@ SINGERS⌄
 
 <a>PLAYLISTS</a>
 
-<a onclick="topSongs()">
+<a onclick="top100()">
 TOP 100
 </a>
 
 <a>ABOUT US</a>
 
-</nav>
+</div>
 
 
 <button
-class="search"
-onclick="searchMusic()">
+class="search-btn"
+onclick="searchSong()">
 ⌕
 </button>
 
-</header>
+</div>
 
 
-
-<!-- HERO BANNER -->
+<!-- ================= HERO ================= -->
 
 <section class="hero">
 
 
-<div class="cassette"></div>
+<div class="hero-left"></div>
 
 
-<div class="singerCollage">
+<div class="hero-right">
 
-<div class="person">
-
+<div class="portrait">
 <div class="face"></div>
-
-<div class="personName">
-KISHORE
+<div class="pname">KISHORE</div>
 </div>
 
-</div>
-
-
-<div class="person">
-
+<div class="portrait">
 <div class="face"></div>
-
-<div class="personName">
-LATA
+<div class="pname">LATA</div>
 </div>
 
-</div>
-
-
-<div class="person">
-
+<div class="portrait">
 <div class="face"></div>
-
-<div class="personName">
-MUKESH
+<div class="pname">MUKESH</div>
 </div>
 
-</div>
-
-
-<div class="person">
-
+<div class="portrait">
 <div class="face"></div>
-
-<div class="personName">
-RAFI
+<div class="pname">RAFI</div>
 </div>
 
-</div>
-
-
-<div class="person">
-
+<div class="portrait">
 <div class="face"></div>
-
-<div class="personName">
-ASHA
+<div class="pname">ASHA</div>
 </div>
 
-</div>
-
-
-<div class="person">
-
+<div class="portrait">
 <div class="face"></div>
-
-<div class="personName">
-MANNA
+<div class="pname">MANNA</div>
 </div>
 
 </div>
 
-</div>
 
+<div class="hero-content">
 
-
-<div class="heroContent">
-
-<div class="script">
+<div class="hero-script">
 Relive The Magic of
 </div>
 
-<div class="heroTitle">
+<div class="hero-title">
 80s & 90s
 </div>
 
-<div class="heroSub">
+<div class="hero-sub">
 GOLDEN HITS
 </div>
 
 <button
-class="playNow"
+class="play-now"
 onclick="playFirst()">
-
 ▶ PLAY NOW
-
 </button>
 
 </div>
@@ -1325,8 +1391,7 @@ onclick="playFirst()">
 </section>
 
 
-
-<!-- CATEGORIES -->
+<!-- ================= CATEGORIES ================= -->
 
 <section class="categories">
 
@@ -1335,173 +1400,146 @@ onclick="playFirst()">
 class="category"
 onclick="filterCategory('Sad')">
 
-<div class="icon">
-💔
-</div>
+<div class="category-icon">💔</div>
 
-<h3>
+<div class="category-title">
 Sad Songs
-</h3>
-
-<small>
-1200+ Songs
-</small>
-
 </div>
 
+<div class="category-count">
+1200+ Songs
+</div>
+
+</div>
 
 
 <div
 class="category"
 onclick="filterCategory('Romantic')">
 
-<div class="icon">
-💗
-</div>
+<div class="category-icon">💗</div>
 
-<h3>
+<div class="category-title">
 Romantic Songs
-</h3>
+</div>
 
-<small>
+<div class="category-count">
 1500+ Songs
-</small>
-
 </div>
 
+</div>
 
 
 <div class="category">
 
-<div class="icon">
-🌧️
-</div>
+<div class="category-icon">🌧️</div>
 
-<h3>
+<div class="category-title">
 Rain Songs
-</h3>
+</div>
 
-<small>
+<div class="category-count">
 500+ Songs
-</small>
-
 </div>
 
-
-
-<div
-class="category"
-onclick="filterCategory('Party')">
-
-<div class="icon">
-🎉
 </div>
-
-<h3>
-Party Songs
-</h3>
-
-<small>
-800+ Songs
-</small>
-
-</div>
-
-
-
-<div
-class="category"
-onclick="filterCategory('Sad')">
-
-<div class="icon">
-💔
-</div>
-
-<h3>
-Breakup Songs
-</h3>
-
-<small>
-800+ Songs
-</small>
-
-</div>
-
-
-
-<div
-class="category"
-onclick="filterCategory('Sad')">
-
-<div class="icon">
-🌙
-</div>
-
-<h3>
-Night & Melancholy
-</h3>
-
-<small>
-700+ Songs
-</small>
-
-</div>
-
 
 
 <div class="category">
 
-<div class="icon">
-🎤
+<div class="category-icon">🎉</div>
+
+<div class="category-title">
+Party Songs
 </div>
 
-<h3>
-Duet Songs
-</h3>
-
-<small>
-1000+ Songs
-</small>
-
+<div class="category-count">
+800+ Songs
 </div>
 
+</div>
 
 
 <div
 class="category"
-onclick="topSongs()">
+onclick="filterCategory('Sad')">
 
-<div class="icon">
-👑
+<div class="category-icon">💔</div>
+
+<div class="category-title">
+Breakup Songs
 </div>
 
-<h3>
+<div class="category-count">
+800+ Songs
+</div>
+
+</div>
+
+
+<div
+class="category"
+onclick="filterCategory('Sad')">
+
+<div class="category-icon">🌙</div>
+
+<div class="category-title">
+Night & Melancholy
+</div>
+
+<div class="category-count">
+700+ Songs
+</div>
+
+</div>
+
+
+<div class="category">
+
+<div class="category-icon">🎤</div>
+
+<div class="category-title">
+Duet Songs
+</div>
+
+<div class="category-count">
+1000+ Songs
+</div>
+
+</div>
+
+
+<div
+class="category"
+onclick="top100()">
+
+<div class="category-icon">👑</div>
+
+<div class="category-title">
 Top 100
-</h3>
-
-<small>
-80s & 90s
-</small>
-
 </div>
 
+<div class="category-count">
+80s & 90s
+</div>
+
+</div>
 
 </section>
 
 
+<!-- ================= MAIN CONTENT ================= -->
 
-<!-- MAIN CONTENT -->
-
-<main class="main">
+<section class="content">
 
 
-<!-- SINGERS -->
+<!-- TOP SINGERS -->
 
-<aside
+<div
 class="card"
 id="singerSection">
 
-<div class="heading">
+<div class="card-heading">
 
 <h2>
 TOP SINGERS
@@ -1511,50 +1549,48 @@ TOP SINGERS
 
 <div id="singers"></div>
 
-</aside>
+</div>
 
 
+<!-- TRENDING SONGS -->
 
-<!-- SONGS -->
+<div class="card">
 
-<section class="card">
-
-<div class="heading">
+<div class="card-heading">
 
 <h2>
 TRENDING SONGS
 </h2>
 
 <span
-class="view"
+class="view-all"
 onclick="showAll()">
 View All
 </span>
 
 </div>
 
-<div id="songList"></div>
+<div id="songs"></div>
 
-</section>
-
-
-
-<!-- RIGHT SIDE -->
-
-<aside class="rightColumn">
+</div>
 
 
-<div class="songDay">
+<!-- RIGHT COLUMN -->
 
-<div>
+<div class="right-column">
+
+
+<!-- SONG OF DAY -->
+
+<div class="song-day">
+
+<div class="day-heading">
 🎵 SONG OF THE DAY
 </div>
 
-
-<div class="dayPic">
+<div class="day-image">
 🎙️
 </div>
-
 
 <h3>
 Lag Ja Gale
@@ -1575,8 +1611,8 @@ Lata Mangeshkar
 </p>
 
 <button
-class="songPlay"
-onclick="playSong(0)">
+class="day-play"
+onclick="playSong(1)">
 ▶
 </button>
 
@@ -1585,35 +1621,32 @@ onclick="playSong(0)">
 </div>
 
 
-
 <!-- PLAYLIST -->
 
 <div class="card playlist">
 
-<div class="heading">
+<div class="card-heading">
 
 <h2>
 PLAYLISTS
 </h2>
 
-<span class="view">
+<span class="view-all">
 View All
 </span>
 
 </div>
 
 
-<div class="playItem">
+<div class="play-item">
 
-<div class="playThumb">
+<div class="play-thumb">
 🎙️
 </div>
 
-<div class="playInfo">
+<div class="play-info">
 
-<b>
 Best of Kishore Kumar
-</b>
 
 <small>
 50 Songs
@@ -1621,24 +1654,22 @@ Best of Kishore Kumar
 
 </div>
 
-<button class="playButton">
+<button class="play-button">
 ▶
 </button>
 
 </div>
 
 
-<div class="playItem">
+<div class="play-item">
 
-<div class="playThumb">
+<div class="play-thumb">
 🎙️
 </div>
 
-<div class="playInfo">
+<div class="play-info">
 
-<b>
 Best of Mohammed Rafi
-</b>
 
 <small>
 50 Songs
@@ -1646,24 +1677,22 @@ Best of Mohammed Rafi
 
 </div>
 
-<button class="playButton">
+<button class="play-button">
 ▶
 </button>
 
 </div>
 
 
-<div class="playItem">
+<div class="play-item">
 
-<div class="playThumb">
+<div class="play-thumb">
 🎙️
 </div>
 
-<div class="playInfo">
+<div class="play-info">
 
-<b>
 Best of Lata Mangeshkar
-</b>
 
 <small>
 50 Songs
@@ -1671,24 +1700,22 @@ Best of Lata Mangeshkar
 
 </div>
 
-<button class="playButton">
+<button class="play-button">
 ▶
 </button>
 
 </div>
 
 
-<div class="playItem">
+<div class="play-item">
 
-<div class="playThumb">
+<div class="play-thumb">
 🎙️
 </div>
 
-<div class="playInfo">
+<div class="play-info">
 
-<b>
 Best of Mukesh
-</b>
 
 <small>
 50 Songs
@@ -1696,69 +1723,44 @@ Best of Mukesh
 
 </div>
 
-<button class="playButton">
+<button class="play-button">
 ▶
 </button>
 
 </div>
 
 
-<div class="playItem">
-
-<div class="playThumb">
-🎙️
-</div>
-
-<div class="playInfo">
-
-<b>
-Best of Asha Bhosle
-</b>
-
-<small>
-50 Songs
-</small>
-
-</div>
-
-<button class="playButton">
-▶
-</button>
-
 </div>
 
 </div>
 
-</aside>
-
-</main>
+</section>
 
 
-
-<!-- MUSIC PLAYER -->
+<!-- ================= PLAYER ================= -->
 
 <div class="player">
 
 
-<div class="current">
+<div class="now-playing">
 
-<div class="currentArt">
+<div class="now-cover">
 💿
 </div>
 
 <div>
 
 <div
-class="currentTitle"
-id="currentTitle">
+class="now-title"
+id="nowTitle">
 
 Select a song
 
 </div>
 
 <span
-class="currentArtist"
-id="currentArtist">
+class="now-info"
+id="nowInfo">
 
 80s & 90s Old Is Gold
 
@@ -1769,7 +1771,7 @@ id="currentArtist">
 </div>
 
 
-<div class="controls">
+<div class="player-controls">
 
 <button>♥</button>
 
@@ -1778,8 +1780,8 @@ id="currentArtist">
 <button>⏮</button>
 
 <button
-class="bigPlay"
-id="playButton"
+class="main-play"
+id="mainPlay"
 onclick="togglePlay()">
 
 ▶
@@ -1793,51 +1795,29 @@ onclick="togglePlay()">
 </div>
 
 
+<div class="progress-area">
+
+<span>1:25</span>
+
 <div class="progress">
-
-<span>
-1:25
-</span>
-
-<div class="progressLine">
-
 <span></span>
-
 </div>
 
-<span>
-4:42
-</span>
+<span>4:42</span>
 
-🔊
-
-</div>
+<span>🔊</span>
 
 </div>
 
 
-
-<div class="footer">
-
-🎵 80s & 90s OLD IS GOLD
-
-<br><br>
-
-Timeless Songs • Golden Memories • Evergreen Music
-
-<br><br>
-
-© 2026 Old Is Gold
-
 </div>
-
 
 
 <script>
 
 /* ================= SONG DATA ================= */
 
-const songs = [
+const songs=[
 
 [
 "Kahin Door Jab Din Dhal Jaye",
@@ -1912,129 +1892,12 @@ const songs = [
 ],
 
 [
-"Katra Katra",
-"Asha Bhosle",
-"Ijaazat",
-1987,
-"Romantic",
-"6:20"
-],
-
-[
 "Zindagi Kaisi Hai Paheli",
 "Manna Dey",
 "Anand",
 1971,
 "Sad",
 "3:55"
-],
-
-[
-"Mera Dil Bhi Kitna Pagal Hai",
-"Kumar Sanu",
-"Saajan",
-1991,
-"Romantic",
-"5:20"
-],
-
-[
-"Do Dil Mil Rahe Hain",
-"Kumar Sanu",
-"Pardes",
-1997,
-"Romantic",
-"5:56"
-],
-
-[
-"Pehla Nasha",
-"Udit Narayan",
-"Jo Jeeta Wohi Sikandar",
-1992,
-"Romantic",
-"4:53"
-],
-
-[
-"Pardesi Pardesi",
-"Udit Narayan",
-"Raja Hindustani",
-1996,
-"Sad",
-"7:00"
-],
-
-[
-"Tum Mile Dil Khile",
-"Udit Narayan",
-"Criminal",
-1995,
-"Romantic",
-"5:56"
-],
-
-[
-"Dilbar Dilbar",
-"Alka Yagnik",
-"Sirf Tum",
-1999,
-"Romantic",
-"5:43"
-],
-
-[
-"Tip Tip Barsa Paani",
-"Alka Yagnik",
-"Mohra",
-1994,
-"Romantic",
-"6:03"
-],
-
-[
-"Wada Raha Sanam",
-"Abhijeet",
-"Khiladi",
-1992,
-"Romantic",
-"6:05"
-],
-
-[
-"Tu Hi Re",
-"Hariharan",
-"Bombay",
-1995,
-"Romantic",
-"7:15"
-],
-
-[
-"Tum Itna Jo Muskura Rahe Ho",
-"Jagjit Singh",
-"Arth",
-1982,
-"Sad",
-"5:21"
-],
-
-[
-"Chitthi Aai Hai",
-"Pankaj Udhas",
-"Naam",
-1986,
-"Sad",
-"7:16"
-],
-
-[
-"Dard-E-Dil",
-"Mohammed Rafi",
-"Karz",
-1980,
-"Sad",
-"4:32"
 ],
 
 [
@@ -2083,12 +1946,21 @@ const songs = [
 ],
 
 [
-"Aye Dil-E-Nadan",
-"Lata Mangeshkar",
-"Razia Sultan",
-1983,
+"Tu Hi Re",
+"Hariharan",
+"Bombay",
+1995,
+"Romantic",
+"7:15"
+],
+
+[
+"Tum Itna Jo Muskura Rahe Ho",
+"Jagjit Singh",
+"Arth",
+1982,
 "Sad",
-"5:26"
+"5:21"
 ]
 
 ];
@@ -2096,49 +1968,47 @@ const songs = [
 
 let currentSongs=[...songs];
 
-let playing=false;
+let isPlaying=false;
 
 
-/* ================= SHOW SONGS ================= */
+/* ================= RENDER ================= */
 
 function renderSongs(list){
 
-const box=document.getElementById("songList");
+const box=document.getElementById("songs");
 
 box.innerHTML="";
 
-list.forEach(function(song,index){
+list.forEach((song,index)=>{
 
-box.innerHTML += `
+box.innerHTML+=`
 
 <div class="song">
 
-<div class="songArt">
+<div class="song-cover">
 🎵
 </div>
 
 <div>
 
-<div class="songTitle">
+<div class="song-title">
 ${song[0]}
 </div>
 
-<span class="songInfo">
+<span class="song-info">
 ${song[2]} (${song[3]}) • ${song[1]}
 </span>
 
 </div>
 
-<div class="duration">
+<div class="song-duration">
 ${song[5]}
 </div>
 
 <button
-class="songPlay"
+class="song-button"
 onclick="playSong(${index})">
-
 ▶
-
 </button>
 
 </div>
@@ -2150,7 +2020,7 @@ onclick="playSong(${index})">
 }
 
 
-/* ================= PLAY ================= */
+/* ================= PLAY SONG ================= */
 
 function playSong(index){
 
@@ -2160,20 +2030,15 @@ if(!song){
 song=songs[0];
 }
 
-document.getElementById(
-"currentTitle"
-).innerText=song[0];
+document.getElementById("nowTitle").innerText=
+song[0];
 
-document.getElementById(
-"currentArtist"
-).innerText=
+document.getElementById("nowInfo").innerText=
 song[2]+" • "+song[1];
 
-playing=true;
+isPlaying=true;
 
-document.getElementById(
-"playButton"
-).innerText="❚❚";
+document.getElementById("mainPlay").innerText="❚❚";
 
 }
 
@@ -2187,12 +2052,10 @@ playSong(0);
 
 function togglePlay(){
 
-playing=!playing;
+isPlaying=!isPlaying;
 
-document.getElementById(
-"playButton"
-).innerText=
-playing ? "❚❚" : "▶";
+document.getElementById("mainPlay").innerText=
+isPlaying ? "❚❚" : "▶";
 
 }
 
@@ -2210,12 +2073,7 @@ renderSongs(currentSongs);
 
 function filterCategory(category){
 
-currentSongs=
-songs.filter(function(song){
-
-return song[4]===category;
-
-});
+currentSongs=songs.filter(song=>song[4]===category);
 
 renderSongs(currentSongs);
 
@@ -2224,22 +2082,16 @@ renderSongs(currentSongs);
 
 function filterSinger(name){
 
-currentSongs=
-songs.filter(function(song){
-
-return song[1]===name;
-
-});
+currentSongs=songs.filter(song=>song[1]===name);
 
 renderSongs(currentSongs);
 
 }
 
 
-function topSongs(){
+function top100(){
 
-currentSongs=
-songs.slice(0,10);
+currentSongs=songs.slice(0,10);
 
 renderSongs(currentSongs);
 
@@ -2249,42 +2101,34 @@ renderSongs(currentSongs);
 /* ================= SINGERS ================= */
 
 const singers=[
-
 "Kishore Kumar",
-" Mohammed Rafi",
+"Mohammed Rafi",
 "Mukesh",
 "Lata Mangeshkar",
 "Asha Bhosle",
 "Manna Dey",
-"Kumar Sanu",
-"Udit Narayan",
-"Alka Yagnik",
-"Jagjit Singh",
-"Pankaj Udhas"
-
+"Talat Mahmood"
 ];
-
 
 const singerBox=
 document.getElementById("singers");
 
+singers.forEach(name=>{
 
-singers.forEach(function(name){
-
-singerBox.innerHTML += `
+singerBox.innerHTML+=`
 
 <div
 class="singer"
-onclick="filterSinger('${name.trim()}')">
+onclick="filterSinger('${name}')">
 
-<div class="singerPhoto">
+<div class="singer-photo">
 </div>
 
-<div class="singerName">
-${name.trim()}
+<div class="singer-name">
+${name}
 </div>
 
-<div class="arrow">
+<div class="singer-arrow">
 ›
 </div>
 
@@ -2297,9 +2141,9 @@ ${name.trim()}
 
 function showSingers(){
 
-document.getElementById(
-"singerSection"
-).scrollIntoView({
+document
+.getElementById("singerSection")
+.scrollIntoView({
 behavior:"smooth"
 });
 
@@ -2308,35 +2152,30 @@ behavior:"smooth"
 
 /* ================= SEARCH ================= */
 
-function searchMusic(){
+function searchSong(){
 
-let text=
-prompt("Search singer or song:");
+let query=
+prompt("Search song or singer:");
 
-if(!text){
+if(!query){
 return;
 }
 
-text=text.toLowerCase();
+query=query.toLowerCase();
 
-currentSongs=
-songs.filter(function(song){
+currentSongs=songs.filter(song=>
 
-return (
-
-song[0].toLowerCase().includes(text)
+song[0].toLowerCase().includes(query)
 
 ||
 
-song[1].toLowerCase().includes(text)
+song[1].toLowerCase().includes(query)
 
 ||
 
-song[2].toLowerCase().includes(text)
+song[2].toLowerCase().includes(query)
 
 );
-
-});
 
 renderSongs(currentSongs);
 
@@ -2348,7 +2187,6 @@ renderSongs(currentSongs);
 renderSongs(currentSongs);
 
 </script>
-
 
 </body>
 </html>
