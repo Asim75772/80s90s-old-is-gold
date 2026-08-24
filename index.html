@@ -2,69 +2,84 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#071019">
+
 <title>80s & 90s Old Is Gold</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
 
 :root{
-  --gold:#e7a928;
-  --gold2:#ffd36a;
-  --cream:#fff4dc;
-  --dark:#071019;
-  --card:#0d1a26;
-  --line:#344555;
+  --bg:#071019;
+  --bg2:#0b1722;
+  --card:#0d1b28;
+  --gold:#e7aa35;
+  --gold2:#ffd477;
+  --white:#fff5df;
+  --muted:#aeb9c4;
+  --border:#344757;
+  --red:#ff4050;
+}
+
+html{
+  scroll-behavior:smooth;
 }
 
 body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#071019;
+  background:
+    radial-gradient(circle at top,#162536 0,#071019 42%,#040a10 100%);
   color:white;
-  padding-bottom:115px;
+  font-family:Arial,Helvetica,sans-serif;
+  min-height:100vh;
+  padding-bottom:120px;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 
 header{
-  height:86px;
-  background:#050a10;
-  border-bottom:1px solid #8e681f;
+  height:82px;
+  background:#050b12;
+  border-bottom:1px solid #5d4820;
   display:flex;
   align-items:center;
-  padding:10px 4%;
-  gap:25px;
-}
-
-.menu{
-  font-size:30px;
-  color:var(--gold);
-  cursor:pointer;
+  gap:15px;
+  padding:8px 4%;
+  position:sticky;
+  top:0;
+  z-index:100;
 }
 
 .logo{
   width:58px;
   height:58px;
+  min-width:58px;
   border-radius:50%;
   border:2px solid var(--gold);
   background:
     repeating-radial-gradient(
       circle,
-      #111 0px,
-      #111 4px,
-      #292929 5px,
-      #111 7px
+      #090909 0px,
+      #090909 5px,
+      #292929 6px,
+      #090909 8px
     );
   position:relative;
+  box-shadow:0 0 15px #e7aa3533;
 }
 
 .logo:after{
   content:"";
   position:absolute;
-  width:16px;
-  height:16px;
-  background:var(--gold);
+  width:17px;
+  height:17px;
   border-radius:50%;
+  background:#e9aa3a;
+  border:4px solid #7d2720;
   top:50%;
   left:50%;
   transform:translate(-50%,-50%);
@@ -76,8 +91,8 @@ header{
 
 .brand h1{
   font-family:Georgia,serif;
-  font-size:31px;
-  color:var(--cream);
+  font-size:30px;
+  color:var(--white);
 }
 
 .brand span{
@@ -85,53 +100,163 @@ header{
   color:var(--gold);
   letter-spacing:5px;
   font-size:11px;
+  font-weight:bold;
   margin-top:3px;
 }
 
-.header-icons{
+.top-buttons{
   display:flex;
-  gap:25px;
-  font-size:27px;
-  color:var(--cream);
+  gap:10px;
 }
 
-/* HERO */
+.top-btn{
+  background:#101c27;
+  border:1px solid #3c4b58;
+  color:#fff;
+  padding:10px 15px;
+  border-radius:22px;
+  cursor:pointer;
+}
+
+.top-btn:hover{
+  border-color:var(--gold);
+  color:var(--gold2);
+}
+
+/* ================= SEARCH ================= */
+
+.search-area{
+  width:94%;
+  max-width:600px;
+  margin:15px auto;
+  display:none;
+}
+
+.search-area.show{
+  display:block;
+}
+
+.search-area input{
+  width:100%;
+  padding:14px 20px;
+  border-radius:30px;
+  border:1px solid var(--gold);
+  background:#0d1a27;
+  color:white;
+  font-size:16px;
+  outline:none;
+}
+
+.search-area input::placeholder{
+  color:#8996a2;
+}
+
+/* ================= HERO ================= */
 
 .hero{
   width:94%;
   max-width:1450px;
   height:330px;
   margin:18px auto;
-  border:1px solid #c08b28;
+  border:1px solid #9c7227;
   border-radius:20px;
   overflow:hidden;
   position:relative;
-
   background:
-  radial-gradient(circle at 50% 50%,#d48b2b88,transparent 43%),
-  linear-gradient(110deg,#111820,#25190d,#0b131b);
+    radial-gradient(
+      circle at 50% 48%,
+      #d48a2c66 0,
+      transparent 38%
+    ),
+    linear-gradient(
+      120deg,
+      #17232b,
+      #24190f,
+      #0b141d
+    );
 }
 
-.hero .radio{
+.hero:before{
+  content:"";
   position:absolute;
-  left:25px;
-  bottom:-10px;
-  font-size:150px;
-  opacity:.65;
+  inset:0;
+  background:
+    repeating-linear-gradient(
+      -15deg,
+      transparent 0px,
+      transparent 25px,
+      #c1883220 26px,
+      #c1883220 30px
+    );
 }
 
-.hero .vinyl{
+.cassette{
   position:absolute;
-  right:25px;
-  top:20px;
-  font-size:160px;
-  opacity:.65;
+  left:-30px;
+  bottom:0;
+  width:370px;
+  height:190px;
+  border:9px solid #6d5535;
+  border-radius:18px;
+  transform:rotate(-8deg);
+  opacity:.55;
+  background:#191919;
+}
+
+.cassette:before,
+.cassette:after{
+  content:"";
+  position:absolute;
+  width:62px;
+  height:62px;
+  border-radius:50%;
+  border:9px solid #59452e;
+  background:#111;
+  top:58px;
+}
+
+.cassette:before{
+  left:58px;
+}
+
+.cassette:after{
+  right:58px;
+}
+
+.record{
+  position:absolute;
+  right:-45px;
+  top:35px;
+  width:270px;
+  height:270px;
+  border-radius:50%;
+  background:
+    repeating-radial-gradient(
+      circle,
+      #171717 0px,
+      #171717 5px,
+      #292929 6px,
+      #101010 9px
+    );
+  opacity:.55;
+}
+
+.record:after{
+  content:"";
+  position:absolute;
+  width:45px;
+  height:45px;
+  background:#c38a2d;
+  border-radius:50%;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
 }
 
 .hero-content{
   position:absolute;
+  z-index:3;
   inset:0;
-  z-index:2;
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -140,60 +265,61 @@ header{
 }
 
 .hero-small{
-  color:#f1b83e;
-  font-size:25px;
+  color:#eab348;
   font-family:Georgia,serif;
   font-style:italic;
+  font-size:25px;
 }
 
 .hero h2{
+  color:#fff5df;
   font-family:Georgia,serif;
-  font-size:68px;
-  color:#fff6e3;
-  margin:7px 0;
+  font-size:66px;
+  margin:5px 0;
+  text-shadow:0 3px 12px #000;
 }
 
 .hero p{
-  color:#f0b83f;
-  letter-spacing:8px;
+  color:#f0b33b;
   font-size:20px;
+  letter-spacing:8px;
   font-weight:bold;
 }
 
 .hero button{
-  margin-top:23px;
-  padding:15px 42px;
+  margin-top:22px;
+  padding:15px 40px;
   border:0;
   border-radius:30px;
-  background:#f4bd50;
+  background:#f6c55e;
   color:#111;
-  font-size:18px;
   font-weight:bold;
+  font-size:18px;
   cursor:pointer;
-  box-shadow:0 5px 20px #d58a1f55;
+  box-shadow:0 5px 25px #0007;
 }
 
 .hero button:hover{
-  background:#ffd878;
+  background:#ffda7d;
+  transform:scale(1.03);
 }
 
-/* SECTION TITLE */
+/* ================= TITLE ================= */
 
 .section-title{
   width:94%;
   max-width:1450px;
-  margin:28px auto 18px;
+  margin:25px auto 17px;
   text-align:center;
-  color:#fff;
-  font-size:30px;
-  letter-spacing:2px;
+  font-size:27px;
+  color:white;
 }
 
 .section-title span{
-  color:var(--gold);
+  color:var(--gold2);
 }
 
-/* RADIO GRID */
+/* ================= RADIO ================= */
 
 .radio-grid{
   width:94%;
@@ -201,130 +327,169 @@ header{
   margin:auto;
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:15px;
+  gap:16px;
 }
 
 .station{
-  background:linear-gradient(145deg,#0e1d2a,#09141e);
-  border:1px solid #334454;
+  background:
+    linear-gradient(
+      145deg,
+      #102131,
+      #081520
+    );
+  border:1px solid var(--border);
   border-radius:18px;
-  padding:22px 15px 18px;
+  min-height:245px;
+  padding:20px 14px 15px;
   text-align:center;
-  min-height:250px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:space-between;
+  position:relative;
   transition:.25s;
 }
 
 .station:hover{
-  transform:translateY(-4px);
   border-color:var(--gold);
-  box-shadow:0 8px 25px #0008;
+  transform:translateY(-3px);
+  box-shadow:0 10px 30px #0007;
 }
 
 .station-icon{
   width:82px;
   height:82px;
+  margin:0 auto 14px;
   border-radius:50%;
   display:flex;
-  justify-content:center;
   align-items:center;
-  font-size:38px;
+  justify-content:center;
+  font-size:37px;
   border:2px solid var(--gold);
-  background:#101b25;
-  margin-bottom:13px;
+  background:#101820;
+  box-shadow:0 0 15px #0008;
 }
 
-.station:nth-child(2) .station-icon{
-  border-color:#18c9df;
+.station:nth-child(2n) .station-icon{
+  border-color:#57bfe8;
 }
 
-.station:nth-child(3) .station-icon{
-  border-color:#ff4e82;
-}
-
-.station:nth-child(4) .station-icon{
-  border-color:#9ee42b;
-}
-
-.station:nth-child(5) .station-icon{
-  border-color:#ffb321;
-}
-
-.station:nth-child(6) .station-icon{
-  border-color:#a96bea;
-}
-
-.station:nth-child(7) .station-icon{
-  border-color:#45a9ff;
-}
-
-.station:nth-child(8) .station-icon{
-  border-color:#ff4b4b;
+.station:nth-child(3n) .station-icon{
+  border-color:#df4d7a;
 }
 
 .station h3{
-  font-size:18px;
-  line-height:1.3;
-  margin-bottom:7px;
+  font-size:17px;
+  line-height:1.35;
+  min-height:46px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
 .station p{
-  color:#aab5c0;
-  font-size:13px;
-  min-height:32px;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.4;
+  min-height:35px;
+  margin-top:5px;
 }
 
-.station-bottom{
-  width:100%;
+.station-actions{
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:18px;
+  gap:12px;
   margin-top:15px;
 }
 
-.play{
-  width:55px;
-  height:55px;
+.play-btn{
+  width:50px;
+  height:50px;
   border-radius:50%;
+  background:#101c27;
   border:2px solid var(--gold);
-  background:#101a23;
   color:white;
-  font-size:21px;
+  font-size:20px;
   cursor:pointer;
 }
 
-.play:hover{
+.play-btn:hover{
   background:var(--gold);
   color:#111;
 }
 
-.favorite{
-  background:none;
-  border:0;
-  color:#f3d78e;
+.fav-btn{
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  border:1px solid #455767;
+  background:#101c27;
+  color:white;
+  font-size:24px;
+  cursor:pointer;
+}
+
+.fav-btn.active{
+  color:#ff4355;
+  border-color:#ff4355;
+}
+
+.more-btn{
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  border:1px solid #455767;
+  background:#101c27;
+  color:white;
   font-size:25px;
   cursor:pointer;
 }
 
-.favorite.active{
-  color:#ff4b57;
+.more-btn:hover,
+.fav-btn:hover{
+  border-color:var(--gold);
 }
 
-/* LOAD MORE */
+/* ================= 3 DOT MENU ================= */
+
+.station-menu{
+  position:absolute;
+  right:12px;
+  bottom:68px;
+  width:185px;
+  background:#0c1925;
+  border:1px solid var(--gold);
+  border-radius:13px;
+  padding:6px;
+  z-index:50;
+  box-shadow:0 10px 30px #000b;
+}
+
+.station-menu button{
+  width:100%;
+  border:0;
+  background:transparent;
+  color:white;
+  text-align:left;
+  padding:11px 12px;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:14px;
+}
+
+.station-menu button:hover{
+  background:#182938;
+  color:var(--gold2);
+}
+
+/* ================= LOAD ================= */
 
 .load{
   display:block;
   margin:25px auto;
-  padding:12px 32px;
-  border-radius:25px;
+  padding:12px 30px;
   border:1px solid var(--gold);
   background:transparent;
   color:var(--gold2);
-  font-size:16px;
+  border-radius:25px;
+  font-size:15px;
   cursor:pointer;
 }
 
@@ -333,7 +498,7 @@ header{
   color:#111;
 }
 
-/* INFO */
+/* ================= INFO ================= */
 
 .info{
   width:94%;
@@ -341,107 +506,141 @@ header{
   margin:25px auto;
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:10px;
+  gap:12px;
 }
 
 .info-box{
-  background:#0b1722;
-  border:1px solid #2c3d4b;
-  border-radius:12px;
-  padding:15px;
+  background:#0b1824;
+  border:1px solid #2d4050;
+  border-radius:13px;
+  padding:17px;
   text-align:center;
+  color:#aeb9c4;
 }
 
-.info-box b{
+.info-box strong{
   display:block;
   color:var(--gold);
-  margin-top:5px;
+  margin:5px 0;
 }
 
 .info-box span{
-  font-size:25px;
+  font-size:24px;
 }
 
-/* PLAYER */
+/* ================= PLAYER ================= */
 
 .player{
   position:fixed;
   bottom:0;
   left:0;
   right:0;
-  height:105px;
+  height:108px;
   background:#040a10;
-  border-top:1px solid #a47725;
-  z-index:100;
+  border-top:1px solid #a67b28;
+  z-index:200;
   display:flex;
   align-items:center;
   padding:10px 3%;
-  gap:25px;
+  gap:18px;
 }
 
-.now-icon{
+.player-disc{
   width:68px;
   height:68px;
-  border-radius:12px;
-  border:1px solid var(--gold);
+  min-width:68px;
+  border-radius:50%;
   background:
-    radial-gradient(circle,#dba83b 0 8%,#171717 9% 30%,#050505 31% 100%);
-  flex-shrink:0;
+    repeating-radial-gradient(
+      circle,
+      #101010 0,
+      #101010 5px,
+      #292929 6px,
+      #111 9px
+    );
+  border:2px solid #b57d27;
+  position:relative;
+}
+
+.player-disc:after{
+  content:"";
+  position:absolute;
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  background:#e1a43a;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
 }
 
 .now{
   flex:1;
+  min-width:0;
 }
 
-.now small{
+.now-label{
   color:var(--gold);
+  font-size:11px;
   letter-spacing:2px;
 }
 
 .now h3{
-  margin:4px 0;
+  margin:5px 0 3px;
   font-size:18px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
 }
 
 .now p{
-  color:#9ca8b3;
-  font-size:13px;
+  color:#99a7b3;
+  font-size:12px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
 }
 
 .live{
-  color:#ff4545!important;
+  color:#ff4754!important;
+  font-size:10px!important;
+  margin-top:3px;
 }
 
 .controls{
   display:flex;
   align-items:center;
-  gap:18px;
+  gap:14px;
 }
 
 .ctrl{
-  border:0;
   background:none;
+  border:0;
   color:white;
   font-size:24px;
   cursor:pointer;
 }
 
-.big-play{
+.ctrl:hover{
+  color:var(--gold2);
+}
+
+.main-play{
   width:62px;
   height:62px;
   border-radius:50%;
-  border:2px solid #f5d37e;
-  background:#f5c45d;
+  border:2px solid #f5d17a;
+  background:#f5c55e;
   color:#111;
-  font-size:23px;
+  font-size:22px;
   cursor:pointer;
 }
 
 .volume{
-  width:130px;
   display:flex;
   align-items:center;
-  gap:7px;
+  gap:8px;
+  width:130px;
 }
 
 .volume input{
@@ -449,82 +648,41 @@ header{
   accent-color:var(--gold);
 }
 
-/* SEARCH */
+/* ================= EMPTY ================= */
 
-.search-box{
-  width:94%;
-  max-width:500px;
-  margin:15px auto 0;
-  display:none;
+.empty{
+  grid-column:1/-1;
+  text-align:center;
+  padding:45px 15px;
+  color:#aeb9c4;
 }
 
-.search-box.show{
+.empty strong{
+  color:var(--gold2);
   display:block;
+  font-size:20px;
+  margin-bottom:8px;
 }
 
-.search-box input{
-  width:100%;
-  padding:13px 18px;
-  border-radius:25px;
-  border:1px solid var(--gold);
-  background:#0d1b27;
-  color:white;
-  outline:none;
-  font-size:16px;
-}
+/* ================= MOBILE ================= */
 
-/* MOBILE */
-
-@media(max-width:900px){
+@media(max-width:950px){
 
   header{
-    height:82px;
-    gap:12px;
+    height:80px;
     padding:8px 15px;
   }
 
-  .logo{
-    width:52px;
-    height:52px;
-  }
-
   .brand h1{
-    font-size:24px;
+    font-size:25px;
   }
 
-  .brand span{
-    font-size:9px;
-  }
-
-  .header-icons{
-    gap:10px;
-    font-size:23px;
-  }
-
-  .hero{
-    height:300px;
-  }
-
-  .hero h2{
-    font-size:46px;
-  }
-
-  .hero-small{
-    font-size:20px;
-  }
-
-  .hero p{
-    font-size:15px;
+  .top-buttons{
+    display:none;
   }
 
   .radio-grid{
     grid-template-columns:repeat(2,1fr);
-    gap:12px;
-  }
-
-  .station{
-    min-height:230px;
-    padding:17px 10px;
   }
 
   .info{
@@ -536,69 +694,78 @@ header{
   }
 
   .player{
-    height:88px;
+    height:92px;
     padding:8px 13px;
     gap:10px;
   }
 
-  .now-icon{
-    width:54px;
-    height:54px;
-  }
-
-  .now h3{
-    font-size:14px;
-  }
-
-  .now p{
-    font-size:11px;
+  .player-disc{
+    width:55px;
+    height:55px;
+    min-width:55px;
   }
 
   .controls{
     gap:8px;
   }
 
-  .ctrl{
-    font-size:19px;
+  .main-play{
+    width:56px;
+    height:56px;
   }
 
-  .big-play{
-    width:55px;
-    height:55px;
-  }
 }
 
-@media(max-width:480px){
+@media(max-width:520px){
 
-  .header-icons{
-    display:none;
+  body{
+    padding-bottom:100px;
+  }
+
+  header{
+    height:75px;
+  }
+
+  .logo{
+    width:49px;
+    height:49px;
+    min-width:49px;
+  }
+
+  .brand h1{
+    font-size:23px;
+  }
+
+  .brand span{
+    font-size:8px;
+    letter-spacing:4px;
   }
 
   .hero{
     width:96%;
-    height:285px;
+    height:290px;
   }
 
-  .hero .radio{
-    left:-15px;
-    font-size:110px;
+  .cassette{
+    width:270px;
+    height:145px;
   }
 
-  .hero .vinyl{
-    right:-20px;
-    font-size:120px;
-  }
-
-  .hero h2{
-    font-size:40px;
+  .record{
+    width:170px;
+    height:170px;
   }
 
   .hero-small{
     font-size:18px;
   }
 
+  .hero h2{
+    font-size:42px;
+  }
+
   .hero p{
-    font-size:13px;
+    font-size:14px;
     letter-spacing:5px;
   }
 
@@ -608,85 +775,95 @@ header{
   }
 
   .section-title{
-    font-size:23px;
+    font-size:22px;
   }
 
   .radio-grid{
     width:94%;
     grid-template-columns:repeat(2,1fr);
+    gap:10px;
   }
 
   .station{
-    min-height:205px;
+    min-height:215px;
+    padding:15px 8px;
   }
 
   .station-icon{
     width:62px;
     height:62px;
-    font-size:29px;
+    font-size:28px;
   }
 
   .station h3{
     font-size:14px;
+    min-height:40px;
   }
 
   .station p{
-    font-size:11px;
+    font-size:10px;
   }
 
-  .play{
-    width:46px;
-    height:46px;
-    font-size:18px;
+  .play-btn{
+    width:44px;
+    height:44px;
+    font-size:17px;
   }
 
-  .favorite{
+  .fav-btn,
+  .more-btn{
+    width:39px;
+    height:39px;
     font-size:21px;
   }
 
+  .station-menu{
+    width:165px;
+  }
+
   .info{
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:repeat(2,1fr);
   }
 
   .info-box{
-    font-size:12px;
+    padding:12px 5px;
+    font-size:11px;
   }
 
-  .info-box span{
-    font-size:20px;
-  }
-
-  .now-icon{
+  .player-disc{
     display:none;
   }
 
-  .now{
-    min-width:0;
+  .now h3{
+    font-size:14px;
+    max-width:145px;
   }
 
-  .now h3{
-    white-space:nowrap;
-    overflow:hidden;
-    text-overflow:ellipsis;
-    max-width:125px;
+  .now p{
+    max-width:145px;
   }
 
   .controls{
     margin-left:auto;
   }
 
+  .ctrl{
+    font-size:20px;
+  }
+
   .controls .ctrl:first-child{
     display:none;
   }
+
 }
 </style>
 </head>
 
 <body>
 
-<header>
+<!-- ================= HEADER ================= -->
 
-  <div class="menu">☰</div>
+<header>
 
   <div class="logo"></div>
 
@@ -695,39 +872,55 @@ header{
     <span>OLD IS GOLD</span>
   </div>
 
-  <div class="header-icons">
-    <span onclick="toggleFavorites()">♡</span>
-    <span onclick="toggleSearch()">⌕</span>
+  <div class="top-buttons">
+
+    <button class="top-btn"
+            onclick="showFavorites()">
+      ♥ Favorites
+    </button>
+
+    <button class="top-btn"
+            onclick="toggleSearch()">
+      🔍 Search
+    </button>
+
   </div>
 
 </header>
 
 
-<div class="search-box" id="searchBox">
+<!-- SEARCH -->
+
+<div class="search-area" id="searchArea">
+
   <input
-    id="search"
+    id="searchInput"
     type="search"
-    placeholder="Search radio station..."
+    placeholder="🔍 Search radio station..."
     oninput="searchStations()">
+
 </div>
 
 
+<!-- ================= HERO ================= -->
+
 <section class="hero">
 
-  <div class="radio">📻</div>
-  <div class="vinyl">💿</div>
+  <div class="cassette"></div>
+
+  <div class="record"></div>
 
   <div class="hero-content">
 
     <div class="hero-small">
-      Feel The Nostalgia
+      Relive The Magic of
     </div>
 
     <h2>80s & 90s</h2>
 
-    <p>OLD IS GOLD</p>
+    <p>GOLDEN HITS</p>
 
-    <button onclick="playCurrent()">
+    <button onclick="playFirstStation()">
       ▶ PLAY RADIO
     </button>
 
@@ -736,66 +929,82 @@ header{
 </section>
 
 
+<!-- ================= RADIO ================= -->
+
 <h2 class="section-title">
   📻 <span>LIVE INTERNET RADIO</span>
 </h2>
 
 
-<div class="radio-grid" id="stations"></div>
+<div class="radio-grid" id="stations">
+
+  <div class="empty">
+    <strong>📻 Finding radio stations...</strong>
+    Please wait
+  </div>
+
+</div>
 
 
-<button class="load" onclick="loadMore()">
-  ↻ LOAD MORE STATIONS
+<button class="load"
+        onclick="loadMore()">
+  ↻ LOAD MORE
 </button>
 
+
+<!-- ================= INFO ================= -->
 
 <div class="info">
 
   <div class="info-box">
     <span>📡</span>
-    <b>LIVE RADIO</b>
-    Online Stations
+    <strong>LIVE RADIO</strong>
+    Internet Stations
   </div>
 
   <div class="info-box">
     <span>🎧</span>
-    <b>GOOD QUALITY</b>
-    HD Streaming
+    <strong>RETRO MUSIC</strong>
+    Old Is Gold
   </div>
 
   <div class="info-box">
-    <span>❤️</span>
-    <b>FAVORITES</b>
+    <span>♥</span>
+    <strong>FAVORITES</strong>
     Save Stations
   </div>
 
   <div class="info-box">
     <span>📱</span>
-    <b>MOBILE FRIENDLY</b>
+    <strong>MOBILE READY</strong>
     Listen Anywhere
   </div>
 
 </div>
 
 
+<!-- ================= PLAYER ================= -->
+
 <div class="player">
 
-  <div class="now-icon"></div>
+  <div class="player-disc"></div>
 
   <div class="now">
 
-    <small>NOW PLAYING</small>
+    <div class="now-label">
+      NOW PLAYING
+    </div>
 
     <h3 id="nowTitle">
       Select a Radio Station
     </h3>
 
-    <p id="nowDesc">
+    <p id="nowDescription">
       80s & 90s Old Is Gold
     </p>
 
     <p class="live">
-      ● LIVE
+      ● LIVE INTERNET RADIO
     </p>
 
   </div>
@@ -803,16 +1012,19 @@ header{
 
   <div class="controls">
 
-    <button class="ctrl" onclick="previousStation()">
+    <button class="ctrl"
+            onclick="previousStation()">
       ⏮
     </button>
 
-    <button class="big-play" id="mainPlay"
-            onclick="togglePlay()">
+    <button class="main-play"
+            id="mainPlay"
+            onclick="toggleMainPlay()">
       ▶
     </button>
 
-    <button class="ctrl" onclick="nextStation()">
+    <button class="ctrl"
+            onclick="nextStation()">
       ⏭
     </button>
 
@@ -829,7 +1041,7 @@ header{
       max="1"
       step="0.01"
       value="0.8"
-      oninput="setVolume(this.value)">
+      oninput="changeVolume(this.value)">
 
   </div>
 
@@ -841,84 +1053,82 @@ header{
 
 <script>
 
-/* ==========================================
-   RADIO BROWSER API
-   ========================================== */
-
-const API =
-"https://de1.api.radio-browser.info/json/stations/search";
-
+/* =====================================================
+   SETTINGS
+===================================================== */
 
 const audio =
 document.getElementById("audio");
 
+const stationsBox =
+document.getElementById("stations");
+
 let stations = [];
 
-let visible = 8;
+let filteredStations = [];
 
-let current = -1;
+let currentIndex = -1;
+
+let visibleCount = 8;
 
 let favorites =
-JSON.parse(localStorage.getItem("oldGoldFavorites") || "[]");
+JSON.parse(
+  localStorage.getItem("oldGoldFavorites") || "[]"
+);
 
 
-/* ==========================================
-   GET RADIO STATIONS
-   ========================================== */
+/* =====================================================
+   RADIO BROWSER API
+===================================================== */
 
-async function getStations(){
+async function loadStations(){
 
-  const box =
-  document.getElementById("stations");
-
-  box.innerHTML = `
-    <div style="
-      grid-column:1/-1;
-      text-align:center;
-      padding:40px;
-      color:#eab64c">
-      📻 Finding live radio stations...
+  stationsBox.innerHTML = `
+    <div class="empty">
+      <strong>📻 Loading Live Radio...</strong>
+      Searching online stations
     </div>
   `;
 
   try{
 
     const url =
-    API +
+    "https://de1.api.radio-browser.info/json/stations/search" +
     "?countrycode=IN" +
     "&tag=oldies" +
     "&hidebroken=true" +
     "&is_https=true" +
     "&order=votes" +
     "&reverse=true" +
-    "&limit=40";
+    "&limit=100";
 
-    let response =
+    const response =
     await fetch(url);
 
     let data =
     await response.json();
 
     stations =
-    data.filter(s =>
-      s.url_resolved &&
-      s.name
+    data.filter(station =>
+      station.url_resolved &&
+      station.name
     );
 
-    /* If oldies search is small,
-       try Bollywood */
+
+    /* If not enough Indian oldies stations,
+       get Bollywood stations */
 
     if(stations.length < 8){
 
       const url2 =
-      API +
+      "https://de1.api.radio-browser.info/json/stations/search" +
       "?countrycode=IN" +
       "&tag=bollywood" +
       "&hidebroken=true" +
       "&is_https=true" +
       "&order=votes" +
       "&reverse=true" +
-      "&limit=40";
+      "&limit=100";
 
       const response2 =
       await fetch(url2);
@@ -927,36 +1137,49 @@ async function getStations(){
       await response2.json();
 
       stations =
-      [...stations,...data2]
-      .filter((s,i,a)=>
-        s.url_resolved &&
-        a.findIndex(x =>
-          x.stationuuid === s.stationuuid
-        ) === i
-      );
+      [...stations,...data2];
 
     }
+
+
+    /* Remove duplicates */
+
+    const seen =
+    new Set();
+
+    stations =
+    stations.filter(station => {
+
+      const id =
+      station.stationuuid ||
+      station.url_resolved;
+
+      if(seen.has(id))
+        return false;
+
+      seen.add(id);
+
+      return true;
+
+    });
+
+
+    filteredStations =
+    [...stations];
 
     renderStations();
 
   }
   catch(error){
 
-    box.innerHTML = `
-      <div style="
-      grid-column:1/-1;
-      text-align:center;
-      padding:35px">
+    stationsBox.innerHTML = `
+      <div class="empty">
 
-      <h3>Radio stations could not load.</h3>
+        <strong>
+          ⚠️ Radio stations could not load
+        </strong>
 
-      <p style="
-      color:#aaa;
-      margin-top:10px">
-
-      Please refresh the page and try again.
-
-      </p>
+        Please refresh the page and try again.
 
       </div>
     `;
@@ -966,43 +1189,51 @@ async function getStations(){
 }
 
 
-/* ==========================================
-   RENDER
-   ========================================== */
+/* =====================================================
+   RENDER STATIONS
+===================================================== */
 
 function renderStations(){
 
-  const box =
-  document.getElementById("stations");
+  stationsBox.innerHTML = "";
 
-  const search =
-  document.getElementById("search")
-  .value
-  .toLowerCase();
+  if(filteredStations.length === 0){
 
-  box.innerHTML = "";
+    stationsBox.innerHTML = `
+      <div class="empty">
 
-  let filtered =
-  stations.filter(s =>
-    s.name.toLowerCase().includes(search) ||
-    (s.tags || "").toLowerCase().includes(search)
-  );
+        <strong>
+          🔍 No stations found
+        </strong>
 
-  filtered
-  .slice(0,visible)
-  .forEach((station,index)=>{
+        Try another search.
+
+      </div>
+    `;
+
+    return;
+
+  }
+
+
+  filteredStations
+  .slice(0,visibleCount)
+  .forEach((station) => {
 
     const realIndex =
     stations.indexOf(station);
+
+    const id =
+    getStationID(station);
+
+    const isFavorite =
+    favorites.includes(id);
 
     const card =
     document.createElement("div");
 
     card.className =
     "station";
-
-    const isFav =
-    favorites.includes(station.stationuuid);
 
     card.innerHTML = `
 
@@ -1013,86 +1244,137 @@ function renderStations(){
         </div>
 
         <h3>
-          ${escapeHTML(station.name)}
+          ${safe(station.name)}
         </h3>
 
         <p>
-          ${escapeHTML(
+          ${safe(
             station.tags ||
-            "Internet Radio"
+            "Live Internet Radio"
           )}
         </p>
 
       </div>
 
-      <div class="station-bottom">
+
+      <div class="station-actions">
 
         <button
-          class="play"
-          onclick="playStation(${realIndex})">
-
+          class="play-btn"
+          onclick="playStation(${realIndex})"
+          title="Play">
           ▶
-
         </button>
 
+
         <button
-          class="favorite ${isFav ? "active":""}"
-          onclick="favoriteStation(
-          ${realIndex},this)">
+          class="fav-btn ${isFavorite ? "active" : ""}"
+          onclick="toggleFavorite(${realIndex},this)"
+          title="Favorite">
+          ${isFavorite ? "♥" : "♡"}
+        </button>
 
-          ${isFav ? "♥":"♡"}
 
+        <button
+          class="more-btn"
+          onclick="openMenu(event,${realIndex})"
+          title="More">
+          ⋮
         </button>
 
       </div>
+
+
+      <div
+        class="station-menu"
+        id="menu-${realIndex}"
+        style="display:none">
+
+        <button
+          onclick="playStation(${realIndex});closeMenus()">
+          ▶ Play Station
+        </button>
+
+        <button
+          onclick="toggleFavorite(${realIndex});closeMenus()">
+          ♥ Add / Remove Favorite
+        </button>
+
+        <button
+          onclick="copyStationLink(${realIndex});closeMenus()">
+          🔗 Copy Stream Link
+        </button>
+
+        <button
+          onclick="showStationInfo(${realIndex});closeMenus()">
+          ℹ Station Info
+        </button>
+
+      </div>
+
     `;
 
-    box.appendChild(card);
+    stationsBox.appendChild(card);
 
   });
 
 }
 
 
-/* ==========================================
+/* =====================================================
    PLAY STATION
-   ========================================== */
+===================================================== */
 
 function playStation(index){
-
-  if(!stations[index]) return;
-
-  current = index;
 
   const station =
   stations[index];
 
+  if(!station)
+    return;
+
+  currentIndex =
+  index;
+
+  const stream =
+  station.url_resolved ||
+  station.url;
+
+  if(!stream)
+    return;
+
+
   audio.src =
-  station.url_resolved;
+  stream;
+
+  audio.load();
+
 
   document.getElementById("nowTitle")
   .textContent =
   station.name;
 
-  document.getElementById("nowDesc")
+
+  document.getElementById("nowDescription")
   .textContent =
   station.tags ||
   "Live Internet Radio";
 
+
   audio.play()
-  .then(()=>{
+  .then(() => {
 
     document.getElementById("mainPlay")
     .textContent = "❚❚";
 
   })
-  .catch(()=>{
+  .catch(() => {
 
     document.getElementById("mainPlay")
     .textContent = "▶";
 
     alert(
-      "এই radio stream টি browser-এ play করা যাচ্ছে না। অন্য station চেষ্টা করুন।"
+      "এই station টি browser-এ play করা যাচ্ছে না। অন্য station চেষ্টা করুন।"
     );
 
   });
@@ -1100,50 +1382,58 @@ function playStation(index){
 }
 
 
-/* ==========================================
-   PLAY CURRENT
-   ========================================== */
+/* =====================================================
+   FIRST STATION
+===================================================== */
 
-function playCurrent(){
+function playFirstStation(){
 
-  if(current === -1){
+  if(stations.length === 0){
 
-    if(stations.length){
+    alert("Radio stations এখনও load হয়নি।");
 
-      playStation(0);
+    return;
 
-    }
+  }
+
+  if(currentIndex === -1){
+
+    playStation(0);
 
   }
   else{
 
-    playStation(current);
+    toggleMainPlay();
 
   }
 
 }
 
 
-/* ==========================================
+/* =====================================================
    PLAY / PAUSE
-   ========================================== */
+===================================================== */
 
-function togglePlay(){
+function toggleMainPlay(){
 
   if(!audio.src){
 
-    playCurrent();
+    playFirstStation();
 
     return;
 
   }
 
+
   if(audio.paused){
 
-    audio.play();
+    audio.play()
+    .then(() => {
 
-    document.getElementById("mainPlay")
-    .textContent = "❚❚";
+      document.getElementById("mainPlay")
+      .textContent = "❚❚";
+
+    });
 
   }
   else{
@@ -1158,54 +1448,60 @@ function togglePlay(){
 }
 
 
-/* ==========================================
+/* =====================================================
    NEXT
-   ========================================== */
+===================================================== */
 
 function nextStation(){
 
-  if(!stations.length) return;
+  if(stations.length === 0)
+    return;
 
-  current++;
 
-  if(current >= stations.length){
+  currentIndex++;
 
-    current = 0;
+  if(currentIndex >= stations.length){
+
+    currentIndex = 0;
 
   }
 
-  playStation(current);
+
+  playStation(currentIndex);
 
 }
 
 
-/* ==========================================
+/* =====================================================
    PREVIOUS
-   ========================================== */
+===================================================== */
 
 function previousStation(){
 
-  if(!stations.length) return;
+  if(stations.length === 0)
+    return;
 
-  current--;
 
-  if(current < 0){
+  currentIndex--;
 
-    current =
+  if(currentIndex < 0){
+
+    currentIndex =
     stations.length - 1;
 
   }
 
-  playStation(current);
+
+  playStation(currentIndex);
 
 }
 
 
-/* ==========================================
+/* =====================================================
    VOLUME
-   ========================================== */
+===================================================== */
 
-function setVolume(value){
+function changeVolume(value){
 
   audio.volume =
   Number(value);
@@ -1215,66 +1511,69 @@ function setVolume(value){
 audio.volume = 0.8;
 
 
-/* ==========================================
-   LOAD MORE
-   ========================================== */
+/* =====================================================
+   FAVORITE
+===================================================== */
 
-function loadMore(){
+function getStationID(station){
 
-  visible += 8;
-
-  renderStations();
-
-}
-
-
-/* ==========================================
-   SEARCH
-   ========================================== */
-
-function toggleSearch(){
-
-  document
-  .getElementById("searchBox")
-  .classList.toggle("show");
-
-}
-
-function searchStations(){
-
-  renderStations();
+  return (
+    station.stationuuid ||
+    station.url_resolved ||
+    station.url
+  );
 
 }
 
 
-/* ==========================================
-   FAVORITES
-   ========================================== */
+function toggleFavorite(index,button){
 
-function favoriteStation(index,button){
+  const station =
+  stations[index];
+
+  if(!station)
+    return;
+
 
   const id =
-  stations[index].stationuuid;
+  getStationID(station);
+
+  if(!id)
+    return;
+
 
   if(favorites.includes(id)){
 
     favorites =
-    favorites.filter(x => x !== id);
+    favorites.filter(
+      item => item !== id
+    );
 
-    button.textContent = "♡";
+    if(button){
 
-    button.classList.remove("active");
+      button.textContent = "♡";
+
+      button.classList
+      .remove("active");
+
+    }
 
   }
   else{
 
     favorites.push(id);
 
-    button.textContent = "♥";
+    if(button){
 
-    button.classList.add("active");
+      button.textContent = "♥";
+
+      button.classList
+      .add("active");
+
+    }
 
   }
+
 
   localStorage.setItem(
     "oldGoldFavorites",
@@ -1284,104 +1583,334 @@ function favoriteStation(index,button){
 }
 
 
-function toggleFavorites(){
+/* =====================================================
+   SHOW FAVORITES
+===================================================== */
 
-  const favs =
-  stations.filter(s =>
-    favorites.includes(s.stationuuid)
+function showFavorites(){
+
+  closeMenus();
+
+  filteredStations =
+  stations.filter(station =>
+    favorites.includes(
+      getStationID(station)
+    )
   );
 
-  if(!favs.length){
+  visibleCount = 100;
 
-    alert(
-      "এখনও কোনো station Favorite করা হয়নি।"
-    );
+  renderStations();
 
-    return;
+}
+
+
+/* =====================================================
+   SHOW ALL AGAIN
+===================================================== */
+
+function showAllStations(){
+
+  filteredStations =
+  [...stations];
+
+  visibleCount = 8;
+
+  renderStations();
+
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+function toggleSearch(){
+
+  const area =
+  document.getElementById("searchArea");
+
+  area.classList.toggle("show");
+
+  if(area.classList.contains("show")){
+
+    document
+      .getElementById("searchInput")
+      .focus();
 
   }
 
-  document.getElementById("searchBox")
-  .classList.add("show");
+}
 
-  document.getElementById("search")
-  .value = "";
 
-  document.getElementById("stations")
-  .innerHTML = "";
+function searchStations(){
 
-  favs.forEach(station=>{
+  const value =
+  document
+  .getElementById("searchInput")
+  .value
+  .toLowerCase()
+  .trim();
 
-    const index =
-    stations.indexOf(station);
 
-    const card =
-    document.createElement("div");
+  if(value === ""){
 
-    card.className = "station";
+    filteredStations =
+    [...stations];
 
-    card.innerHTML = `
+  }
+  else{
 
-      <div>
+    filteredStations =
+    stations.filter(station =>
 
-        <div class="station-icon">
-          ❤️
-        </div>
+      (station.name || "")
+      .toLowerCase()
+      .includes(value)
 
-        <h3>
-          ${escapeHTML(station.name)}
-        </h3>
+      ||
 
-        <p>
-          ${escapeHTML(
-            station.tags ||
-            "Favorite Radio"
-          )}
-        </p>
+      (station.tags || "")
+      .toLowerCase()
+      .includes(value)
 
-      </div>
+    );
 
-      <div class="station-bottom">
+  }
 
-        <button
-          class="play"
-          onclick="playStation(${index})">
-          ▶
-        </button>
 
-      </div>
-    `;
+  visibleCount = 8;
 
-    document
-    .getElementById("stations")
-    .appendChild(card);
+  renderStations();
+
+}
+
+
+/* =====================================================
+   LOAD MORE
+===================================================== */
+
+function loadMore(){
+
+  visibleCount += 8;
+
+  renderStations();
+
+}
+
+
+/* =====================================================
+   3 DOT MENU
+===================================================== */
+
+function openMenu(event,index){
+
+  event.stopPropagation();
+
+  closeMenus();
+
+  const menu =
+  document.getElementById(
+    "menu-" + index
+  );
+
+  if(menu){
+
+    menu.style.display =
+    "block";
+
+  }
+
+}
+
+
+function closeMenus(){
+
+  document
+  .querySelectorAll(".station-menu")
+  .forEach(menu => {
+
+    menu.style.display =
+    "none";
 
   });
 
 }
 
 
-/* ==========================================
-   HTML SAFETY
-   ========================================== */
+document.addEventListener(
+  "click",
+  function(){
 
-function escapeHTML(text){
+    closeMenus();
 
-  return String(text)
-  .replace(/&/g,"&amp;")
-  .replace(/</g,"&lt;")
-  .replace(/>/g,"&gt;")
-  .replace(/"/g,"&quot;")
-  .replace(/'/g,"&#039;");
+  }
+);
+
+
+/* =====================================================
+   COPY STREAM LINK
+===================================================== */
+
+function copyStationLink(index){
+
+  const station =
+  stations[index];
+
+  if(!station)
+    return;
+
+
+  const link =
+  station.url_resolved ||
+  station.url;
+
+
+  if(!link)
+    return;
+
+
+  if(
+    navigator.clipboard &&
+    navigator.clipboard.writeText
+  ){
+
+    navigator.clipboard
+    .writeText(link)
+    .then(() => {
+
+      alert(
+        "✅ Radio stream link copied!"
+      );
+
+    })
+    .catch(() => {
+
+      showCopyBox(link);
+
+    });
+
+  }
+  else{
+
+    showCopyBox(link);
+
+  }
 
 }
 
 
-/* ==========================================
-   START
-   ========================================== */
+function showCopyBox(link){
 
-getStations();
+  prompt(
+    "Copy this radio stream link:",
+    link
+  );
+
+}
+
+
+/* =====================================================
+   STATION INFO
+===================================================== */
+
+function showStationInfo(index){
+
+  const station =
+  stations[index];
+
+  if(!station)
+    return;
+
+
+  const name =
+  station.name ||
+  "Unknown Station";
+
+  const country =
+  station.country ||
+  "Unknown";
+
+  const language =
+  station.language ||
+  "Not specified";
+
+  const tags =
+  station.tags ||
+  "Not specified";
+
+
+  alert(
+    "📻 " + name +
+    "\n\n" +
+    "Country: " + country +
+    "\n" +
+    "Language: " + language +
+    "\n" +
+    "Tags: " + tags
+  );
+
+}
+
+
+/* =====================================================
+   HTML SAFE
+===================================================== */
+
+function safe(text){
+
+  return String(text || "")
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#039;");
+
+}
+
+
+/* =====================================================
+   AUDIO EVENTS
+===================================================== */
+
+audio.addEventListener(
+  "play",
+  function(){
+
+    document.getElementById("mainPlay")
+    .textContent = "❚❚";
+
+  }
+);
+
+
+audio.addEventListener(
+  "pause",
+  function(){
+
+    document.getElementById("mainPlay")
+    .textContent = "▶";
+
+  }
+);
+
+
+audio.addEventListener(
+  "error",
+  function(){
+
+    document.getElementById("mainPlay")
+    .textContent = "▶";
+
+  }
+);
+
+
+/* =====================================================
+   START
+===================================================== */
+
+loadStations();
 
 </script>
 
