@@ -8,7 +8,12 @@
 <title>80s & 90s Old Is Gold Radio</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
 
 body{
     font-family:Arial,Helvetica,sans-serif;
@@ -233,6 +238,8 @@ header{
 .status.off{
     color:#e8ad3b;
 }
+
+/* BUTTONS */
 
 .actions{
     display:flex;
@@ -496,8 +503,10 @@ header{
         display:none;
     }
 }
+
 </style>
 </head>
+
 
 <body>
 
@@ -506,12 +515,19 @@ header{
     <div class="logo"></div>
 
     <div class="brand">
+
         <h1>80s & 90s</h1>
+
         <small>OLD IS GOLD</small>
+
     </div>
 
-    <button class="head-btn" onclick="showFavorites()">
+    <button
+        class="head-btn"
+        onclick="showFavorites()">
+
         ♥ Favorites
+
     </button>
 
 </header>
@@ -521,14 +537,23 @@ header{
 
     <div class="hero-content">
 
-        <small>Feel The Nostalgia</small>
+        <small>
+            Feel The Nostalgia
+        </small>
 
-        <h2>80s & 90s</h2>
+        <h2>
+            80s & 90s
+        </h2>
 
-        <p>OLD IS GOLD RADIO</p>
+        <p>
+            OLD IS GOLD RADIO
+        </p>
 
-        <button onclick="playChannel(0)">
+        <button
+            onclick="playChannel(0)">
+
             ▶ PLAY RADIO
+
         </button>
 
     </div>
@@ -537,11 +562,18 @@ header{
 
 
 <h2 class="title">
-    📻 <span>LEGENDARY VOICES</span>
+
+    📻 <span>
+        LEGENDARY VOICES
+    </span>
+
 </h2>
 
 
-<div class="channels" id="channels"></div>
+<div
+    class="channels"
+    id="channels">
+</div>
 
 
 <div class="player">
@@ -550,7 +582,9 @@ header{
 
     <div class="now">
 
-        <small>NOW PLAYING</small>
+        <small>
+            NOW PLAYING
+        </small>
 
         <h3 id="nowTitle">
             Select a Radio Channel
@@ -565,20 +599,31 @@ header{
 
     <div class="controls">
 
-        <button class="ctrl"
-                onclick="previous()">
+        <button
+            class="ctrl"
+            onclick="previous()">
+
             ⏮
+
         </button>
 
-        <button class="big"
-                id="playButton"
-                onclick="togglePlay()">
+
+        <button
+            class="big"
+            id="playButton"
+            onclick="togglePlay()">
+
             ▶
+
         </button>
 
-        <button class="ctrl"
-                onclick="next()">
+
+        <button
+            class="ctrl"
+            onclick="next()">
+
             ⏭
+
         </button>
 
     </div>
@@ -601,13 +646,17 @@ header{
 </div>
 
 
-<audio id="audio"></audio>
+<audio
+    id="audio"
+    preload="none"
+    playsinline>
+</audio>
 
 
 <script>
 
 /* =====================================================
-   VERIFIED HTTPS RADIO STREAMS
+   RADIO CHANNELS
 ===================================================== */
 
 const channels = [
@@ -615,105 +664,285 @@ const channels = [
     {
         name:"Hindi Evergreen",
         icon:"📻",
-        description:"Lata • Kishore • Rafi • Mukesh • Asha",
-        stream:"https://stream.zeno.fm/n2fd0edh9k8uv"
+        description:
+        "Lata • Kishore • Rafi • Mukesh • Asha",
+        stream:
+        "https://stream.zeno.fm/n2fd0edh9k8uv"
     },
 
     {
         name:"Kishore Kumar Radio",
         icon:"🎤",
-        description:"Kishore Kumar • Golden Hits",
-        stream:"https://stream.zeno.fm/0ghtfp8ztm0uv"
+        description:
+        "Kishore Kumar • Golden Hits",
+        stream:
+        "https://stream.zeno.fm/0ghtfp8ztm0uv"
     },
 
     {
         name:"Lata Mangeshkar Radio",
         icon:"🎤",
-        description:"Lata Mangeshkar • Evergreen Hits",
-        stream:"https://stream.zeno.fm/87xam8pf7tzuv"
+        description:
+        "Lata Mangeshkar • Evergreen Hits",
+        stream:
+        "https://stream.zeno.fm/87xam8pf7tzuv"
     },
 
     {
         name:"Goldy Mukesh",
         icon:"🎙️",
-        description:"Mukesh • Old Is Gold",
-        stream:"https://stream.zeno.fm/t39watus1p8uv"
+        description:
+        "Mukesh • Old Is Gold",
+        stream:
+        "https://stream.zeno.fm/t39watus1p8uv"
     },
 
     {
         name:"Mohammed Rafi Radio",
         icon:"🎙️",
-        description:"Mohammed Rafi • Golden Hits",
-        stream:"https://stream.zeno.fm/0zkr7x8ztm0uv"
+        description:
+        "Mohammed Rafi • Golden Hits",
+        stream:
+        "https://stream.zeno.fm/0zkr7x8ztm0uv"
     },
 
     {
         name:"Radio Retro Bollywood",
         icon:"💿",
-        description:"60s • 70s • 80s Bollywood",
-        stream:"https://stream.zeno.fm/u0hrd3xkzhhvv"
+        description:
+        "60s • 70s • 80s Bollywood",
+        stream:
+        "https://stream.zeno.fm/u0hrd3xkzhhvv"
     },
 
     {
         name:"Retro Bollywood 90s",
         icon:"💿",
-        description:"80s • 90s Bollywood",
-        stream:"https://stream.zeno.fm/fdgs82xkzhhvv"
+        description:
+        "80s • 90s Bollywood",
+        stream:
+        "https://stream.zeno.fm/fdgs82xkzhhvv"
     },
 
     {
         name:"Bollywood Gaane Purane",
         icon:"📻",
-        description:"Golden Hindi Film Songs",
-        stream:"https://stream.zeno.fm/6n6ewddtad0uv"
+        description:
+        "Golden Hindi Film Songs",
+        stream:
+        "https://stream.zeno.fm/6n6ewddtad0uv"
     },
 
     {
         name:"Manna Dey",
         icon:"🎤",
-        description:"Manna Dey • Golden Classics",
-        stream:"https://stream.zeno.fm/60ef4p33vxquv"
+        description:
+        "Manna Dey • Golden Classics",
+        stream:
+        "https://stream.zeno.fm/60ef4p33vxquv"
     }
 
 ];
 
 
+/* =====================================================
+   AUDIO
+===================================================== */
+
 const audio =
-document.getElementById("audio");
+    document.getElementById("audio");
 
 let current = 0;
 
-let favorites =
-JSON.parse(
-    localStorage.getItem(
-        "oldGoldFavorites"
-    ) || "[]"
-);
+
+/* =====================================================
+   FAVORITES
+===================================================== */
+
+let favorites = [];
+
+try{
+
+    favorites =
+    JSON.parse(
+        localStorage.getItem(
+            "oldGoldFavorites"
+        ) || "[]"
+    );
+
+}catch(e){
+
+    favorites = [];
+
+}
 
 
 /* =====================================================
-   CREATE CARDS
+   MEDIA SESSION
+   LOCK SCREEN / NOTIFICATION CONTROLS
+===================================================== */
+
+function setupMediaSession(){
+
+    if(!("mediaSession" in navigator)){
+
+        console.log(
+            "Media Session not supported"
+        );
+
+        return;
+
+    }
+
+
+    try{
+
+        navigator.mediaSession.setActionHandler(
+            "play",
+            function(){
+
+                audio.play()
+                .catch(function(){});
+
+            }
+        );
+
+    }catch(e){}
+
+
+    try{
+
+        navigator.mediaSession.setActionHandler(
+            "pause",
+            function(){
+
+                audio.pause();
+
+            }
+        );
+
+    }catch(e){}
+
+
+    try{
+
+        navigator.mediaSession.setActionHandler(
+            "nexttrack",
+            function(){
+
+                next();
+
+            }
+        );
+
+    }catch(e){}
+
+
+    try{
+
+        navigator.mediaSession.setActionHandler(
+            "previoustrack",
+            function(){
+
+                previous();
+
+            }
+        );
+
+    }catch(e){}
+
+
+    try{
+
+        navigator.mediaSession.setActionHandler(
+            "stop",
+            function(){
+
+                audio.pause();
+
+            }
+        );
+
+    }catch(e){}
+
+}
+
+
+/* =====================================================
+   UPDATE LOCK SCREEN MEDIA INFORMATION
+===================================================== */
+
+function updateMediaSession(channel){
+
+    if(!("mediaSession" in navigator))
+        return;
+
+
+    try{
+
+        navigator.mediaSession.metadata =
+        new MediaMetadata({
+
+            title:
+            channel.name,
+
+            artist:
+            "80s & 90s Old Is Gold",
+
+            album:
+            "Old Is Gold Radio"
+
+        });
+
+
+        navigator.mediaSession.playbackState =
+        "playing";
+
+    }catch(e){
+
+        console.log(
+            "Media Session metadata error",
+            e
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   CREATE CHANNEL CARDS
 ===================================================== */
 
 function createCards(){
 
     const box =
-    document.getElementById("channels");
+    document.getElementById(
+        "channels"
+    );
 
-    box.innerHTML="";
+
+    box.innerHTML = "";
+
 
     channels.forEach(
-        (channel,index)=>{
+        function(channel,index){
 
             const fav =
             favorites.includes(index);
 
+
             const card =
-            document.createElement("div");
+            document.createElement(
+                "div"
+            );
 
-            card.className="channel";
 
-            card.innerHTML=`
+            card.className =
+            "channel";
+
+
+            card.innerHTML = `
 
                 <div>
 
@@ -732,7 +961,9 @@ function createCards(){
                     <div
                         class="status"
                         id="status-${index}">
+
                         ● HTTPS STREAM READY
+
                     </div>
 
                 </div>
@@ -742,25 +973,39 @@ function createCards(){
 
                     <button
                         class="play"
-                        onclick="playChannel(${index})">
+                        onclick="
+                            playChannel(${index})
+                        ">
+
                         ▶
+
                     </button>
 
 
                     <button
                         class="favorite ${
-                            fav ? "active":""
+                            fav ? "active" : ""
                         }"
-                        onclick="toggleFavorite(event,${index})">
+                        onclick="
+                            toggleFavorite(
+                                event,
+                                ${index}
+                            )
+                        ">
 
-                        ${fav ? "♥":"♡"}
+                        ${fav ? "♥" : "♡"}
 
                     </button>
 
 
                     <button
                         class="more"
-                        onclick="openMenu(event,${index})">
+                        onclick="
+                            openMenu(
+                                event,
+                                ${index}
+                            )
+                        ">
 
                         ⋮
 
@@ -776,26 +1021,34 @@ function createCards(){
 
                     <button
                         onclick="
-                        playChannel(${index});
-                        closeMenus();">
+                            playChannel(${index});
+                            closeMenus();
+                        ">
 
                         ▶ Play Channel
 
                     </button>
 
+
                     <button
                         onclick="
-                        toggleFavorite(event,${index});
-                        closeMenus();">
+                            toggleFavorite(
+                                event,
+                                ${index}
+                            );
+                            closeMenus();
+                        ">
 
                         ♥ Add / Remove Favorite
 
                     </button>
 
+
                     <button
                         onclick="
-                        channelInfo(${index});
-                        closeMenus();">
+                            channelInfo(${index});
+                            closeMenus();
+                        ">
 
                         ℹ Channel Info
 
@@ -804,6 +1057,7 @@ function createCards(){
                 </div>
 
             `;
+
 
             box.appendChild(card);
 
@@ -822,15 +1076,20 @@ function playChannel(index){
     const channel =
     channels[index];
 
+
     if(!channel)
         return;
 
-    current=index;
+
+    current =
+    index;
+
 
     document.getElementById(
         "nowTitle"
     ).textContent =
     channel.name;
+
 
     document.getElementById(
         "nowDesc"
@@ -838,31 +1097,103 @@ function playChannel(index){
     channel.description;
 
 
+    const status =
+    document.getElementById(
+        "status-" + index
+    );
+
+
+    if(status){
+
+        status.textContent =
+        "● CONNECTING...";
+
+        status.classList.remove(
+            "off"
+        );
+
+    }
+
+
+    /*
+       Stop current stream
+    */
+
     audio.pause();
 
-    audio.src =
-    channel.stream;
+    audio.removeAttribute(
+        "src"
+    );
 
     audio.load();
 
 
+    /*
+       Set new stream
+    */
+
+    audio.src =
+    channel.stream;
+
+    audio.preload =
+    "none";
+
+
+    audio.load();
+
+
+    /*
+       Start radio
+    */
+
     audio.play()
-    .then(()=>{
+
+    .then(function(){
 
         document.getElementById(
             "playButton"
-        ).textContent="❚❚";
+        ).textContent =
+        "❚❚";
+
+
+        if(status){
+
+            status.textContent =
+            "● PLAYING";
+
+        }
+
+
+        updateMediaSession(
+            channel
+        );
 
     })
-    .catch(error=>{
+
+    .catch(function(error){
+
+        console.log(
+            "Playback error:",
+            error
+        );
+
 
         document.getElementById(
             "playButton"
-        ).textContent="▶";
+        ).textContent =
+        "▶";
 
-        alert(
-            "এই stream-টি এই browser-এ play করা যাচ্ছে না। অন্য channel চেষ্টা করুন।"
-        );
+
+        if(status){
+
+            status.textContent =
+            "● STREAM ERROR";
+
+            status.classList.add(
+                "off"
+            );
+
+        }
 
     });
 
@@ -883,9 +1214,11 @@ function togglePlay(){
 
     }
 
+
     if(audio.paused){
 
-        audio.play();
+        audio.play()
+        .catch(function(){});
 
     }else{
 
@@ -896,21 +1229,89 @@ function togglePlay(){
 }
 
 
+/* =====================================================
+   AUDIO PLAY EVENT
+===================================================== */
+
 audio.addEventListener(
     "play",
-    ()=>{
+    function(){
+
         document.getElementById(
             "playButton"
-        ).textContent="❚❚";
+        ).textContent =
+        "❚❚";
+
+
+        if(
+            "mediaSession"
+            in navigator
+        ){
+
+            navigator.mediaSession
+            .playbackState =
+            "playing";
+
+        }
+
     }
 );
 
+
+/* =====================================================
+   AUDIO PAUSE EVENT
+===================================================== */
+
 audio.addEventListener(
     "pause",
-    ()=>{
+    function(){
+
         document.getElementById(
             "playButton"
-        ).textContent="▶";
+        ).textContent =
+        "▶";
+
+
+        if(
+            "mediaSession"
+            in navigator
+        ){
+
+            navigator.mediaSession
+            .playbackState =
+            "paused";
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   AUDIO ERROR
+===================================================== */
+
+audio.addEventListener(
+    "error",
+    function(){
+
+        const status =
+        document.getElementById(
+            "status-" + current
+        );
+
+
+        if(status){
+
+            status.textContent =
+            "● RECONNECTING...";
+
+            status.classList.add(
+                "off"
+            );
+
+        }
+
     }
 );
 
@@ -923,10 +1324,20 @@ function next(){
 
     current++;
 
-    if(current>=channels.length)
-        current=0;
 
-    playChannel(current);
+    if(
+        current >=
+        channels.length
+    ){
+
+        current = 0;
+
+    }
+
+
+    playChannel(
+        current
+    );
 
 }
 
@@ -939,19 +1350,30 @@ function previous(){
 
     current--;
 
-    if(current<0)
-        current=channels.length-1;
 
-    playChannel(current);
+    if(current < 0){
+
+        current =
+        channels.length - 1;
+
+    }
+
+
+    playChannel(
+        current
+    );
 
 }
 
 
 /* =====================================================
-   MOBILE FRIENDLY FAVORITE
+   FAVORITE
 ===================================================== */
 
-function toggleFavorite(event,index){
+function toggleFavorite(
+    event,
+    index
+){
 
     if(event){
 
@@ -968,7 +1390,9 @@ function toggleFavorite(event,index){
 
     if(position === -1){
 
-        favorites.push(index);
+        favorites.push(
+            index
+        );
 
     }else{
 
@@ -980,12 +1404,16 @@ function toggleFavorite(event,index){
     }
 
 
-    localStorage.setItem(
-        "oldGoldFavorites",
-        JSON.stringify(
-            favorites
-        )
-    );
+    try{
+
+        localStorage.setItem(
+            "oldGoldFavorites",
+            JSON.stringify(
+                favorites
+            )
+        );
+
+    }catch(e){}
 
 
     createCards();
@@ -994,7 +1422,7 @@ function toggleFavorite(event,index){
 
 
 /* =====================================================
-   FAVORITES
+   SHOW FAVORITES
 ===================================================== */
 
 function showFavorites(){
@@ -1004,33 +1432,39 @@ function showFavorites(){
         "channels"
     );
 
-    box.innerHTML="";
+
+    box.innerHTML = "";
 
 
     const list =
     favorites
     .map(
-        index =>
-        channels[index]
+        function(index){
+
+            return channels[index];
+
+        }
     )
     .filter(Boolean);
 
 
-    if(list.length===0){
+    if(list.length === 0){
 
-        box.innerHTML=`
+        box.innerHTML = `
 
-            <div style="
-            grid-column:1/-1;
-            text-align:center;
-            padding:45px;
-            color:#aaa">
+            <div
+                style="
+                grid-column:1/-1;
+                text-align:center;
+                padding:45px;
+                color:#aaa">
 
                 ♥ No Favorite Channels
 
                 <br><br>
 
-                Tap ♡ on a channel to save it.
+                Tap ♡ on a channel
+                to save it.
 
                 <br><br>
 
@@ -1042,7 +1476,9 @@ function showFavorites(){
                     border:1px solid #e8ad3b;
                     background:#101c27;
                     color:#ffd875">
+
                     Show All Channels
+
                 </button>
 
             </div>
@@ -1054,78 +1490,114 @@ function showFavorites(){
     }
 
 
-    list.forEach(channel=>{
+    list.forEach(
+        function(channel){
 
-        const index =
-        channels.indexOf(channel);
+            const index =
+            channels.indexOf(
+                channel
+            );
 
-        const card =
-        document.createElement("div");
 
-        card.className="channel";
+            const card =
+            document.createElement(
+                "div"
+            );
 
-        card.innerHTML=`
 
-            <div>
+            card.className =
+            "channel";
 
-                <div class="channel-icon">
-                    ${channel.icon}
+
+            card.innerHTML = `
+
+                <div>
+
+                    <div class="channel-icon">
+                        ${channel.icon}
+                    </div>
+
+                    <h3>
+                        ${channel.name}
+                    </h3>
+
+                    <p>
+                        ${channel.description}
+                    </p>
+
                 </div>
 
-                <h3>
-                    ${channel.name}
-                </h3>
 
-                <p>
-                    ${channel.description}
-                </p>
+                <div class="actions">
 
-            </div>
+                    <button
+                        class="play"
+                        onclick="
+                            playChannel(${index})
+                        ">
 
-            <div class="actions">
+                        ▶
 
-                <button
-                    class="play"
-                    onclick="playChannel(${index})">
-                    ▶
-                </button>
+                    </button>
 
-                <button
-                    class="favorite active"
-                    onclick="toggleFavorite(event,${index})">
-                    ♥
-                </button>
 
-            </div>
+                    <button
+                        class="favorite active"
+                        onclick="
+                            toggleFavorite(
+                                event,
+                                ${index}
+                            )
+                        ">
 
-        `;
+                        ♥
 
-        box.appendChild(card);
+                    </button>
 
-    });
+                </div>
+
+            `;
+
+
+            box.appendChild(
+                card
+            );
+
+        }
+    );
 
 }
 
 
 /* =====================================================
-   3 DOT
+   THREE DOT MENU
 ===================================================== */
 
-function openMenu(event,index){
+function openMenu(
+    event,
+    index
+){
 
     event.preventDefault();
 
     event.stopPropagation();
 
+
     closeMenus();
+
 
     const menu =
     document.getElementById(
-        "menu-"+index
+        "menu-" + index
     );
 
-    if(menu)
-        menu.style.display="block";
+
+    if(menu){
+
+        menu.style.display =
+        "block";
+
+    }
 
 }
 
@@ -1133,10 +1605,16 @@ function openMenu(event,index){
 function closeMenus(){
 
     document
-    .querySelectorAll(".menu")
+    .querySelectorAll(
+        ".menu"
+    )
     .forEach(
-        menu =>
-        menu.style.display="none"
+        function(menu){
+
+            menu.style.display =
+            "none";
+
+        }
     );
 
 }
@@ -1144,12 +1622,16 @@ function closeMenus(){
 
 document.addEventListener(
     "click",
-    closeMenus
+    function(){
+
+        closeMenus();
+
+    }
 );
 
 
 /* =====================================================
-   INFO
+   CHANNEL INFO
 ===================================================== */
 
 function channelInfo(index){
@@ -1157,13 +1639,24 @@ function channelInfo(index){
     const channel =
     channels[index];
 
+
+    if(!channel)
+        return;
+
+
     alert(
+
         "📻 " +
         channel.name +
+
         "\n\n" +
+
         channel.description +
+
         "\n\n" +
+
         "HTTPS Live Stream: Ready"
+
     );
 
 }
@@ -1180,11 +1673,20 @@ function setVolume(value){
 
 }
 
-audio.volume=.8;
+
+audio.volume =
+0.8;
 
 
 /* =====================================================
-   START
+   MEDIA SESSION INITIALIZE
+===================================================== */
+
+setupMediaSession();
+
+
+/* =====================================================
+   START APP
 ===================================================== */
 
 createCards();
